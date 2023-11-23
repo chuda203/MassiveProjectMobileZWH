@@ -13,6 +13,27 @@
         android:theme="@style/Theme.MassiveProjectMobileZWH"
         tools:targetApi="31">
         <activity
+            android:name=".TukarKoinActivity"
+            android:exported="false" />
+        <activity
+            android:name=".TukarKoin3Activity"
+            android:exported="false" />
+        <activity
+            android:name=".TukarKoin2Activity"
+            android:exported="false" />
+        <activity
+            android:name=".TopUpKoinPengepulPembayaran"
+            android:exported="false" />
+        <activity
+            android:name=".TupUpKoinActivity"
+            android:exported="false" />
+        <activity
+            android:name=".DompetPengepulActivity"
+            android:exported="false" />
+        <activity
+            android:name=".DompetActivity"
+            android:exported="false" />
+        <activity
             android:name=".ProfilePenggunaActivity"
             android:exported="false" />
         <activity

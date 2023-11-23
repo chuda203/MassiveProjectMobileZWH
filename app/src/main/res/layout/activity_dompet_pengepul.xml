@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/two_color_background"
+    tools:context=".DompetPengepulActivity">
+
+    <ImageView
+        android:id="@+id/back"
+        android:layout_width="28dp"
+        android:layout_height="28dp"
+        android:src="@drawable/back"
+        android:layout_marginTop="35dp"
+        android:layout_marginStart="20dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <TextView
+        android:id="@+id/judul"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Dompet"
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        android:fontFamily="@font/poppinsbold"
+        android:layout_marginTop="33dp"
+        android:layout_marginStart="70dp"
+        app:layout_constraintStart_toEndOf="@+id/back"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/card"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:background="@drawable/rectangle_dompet"
+        android:paddingStart="320dp"
+        android:paddingEnd="50dp"
+        android:paddingTop="50dp"
+        android:paddingBottom="100dp"
+        android:layout_marginTop="90dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Koin Saya"
+        android:textColor="@color/green"
+        android:textSize="14sp"
+        android:fontFamily="@font/poppinsbold"
+        android:textAlignment="center"
+        android:layout_marginTop="109dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/koin"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:src="@drawable/koin"
+        android:layout_marginTop="170dp"
+        android:layout_marginStart="40dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/total"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="65.000"
+        android:textColor="@color/green"
+        android:textSize="14sp"
+        android:fontFamily="@font/poppinsmedium"
+        android:textAlignment="center"
+        android:layout_marginTop="180dp"
+        android:layout_marginStart="10dp"
+        app:layout_constraintStart_toEndOf="@id/koin"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <LinearLayout
+        android:layout_width="100dp"
+        android:layout_height="70dp"
+        android:orientation="vertical"
+        android:background="@drawable/rectangle_dompet"
+        android:layout_marginTop="150dp"
+        android:layout_marginEnd="40dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/koin_tambah"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:src="@drawable/koin_tambah"
+            android:layout_marginTop="15dp"
+            android:layout_marginStart="40dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tambah"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Tambah Koin"
+            android:textColor="@color/green"
+            android:textSize="12sp"
+            android:fontFamily="@font/poppinsmedium"
+            android:textAlignment="center"
+            android:layout_marginStart="10dp"
+            app:layout_constraintEnd_toEndOf="parent"/>
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/riwayat"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Riwayat Transaksi Koin"
+        android:textColor="@color/green"
+        android:textSize="14sp"
+        android:fontFamily="@font/poppinsmedium"
+        android:layout_marginTop="28dp"
+        android:layout_marginStart="20dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/card"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

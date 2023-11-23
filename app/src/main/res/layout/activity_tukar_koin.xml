@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/two_color_background"
+    tools:context=".TukarKoinActivity">
+
+    <ImageView
+        android:id="@+id/back"
+        android:layout_width="28dp"
+        android:layout_height="28dp"
+        android:src="@drawable/back"
+        android:layout_marginTop="35dp"
+        android:layout_marginStart="20dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <TextView
+        android:id="@+id/judul"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Tukar Koin"
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        android:fontFamily="@font/poppinsbold"
+        android:layout_marginTop="33dp"
+        android:layout_marginStart="70dp"
+        app:layout_constraintStart_toEndOf="@+id/back"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <TextView
+        android:id="@+id/no_hp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Nomor Dana"
+        android:textColor="@color/black"
+        android:textSize="14sp"
+        android:fontFamily="@font/poppinsmedium"
+        android:layout_marginTop="160dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <EditText
+        android:id="@+id/input_no_hp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/no_hp"/>
+
+    <TextView
+        android:id="@+id/nominal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Nominal"
+        android:textColor="@color/black"
+        android:textSize="14sp"
+        android:fontFamily="@font/poppinsmedium"
+        android:layout_marginTop="15dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/input_no_hp"/>
+
+    <EditText
+        android:id="@+id/input_nominasi"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/nominal"/>
+
+    <TextView
+        android:id="@+id/catatan"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Catatan Transaksi"
+        android:textColor="@color/black"
+        android:textSize="14sp"
+        android:fontFamily="@font/poppinsmedium"
+        android:layout_marginTop="15dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/input_nominasi"/>
+
+    <EditText
+        android:id="@+id/input_catatan"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/catatan"/>
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Lanjutkan"
+        android:textColor="@color/white"
+        android:textSize="14sp"
+        android:fontFamily="@font/poppinsbold"
+        android:textAlignment="center"
+        android:backgroundTint="@color/green"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginBottom="50dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
