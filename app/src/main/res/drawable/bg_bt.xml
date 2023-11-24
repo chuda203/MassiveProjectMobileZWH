@@ -1,0 +1,5 @@
+<!-- res/drawable/button_background_green.xml -->
+<shape xmlns:android="http://schemas.android.com/apk/res/android">
+    <solid android:color="@color/colorutama" /> <!-- Warna hijau -->
+    <corners android:radius="8dp" /> <!-- Radius sudut -->
+</shape>

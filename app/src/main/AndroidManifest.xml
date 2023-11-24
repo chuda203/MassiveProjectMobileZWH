@@ -13,6 +13,33 @@
         android:theme="@style/Theme.MassiveProjectMobileZWH"
         tools:targetApi="31">
         <activity
+            android:name=".BerandaJemputSelesaiActivity"
+            android:exported="false" />
+        <activity
+            android:name=".BerandaJemputKonfirmasiActivity"
+            android:exported="false" />
+        <activity
+            android:name=".BerandaJemputProsesActivity"
+            android:exported="false" />
+        <activity
+            android:name=".BerandaJemputCariActivity"
+            android:exported="false" />
+        <activity
+            android:name=".BerandaJemputUnggahActivity"
+            android:exported="false" />
+        <activity
+            android:name=".BerandaJemputUpfotoActivity"
+            android:exported="false" />
+        <activity
+            android:name=".BerandaJemputCaptureActivity"
+            android:exported="false" />
+        <activity
+            android:name=".BerandaJemputPilihActivity"
+            android:exported="false" />
+        <activity
+            android:name=".BerandaRootActivity"
+            android:exported="false" />
+        <activity
             android:name=".TukarKoinActivity"
             android:exported="false" />
         <activity

@@ -2,4 +2,25 @@
     <string name="app_name">MassiveProjectMobileZWH</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="title_beranda_jemput">Penjemputan Sampah</string>
+    <string name="sub_title_beranda_jemput_pilih">Atur Lokasi Penjemputan</string>
+    <string name="maps_detail_beranda_jemput_pilih">Mall Pekanbaru, Pintu Masuk</string>
+    <string name="maps_option_beranda_jemput_pilih">Atur Lokasi Lain</string>
+    <string name="maps_option_sub_beranda_jemput_pilih">Pilih lokasi lain atau tambah lokasi baru</string>
+    <string name="button_next_beranda_jemput_pilih">Konfirmasi Lokasi</string>
+    <string name="todo">TODO</string>
+    <string name="sub_title_beranda_jemput_unggah">Detail Penjemputan Sampah</string>
+    <string name="title_maps_beranda_jemput_unggah">Titik Jemput Sampah</string>
+    <string name="maps_detail_beranda_jemput_unggah">Mall Pekanbaru, Pintu Masuk ke selatan</string>
+    <string name="title_category_beranda_jemput_unggah">Kategori/Jenis Sampah</string>
+    <string name="category_beranda_jemput_unggah">--Pilih Kategori--</string>
+    <string name="title_category_sub_beranda_jemput_unggah">Catatan Tambahan</string>
+    <string name="category_sub_beranda_jemput_unggah">*Masukkan detail sampah</string>
+    <string name="category_subnote_beranda_jemput_unggah">Masukkan catatan tambahan</string>
+    <string name="confirmation_beranda_jemput_unggah">Jemput Sekarang</string>
+    <string name="profile_beranda_jemput_proses">Budi Putra</string>
+    <string name="process_beranda_jemput_proses">Sedang dalam perjalanan menuju lokasi</string>
+    <string name="phone_beranda_jemput_proses">      Telepon</string>
+    <string name="chat_beranda_jemput_proses">       Chat</string>
+    <string name="confirm_beranda_jemput_proses">Selesai</string>
 </resources>
