@@ -8,4 +8,6 @@
     <color name="green_secondary_button">#E5FCA1</color>
 
     <color name="black_trasnparent">#C0000000</color>
+    <color name="black2">#222222</color>
+    <color name="green2">#E5FCA1</color>
 </resources>

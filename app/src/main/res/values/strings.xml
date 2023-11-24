@@ -23,4 +23,15 @@
     <string name="phone_beranda_jemput_proses">      Telepon</string>
     <string name="chat_beranda_jemput_proses">       Chat</string>
     <string name="confirm_beranda_jemput_proses">Selesai</string>
+    <string name="confirmation_beranda_jemput_upfoto">Unggah Foto</string>
+
+    <string name="alur1">1. Pengguna memasukkan jumlah barang</string>
+    <string name="alur2">2. Pengguna memilih kategori setiap barang</string>
+    <string name="alur3">3. Memilih kategori pembayaran</string>
+    <string name="alur4">4. Menentukan titik lokasi penjemputan</string>
+    <string name="alur5">5. Menunggu konfirmasi penjemputan</string>
+    <string name="alur6">6. Proses penjemputan</string>
+    <string name="alur7">7. Barang diambil</string>
+    <string name="alur8">8. Pengepul melakukan pembayaran</string>
+    <string name="alur9">9. Proses selesai</string>
 </resources>
