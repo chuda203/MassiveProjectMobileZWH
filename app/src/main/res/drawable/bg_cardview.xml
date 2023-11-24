@@ -1,0 +1,15 @@
+<!-- res/drawable/cardview_shadow.xml -->
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <item>
+        <shape android:shape="rectangle">
+            <solid android:color="#FFFFFF" /> <!-- Warna putih -->
+            <corners android:radius="8dp" /> <!-- Lengkungan sudut -->
+        </shape>
+    </item>
+    <item android:right="1dp" android:left="1dp" android:bottom="3dp">
+        <shape android:shape="rectangle">
+            <solid android:color="#1A000000" /> <!-- Warna shadow -->
+            <corners android:radius="8dp" /> <!-- Lengkungan sudut -->
+        </shape>
+    </item>
+</layer-list>
