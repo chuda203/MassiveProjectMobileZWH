@@ -1,0 +1,342 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/two_color_background"
+    tools:context=".WalletListActivity">
+
+    <TextView
+        android:id="@+id/tv_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="3dp"
+        android:fontFamily="@font/poppinsbold"
+        android:text="Dompet"
+        android:textColor="@color/white"
+        android:textSize="22sp"
+        app:layout_constraintStart_toEndOf="@+id/iv_back"
+        app:layout_constraintTop_toTopOf="@id/iv_back" />
+
+    <ImageView
+        android:id="@+id/iv_back"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="40dp"
+        android:layout_marginStart="30dp"
+        android:src="@drawable/ic_back"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:contentDescription="@string/todo" />
+
+    <View
+        android:id="@+id/separator"
+        android:layout_width="wrap_content"
+        android:layout_height="10dp"
+        android:layout_marginTop="120dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardView_wallet"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="30dp"
+        android:layout_marginTop="20dp"
+        app:cardBackgroundColor="@color/colorutama"
+        app:cardCornerRadius="20dp"
+        app:contentPadding="20dp"
+        app:layout_constraintTop_toBottomOf="@+id/separator"
+        tools:layout_editor_absoluteX="30dp">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/tv_title_wallet"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/poppinsbold"
+                android:text="Smart Recycling"
+                android:textColor="@color/white"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/tv_title_coins"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="15dp"
+                android:fontFamily="@font/poppinsregular"
+                android:text="Coins"
+                android:textColor="@color/white"
+                app:layout_constraintStart_toStartOf="@id/tv_title_wallet"
+                app:layout_constraintTop_toBottomOf="@id/tv_title_wallet" />
+
+            <TextView
+                android:id="@+id/tv_coins"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/poppinsregular"
+                android:text="800.000"
+                android:textColor="@color/white"
+                app:layout_constraintStart_toStartOf="@id/tv_title_coins"
+                app:layout_constraintTop_toBottomOf="@id/tv_title_coins" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.cardview.widget.CardView>
+
+    <View
+        android:id="@+id/view_frame_topup"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="30dp"
+        android:background="@drawable/bg_bt_wallet"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cardView_wallet" />
+
+    <View
+        android:id="@+id/view_frame_history"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginEnd="40dp"
+        android:background="@drawable/bg_bt_wallet"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cardView_wallet" />
+
+    <View
+        android:id="@+id/view_frame_payment"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_marginTop="30dp"
+        android:background="@drawable/bg_bt_wallet"
+        app:layout_constraintEnd_toStartOf="@+id/view_frame_history"
+        app:layout_constraintStart_toEndOf="@id/view_frame_topup"
+        app:layout_constraintTop_toBottomOf="@+id/cardView_wallet" />
+
+
+    <View
+        android:id="@+id/view_subframe_topup"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/bg_bt_subwallet"
+        app:layout_constraintEnd_toEndOf="@+id/view_frame_topup"
+        app:layout_constraintStart_toStartOf="@+id/view_frame_topup"
+        app:layout_constraintTop_toTopOf="@+id/view_frame_topup" />
+
+    <View
+        android:id="@+id/view_subframe_payment"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/bg_bt_subwallet"
+        app:layout_constraintEnd_toEndOf="@+id/view_frame_payment"
+        app:layout_constraintStart_toStartOf="@+id/view_frame_payment"
+        app:layout_constraintTop_toTopOf="@+id/view_frame_payment" />
+
+    <View
+        android:id="@+id/view_subframe_history"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/bg_bt_subwallet"
+        app:layout_constraintEnd_toEndOf="@+id/view_frame_history"
+        app:layout_constraintStart_toStartOf="@+id/view_frame_history"
+        app:layout_constraintTop_toTopOf="@+id/view_frame_history" />
+
+    <ImageView
+        android:id="@+id/iv_topup"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_add"
+        app:layout_constraintBottom_toBottomOf="@+id/view_subframe_topup"
+        app:layout_constraintEnd_toEndOf="@+id/view_subframe_topup"
+        app:layout_constraintStart_toStartOf="@+id/view_subframe_topup"
+        app:layout_constraintTop_toTopOf="@+id/view_subframe_topup" />
+
+    <ImageView
+        android:id="@+id/iv_payment"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_shop"
+        app:layout_constraintBottom_toBottomOf="@+id/view_subframe_payment"
+        app:layout_constraintEnd_toEndOf="@+id/view_subframe_payment"
+        app:layout_constraintStart_toStartOf="@+id/view_subframe_payment"
+        app:layout_constraintTop_toTopOf="@+id/view_subframe_payment" />
+
+    <ImageView
+        android:id="@+id/iv_history"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_history"
+        app:layout_constraintBottom_toBottomOf="@+id/view_subframe_history"
+        app:layout_constraintEnd_toEndOf="@+id/view_subframe_history"
+        app:layout_constraintStart_toStartOf="@+id/view_subframe_history"
+        app:layout_constraintTop_toTopOf="@+id/view_subframe_history" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:fontFamily="@font/poppinsregular"
+        android:text="Isi Saldo"
+        android:textColor="@color/white"
+        android:textSize="10sp"
+        app:layout_constraintEnd_toEndOf="@+id/view_frame_topup"
+        app:layout_constraintStart_toStartOf="@+id/view_frame_topup"
+        app:layout_constraintTop_toBottomOf="@+id/view_subframe_topup" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:fontFamily="@font/poppinsregular"
+        android:text="Transaksi"
+        android:textColor="@color/white"
+        android:textSize="10sp"
+        app:layout_constraintEnd_toEndOf="@+id/view_frame_payment"
+        app:layout_constraintStart_toStartOf="@+id/view_frame_payment"
+        app:layout_constraintTop_toBottomOf="@+id/view_subframe_payment" />
+
+    <TextView
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="2dp"
+        android:fontFamily="@font/poppinsregular"
+        android:text="Riwayat Transaksi"
+        android:textColor="@color/white"
+        android:textSize="10sp"
+        android:gravity="center"
+        app:layout_constraintEnd_toEndOf="@+id/view_frame_history"
+        app:layout_constraintStart_toStartOf="@+id/view_frame_history"
+        app:layout_constraintTop_toBottomOf="@+id/view_subframe_history" />
+
+    <TextView
+        android:id="@+id/tv_subtitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="40dp"
+        android:fontFamily="@font/poppinsbold"
+        android:text="Riwayat Transaksi"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/view_frame_payment" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_subtitle">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintTop_toBottomOf="@+id/tv_subtitle">
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardView_history1"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginTop="30dp"
+            android:layout_marginHorizontal="30dp"
+            app:cardBackgroundColor="@color/grey"
+            app:cardCornerRadius="8dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_subtitle">
+
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardView_history2"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginHorizontal="30dp"
+            app:cardBackgroundColor="@color/grey"
+            app:cardCornerRadius="8dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_subtitle">
+
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardView_history3"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginHorizontal="30dp"
+            app:cardBackgroundColor="@color/grey"
+            app:cardCornerRadius="8dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_subtitle">
+
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardView_history4"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginHorizontal="30dp"
+            app:cardBackgroundColor="@color/grey"
+            app:cardCornerRadius="8dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_subtitle">
+
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardView_history5"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginHorizontal="30dp"
+            app:cardBackgroundColor="@color/grey"
+            app:cardCornerRadius="8dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_subtitle">
+
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardView_history6"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginHorizontal="30dp"
+            app:cardBackgroundColor="@color/grey"
+            app:cardCornerRadius="8dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_subtitle">
+
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardView_history7"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginHorizontal="30dp"
+            app:cardBackgroundColor="@color/grey"
+            app:cardCornerRadius="8dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_subtitle">
+
+        </androidx.cardview.widget.CardView>
+
+    </LinearLayout>
+
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

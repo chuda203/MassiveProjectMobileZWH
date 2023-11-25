@@ -10,4 +10,7 @@
     <color name="black_trasnparent">#C0000000</color>
     <color name="black2">#222222</color>
     <color name="green2">#E5FCA1</color>
+    <color name="red">#C91C1C</color>
+    <color name="grey">#F1F1F1</color>
+    <color name="darkgrey">#121212</color>
 </resources>
