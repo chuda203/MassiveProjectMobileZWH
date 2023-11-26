@@ -13,6 +13,87 @@
         android:theme="@style/Theme.MassiveProjectMobileZWH"
         tools:targetApi="31">
         <activity
+            android:name=".ProfileCameraActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ProfileEditActivity"
+            android:exported="false" />
+        <activity
+            android:name=".WalletPaymentActivity"
+            android:exported="false" />
+        <activity
+            android:name=".WalletHistoryActivity"
+            android:exported="false" />
+        <activity
+            android:name=".WalletListActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ProfileNotifActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ProfileHelpActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ProfileAboutActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ProfileListActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ChatConversationActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ChatListActivity"
+            android:exported="false" />
+        <activity
+            android:name=".OrderDoneActivity"
+            android:exported="false" />
+        <activity
+            android:name=".MapsProcessActivity"
+            android:exported="false" />
+        <activity
+            android:name=".OrderDetailActivity"
+            android:exported="false" />
+        <activity
+            android:name=".MapsListActivity"
+            android:exported="false" />
+        <activity
+            android:name=".OrderHistoryActivity"
+            android:exported="false" />
+        <activity
+            android:name=".OrderRegionActivity"
+            android:exported="false" />
+        <activity
+            android:name=".OrderListActivity"
+            android:exported="false" />
+        <activity
+            android:name=".BerandaJemputSelesaiActivity"
+            android:exported="false" />
+        <activity
+            android:name=".BerandaJemputKonfirmasiActivity"
+            android:exported="false" />
+        <activity
+            android:name=".BerandaJemputProsesActivity"
+            android:exported="false" />
+        <activity
+            android:name=".BerandaJemputCariActivity"
+            android:exported="false" />
+        <activity
+            android:name=".BerandaJemputUnggahActivity"
+            android:exported="false" />
+        <activity
+            android:name=".BerandaJemputUpfotoActivity"
+            android:exported="false" />
+        <activity
+            android:name=".BerandaJemputCaptureActivity"
+            android:exported="false" />
+        <activity
+            android:name=".BerandaJemputPilihActivity"
+            android:exported="false" />
+        <activity
+            android:name=".BerandaRootActivity"
+            android:exported="false" />
+        <activity
             android:name=".TukarKoinActivity"
             android:exported="false" />
         <activity
