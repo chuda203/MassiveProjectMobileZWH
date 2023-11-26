@@ -1,0 +1,196 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorutama"
+    tools:context=".ProfilListFragment">
+
+    <!-- TODO: Update blank fragment layout -->
+    <TextView
+        android:id="@+id/header_profile"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:textSize="24sp"
+        android:textAlignment="center"
+        android:textStyle="bold"
+        android:textColor="@color/white"
+        android:text="Profile" />
+
+    <View
+        android:id="@+id/foreground"
+        android:layout_width="match_parent"
+        android:layout_height="560dp"
+        android:layout_marginTop="170dp"
+        android:background="@drawable/rounded"
+        />
+
+    <View
+        android:id="@+id/notifikasi"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_marginLeft="340dp"
+        android:layout_marginTop="30dp"
+        android:background="@drawable/baseline_notifications_24"/>
+
+    <TextView
+        android:id="@+id/nama"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Aldio Yohanes"
+        android:textStyle="normal"
+        android:textColor="@color/white"
+        android:textSize="16sp"
+        android:layout_marginLeft="120dp"
+        android:layout_marginTop="80dp"/>
+
+    <TextView
+        android:id="@+id/email"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="aldioyohanes229@gmail.com"
+        android:textColor="@color/white"
+        android:textStyle="normal"
+        android:textSize="16sp"
+        android:layout_marginLeft="120dp"
+        android:layout_marginTop="105dp"/>
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="75dp"
+        android:layout_height="82dp"
+        android:src="@drawable/foto_profile"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="65dp"/>
+
+    <View
+        android:id="@+id/pengaturan_akun"
+        android:layout_width="25dp"
+        android:layout_height="25dp"
+        android:background="@drawable/profileicon"
+        android:layout_marginTop="230dp"
+        android:layout_marginLeft="30dp"/>
+
+    <View
+        android:id="@+id/dompet"
+        android:layout_width="25dp"
+        android:layout_height="25dp"
+        android:background="@drawable/payment_check"
+        android:layout_marginTop="280dp"
+        android:layout_marginLeft="30dp"/>
+
+    <View
+        android:id="@+id/notifikasi1"
+        android:layout_width="25dp"
+        android:layout_height="25dp"
+        android:background="@drawable/notifications"
+        android:layout_marginTop="330dp"
+        android:layout_marginLeft="30dp"/>
+
+    <View
+        android:id="@+id/bantuan"
+        android:layout_width="25dp"
+        android:layout_height="25dp"
+        android:background="@drawable/help"
+        android:layout_marginTop="380dp"
+        android:layout_marginLeft="30dp"/>
+
+    <View
+        android:id="@+id/tentang_kami"
+        android:layout_width="25dp"
+        android:layout_height="25dp"
+        android:background="@drawable/info"
+        android:layout_marginTop="430dp"
+        android:layout_marginLeft="30dp"
+        />
+
+    <View
+        android:id="@+id/nav1"
+        android:layout_width="25dp"
+        android:layout_height="25dp"
+        android:background="@drawable/baseline_navigate_next_24"
+        android:layout_marginTop="230dp"
+        android:layout_marginLeft="350dp"/>
+
+    <View
+        android:id="@+id/nav2"
+        android:layout_width="25dp"
+        android:layout_height="25dp"
+        android:background="@drawable/baseline_navigate_next_24"
+        android:layout_marginTop="280dp"
+        android:layout_marginLeft="350dp"/>
+
+    <View
+        android:id="@+id/nav3"
+        android:layout_width="25dp"
+        android:layout_height="25dp"
+        android:background="@drawable/baseline_navigate_next_24"
+        android:layout_marginTop="330dp"
+        android:layout_marginLeft="350dp"/>
+
+    <View
+        android:id="@+id/nav4"
+        android:layout_width="25dp"
+        android:layout_height="25dp"
+        android:background="@drawable/baseline_navigate_next_24"
+        android:layout_marginTop="380dp"
+        android:layout_marginLeft="350dp"/>
+
+    <View
+        android:id="@+id/nav5"
+        android:layout_width="25dp"
+        android:layout_height="25dp"
+        android:background="@drawable/baseline_navigate_next_24"
+        android:layout_marginTop="430dp"
+        android:layout_marginLeft="350dp"/>
+
+    <TextView
+        android:id="@+id/set_akun"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Pengaturan Akun"
+        android:layout_marginTop="232dp"
+        android:layout_marginLeft="70dp"
+        android:textStyle="bold"
+        />
+
+    <TextView
+        android:id="@+id/dompet1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Dompet"
+        android:layout_marginTop="282dp"
+        android:layout_marginLeft="70dp"
+        android:textStyle="bold"/>
+
+    <TextView
+        android:id="@+id/notifikasi2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Notifikasi"
+        android:layout_marginTop="332dp"
+        android:layout_marginLeft="70dp"
+        android:textStyle="bold"/>
+
+    <TextView
+        android:id="@+id/bantuan1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Bantuan"
+        android:layout_marginTop="382dp"
+        android:layout_marginLeft="70dp"
+        android:textStyle="bold"/>
+
+    <TextView
+        android:id="@+id/tentang_kami1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Tentang Kami"
+        android:layout_marginTop="432dp"
+        android:layout_marginLeft="70dp"
+        android:textStyle="bold"/>
+
+
+</FrameLayout>
