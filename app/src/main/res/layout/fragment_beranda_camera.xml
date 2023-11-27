@@ -4,14 +4,33 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/img_capture_sample_profile"
-    tools:context=".ProfilCameraActivity">
+    android:background="@drawable/two_color_background"
+    tools:context=".BerandaCameraFragment">
+
+    <LinearLayout
+        android:id="@+id/linearlayout_capture"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/img_capture_sample"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:contentDescription="@string/todo"
+            android:scaleType="centerCrop"
+            android:src="@drawable/img_capture_sample" />
+
+    </LinearLayout>
 
     <View
         android:id="@+id/view_top"
         android:layout_width="match_parent"
         android:layout_height="100dp"
-        android:background="@color/darkgrey"
+        android:background="@color/black_trasnparent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -42,7 +61,7 @@
         android:id="@+id/view_bottom"
         android:layout_width="match_parent"
         android:layout_height="130dp"
-        android:background="@color/darkgrey"
+        android:background="@color/black_trasnparent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintBottom_toBottomOf="parent" />

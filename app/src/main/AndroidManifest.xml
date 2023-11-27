@@ -16,7 +16,7 @@
             android:name=".TransaksiSudahStatusActivity"
             android:exported="false" />
         <activity
-            android:name=".TransakasiSudahActivity"
+            android:name=".TransaksiSudahActivity"
             android:exported="false" />
         <activity
             android:name=".TransaksiFotoActivity"

@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/two_color_background"
+    tools:context=".BerandaOrderSelesaiFragment">
+
+    <TextView
+        android:id="@+id/tv_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="3dp"
+        android:fontFamily="@font/poppinsbold"
+        android:text="@string/title_beranda_jemput"
+        android:textColor="@color/white"
+        android:textSize="22sp"
+        app:layout_constraintStart_toEndOf="@+id/iv_back"
+        app:layout_constraintTop_toTopOf="@id/iv_back" />
+
+    <ImageView
+        android:id="@+id/iv_back"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="40dp"
+        android:layout_marginStart="30dp"
+        android:src="@drawable/ic_back"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:contentDescription="@string/todo" />
+
+    <View
+        android:id="@+id/separator"
+        android:layout_width="wrap_content"
+        android:layout_height="10dp"
+        android:layout_marginTop="120dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/img_done"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        android:src="@drawable/ic_done"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/separator" />
+
+    <TextView
+        android:id="@+id/tv_title_done"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:fontFamily="@font/poppinsregular"
+        android:text="Selesai"
+        android:textColor="@color/black"
+        android:textSize="25dp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/img_done" />
+
+    <TextView
+        android:id="@+id/tv_subtitle_done"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/poppinsregular"
+        android:paddingHorizontal="30dp"
+        android:text="Koin telah ditambahkan oleh pengepul"
+        android:textColor="@color/black"
+        android:textSize="25dp"
+        android:textStyle="bold"
+        android:gravity="center"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_title_done" />
+
+    <Button
+        android:id="@+id/bt_confirmation_home"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="30dp"
+        android:layout_marginBottom="20dp"
+        android:text="@string/confirm_beranda_jemput_proses"
+        android:fontFamily="@font/poppinsbold"
+        android:textSize="15sp"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        android:background="@drawable/bg_bt"
+        app:layout_constraintBottom_toTopOf="@id/tv_option" />
+
+    <TextView
+        android:id="@+id/tv_option"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="20dp"
+        android:fontFamily="@font/poppinsregular"
+        android:gravity="center"
+        android:text="Atau"
+        android:textColor="@color/black"
+        android:textSize="20dp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/bt_confirmation_history"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+
+    <Button
+        android:id="@+id/bt_confirmation_history"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="30dp"
+        android:layout_marginBottom="40dp"
+        android:text="@string/confirm_beranda_jemput_proses"
+        android:fontFamily="@font/poppinsbold"
+        android:textSize="15sp"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        android:background="@drawable/bg_bt"
+        app:layout_constraintBottom_toBottomOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

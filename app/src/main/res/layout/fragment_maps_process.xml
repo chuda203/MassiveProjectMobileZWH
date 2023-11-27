@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MapsProcessFragment">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toTopOf="@+id/cardView_profile"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/iv_maps_sample"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:scaleType="centerCrop"
+            android:src="@drawable/img_map_sampe_xl"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/iv_maps_mode"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="20dp"
+            android:src="@drawable/ic_maps_mode"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/iv_compass"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="20dp"
+            android:src="@drawable/ic_compass"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/iv_maps_mode" />
+
+        <ImageView
+            android:id="@+id/iv_gps"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="20dp"
+            android:layout_marginBottom="20dp"
+            android:src="@drawable/ic_gps"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardView_profile"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bg_cardview"
+        app:cardCornerRadius="8dp"
+        app:contentPadding="20dp"
+        android:layout_marginHorizontal="30dp"
+        android:layout_marginBottom="50dp"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/iv_maps"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginStart="20dp"
+                android:src="@drawable/ic_maps"
+                app:layout_constraintStart_toStartOf="@id/img_profile"
+                app:layout_constraintTop_toBottomOf="@id/separator_profile"
+                android:contentDescription="@string/todo"/>
+
+            <ImageView
+                android:id="@+id/img_phone"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="20dp"
+                android:src="@drawable/ic_phone"
+                app:layout_constraintEnd_toStartOf="@+id/img_chat"
+                app:layout_constraintTop_toTopOf="@+id/img_chat" />
+
+            <ImageView
+                android:id="@+id/img_chat"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="10dp"
+                android:src="@drawable/ic_chat"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/tv_maps_detail"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/poppinsregular"
+                android:text="@string/maps_detail_beranda_jemput_pilih"
+                android:textSize="11sp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="@+id/tv_process"
+                app:layout_constraintTop_toBottomOf="@id/tv_process" />
+
+            <TextView
+                android:id="@+id/tv_profile"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:fontFamily="@font/poppinsbold"
+                android:text="Aldio Yohanes"
+                app:layout_constraintStart_toEndOf="@+id/img_profile"
+                app:layout_constraintTop_toTopOf="@id/img_profile"
+                app:layout_constraintBottom_toBottomOf="@id/img_profile"/>
+
+            <TextView
+                android:id="@+id/tv_process"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:fontFamily="@font/poppinsregular"
+                android:text="Titik Jemput"
+                android:textSize="11sp"
+                app:layout_constraintStart_toEndOf="@+id/iv_maps"
+                app:layout_constraintTop_toTopOf="@+id/iv_maps" />
+
+
+            <View
+                android:id="@+id/separator_profile"
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:layout_marginTop="5dp"
+                android:background="@color/colorutama"
+                app:layout_constraintTop_toBottomOf="@+id/img_profile" />
+
+            <ImageView
+                android:id="@+id/img_profile"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_profile_order"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                android:contentDescription="@string/todo" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.cardview.widget.CardView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
