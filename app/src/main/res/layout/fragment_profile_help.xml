@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/two_color_background"
-    tools:context=".ProfileHelpFragment">
+    tools:context=".profile.ProfileHelpFragment">
     <ImageView
         android:id="@+id/kembali"
         android:layout_width="42dp"

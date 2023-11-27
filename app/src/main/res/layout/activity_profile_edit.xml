@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/two_color_profilbackground"
-    tools:context=".ProfileEditActivity">
+    tools:context=".profile.ProfileEditActivity">
 
     <TextView
         android:id="@+id/tv_title"

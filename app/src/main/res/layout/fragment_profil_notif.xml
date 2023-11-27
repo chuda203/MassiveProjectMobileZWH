@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/two_color_background"
-    tools:context=".ProfilNotifFragment">
+    tools:context=".profil.ProfilNotifFragment">
 
     <TextView
         android:id="@+id/tvNotif"

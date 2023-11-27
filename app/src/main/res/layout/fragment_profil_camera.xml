@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/img_capture_sample_profile"
-    tools:context=".ProfilCameraFragment">
+    tools:context=".profil.ProfilCameraFragment">
 
     <View
         android:id="@+id/view_top"

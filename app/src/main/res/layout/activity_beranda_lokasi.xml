@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/two_color_background"
-    tools:context=".BerandaLokasiActivity">
+    tools:context=".beranda.BerandaLokasiActivity">
 
     <TextView
         android:id="@+id/tv_title"

@@ -7,22 +7,22 @@
 
     <fragment
         android:id="@+id/orderListFragment"
-        android:name="com.infinite.massiveprojectmobilezwh.OrderListFragment"
+        android:name="com.infinite.massiveprojectmobilezwh.order.OrderListFragment"
         android:label="fragment_order_list"
         tools:layout="@layout/fragment_order_list" />
     <fragment
         android:id="@+id/chatListFragment"
-        android:name="com.infinite.massiveprojectmobilezwh.ChatListFragment"
+        android:name="com.infinite.massiveprojectmobilezwh.chat.ChatListFragment"
         android:label="fragment_chat_list"
         tools:layout="@layout/fragment_chat_list" />
     <fragment
         android:id="@+id/mapsListFragment"
-        android:name="com.infinite.massiveprojectmobilezwh.MapsListFragment"
+        android:name="com.infinite.massiveprojectmobilezwh.maps.MapsListFragment"
         android:label="fragment_maps_list"
         tools:layout="@layout/fragment_maps_list" />
     <fragment
         android:id="@+id/profileListFragment"
-        android:name="com.infinite.massiveprojectmobilezwh.ProfileListFragment"
+        android:name="com.infinite.massiveprojectmobilezwh.profile.ProfileListFragment"
         android:label="fragment_profile_list"
         tools:layout="@layout/fragment_profile_list" />
 </navigation>
