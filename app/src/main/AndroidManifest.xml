@@ -13,6 +13,24 @@
         android:theme="@style/Theme.MassiveProjectMobileZWH"
         tools:targetApi="31">
         <activity
+            android:name=".TransaksiSudahStatusActivity"
+            android:exported="false" />
+        <activity
+            android:name=".TransakasiSudahActivity"
+            android:exported="false" />
+        <activity
+            android:name=".TransaksiFotoActivity"
+            android:exported="false" />
+        <activity
+            android:name=".TransaksiBelumStatusActivity"
+            android:exported="false" />
+        <activity
+            android:name=".TransaksiBelumActivity"
+            android:exported="false" />
+        <activity
+            android:name=".TransaksiListActivity"
+            android:exported="false" />
+        <activity
             android:name=".RegisterActivity"
             android:exported="false" />
         <activity
@@ -37,7 +55,7 @@
             android:name=".SplashOptionActivity"
             android:exported="false" />
         <activity
-            android:name=".SplashActivity"
+            android:name=".MainActivity"
             android:exported="false" />
         <activity
             android:name=".ProfilNotifActivity"
@@ -100,9 +118,6 @@
             android:name=".BerandaOrderSelesaiActivity"
             android:exported="false" />
         <activity
-            android:name=".BerandaJemputKonfirmasiActivity"
-            android:exported="false" />
-        <activity
             android:name=".BerandaProsesActivity"
             android:exported="false" />
         <activity
@@ -133,34 +148,13 @@
             android:name=".BerandaTukarKonfrimActivity"
             android:exported="false" />
         <activity
-            android:name=".TopUpKoinPengepulPembayaran"
-            android:exported="false" />
-        <activity
             android:name=".WalletAddActivity"
-            android:exported="false" />
-        <activity
-            android:name=".DompetPengepulActivity"
             android:exported="false" />
         <activity
             android:name=".BerandaDompetActivity"
             android:exported="false" />
         <activity
-            android:name=".ProfilePenggunaActivity"
-            android:exported="false" />
-        <activity
-            android:name=".activity.profilepengguna.ProfilePengguna"
-            android:exported="false" />
-        <activity
-            android:name=".activity.profilepengepul.ProfileActivity"
-            android:exported="false" />
-        <activity
-            android:name=".profilepengelola.ProfileActivity"
-            android:exported="false" />
-        <activity
-            android:name=".ProfilActivity"
-            android:exported="false" />
-        <activity
-            android:name=".MainActivity"
+            android:name=".SplashActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
