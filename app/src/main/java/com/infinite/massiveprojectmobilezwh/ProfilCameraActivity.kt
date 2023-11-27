@@ -3,9 +3,9 @@ package com.infinite.massiveprojectmobilezwh
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 
-class TupUpKoinActivity : AppCompatActivity() {
+class ProfilCameraActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_tup_up_koin)
+        setContentView(R.layout.activity_profil_camera)
     }
 }

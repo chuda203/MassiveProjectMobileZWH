@@ -3,9 +3,9 @@ package com.infinite.massiveprojectmobilezwh
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 
-class DompetPengepulActivity : AppCompatActivity() {
+class BerandaChatActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_dompet_pengepul)
+        setContentView(R.layout.activity_beranda_chat)
     }
 }

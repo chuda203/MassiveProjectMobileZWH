@@ -13,6 +13,21 @@
         android:theme="@style/Theme.MassiveProjectMobileZWH"
         tools:targetApi="31">
         <activity
+            android:name=".RegisterActivity"
+            android:exported="false" />
+        <activity
+            android:name=".LoginActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ProfilCameraActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ProfilEditActivity"
+            android:exported="false" />
+        <activity
+            android:name=".BerandaChatActivity"
+            android:exported="false" />
+        <activity
             android:name=".DaftarActivity"
             android:exported="false" />
         <activity
@@ -100,7 +115,7 @@
             android:name=".BerandaUpfotoActivity"
             android:exported="false" />
         <activity
-            android:name=".BerandaCaptureActivity"
+            android:name=".BerandaCameraActivity"
             android:exported="false" />
         <activity
             android:name=".BerandaLokasiActivity"
@@ -121,7 +136,7 @@
             android:name=".TopUpKoinPengepulPembayaran"
             android:exported="false" />
         <activity
-            android:name=".TupUpKoinActivity"
+            android:name=".WalletAddActivity"
             android:exported="false" />
         <activity
             android:name=".DompetPengepulActivity"
