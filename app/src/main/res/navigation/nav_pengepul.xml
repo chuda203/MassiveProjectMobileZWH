@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_pengepul"
+    app:startDestination="@id/mapsListFragment">
+
+    <fragment
+        android:id="@+id/orderListFragment"
+        android:name="com.infinite.massiveprojectmobilezwh.OrderListFragment"
+        android:label="fragment_order_list"
+        tools:layout="@layout/fragment_order_list" />
+    <fragment
+        android:id="@+id/chatListFragment"
+        android:name="com.infinite.massiveprojectmobilezwh.ChatListFragment"
+        android:label="fragment_chat_list"
+        tools:layout="@layout/fragment_chat_list" />
+    <fragment
+        android:id="@+id/mapsListFragment"
+        android:name="com.infinite.massiveprojectmobilezwh.MapsListFragment"
+        android:label="fragment_maps_list"
+        tools:layout="@layout/fragment_maps_list" />
+    <fragment
+        android:id="@+id/profileListFragment"
+        android:name="com.infinite.massiveprojectmobilezwh.ProfileListFragment"
+        android:label="fragment_profile_list"
+        tools:layout="@layout/fragment_profile_list" />
+</navigation>

@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_pengguna"
+    app:startDestination="@id/berandaListFragment">
+
+    <fragment
+        android:id="@+id/profilListFragment"
+        android:name="com.infinite.massiveprojectmobilezwh.ProfilListFragment"
+        android:label="fragment_profil_list"
+        tools:layout="@layout/fragment_profil_list" />
+    <fragment
+        android:id="@+id/berandaListFragment"
+        android:name="com.infinite.massiveprojectmobilezwh.BerandaListFragment"
+        android:label="fragment_beranda_list"
+        tools:layout="@layout/fragment_beranda_list" />
+    <fragment
+        android:id="@+id/transaksiListFragment"
+        android:name="com.infinite.massiveprojectmobilezwh.TransaksiListFragment"
+        android:label="TransaksiListFragment"
+        tools:layout="@layout/fragment_transaksi_list"/>
+    <fragment
+        android:id="@+id/transaksiBelumFragment"
+        android:name="com.infinite.massiveprojectmobilezwh.TransaksiBelumFragment"
+        android:label="fragment_transaksi_belum"
+        tools:layout="@layout/fragment_transaksi_belum" />
+    <fragment
+        android:id="@+id/transaksiSudahFragment"
+        android:name="com.infinite.massiveprojectmobilezwh.TransaksiSudahFragment"
+        android:label="TransaksiSudahFragment"
+        tools:layout="@layout/activity_transakasi_sudah"/>
+    <fragment
+        android:id="@+id/daftarFragment"
+        android:name="com.infinite.massiveprojectmobilezwh.DaftarFragment"
+        android:label="fragment_daftar"
+        tools:layout="@layout/fragment_daftar" />
+</navigation>
