@@ -13,148 +13,151 @@
         android:theme="@style/Theme.MassiveProjectMobileZWH"
         tools:targetApi="31">
         <activity
-            android:name=".TransaksiSudahStatusActivity"
+            android:name=".transaksi.TransaksiSudahStatusActivity"
             android:exported="false" />
         <activity
-            android:name=".TransakasiSudahActivity"
+            android:name=".transaksi.TransaksiSudahActivity"
             android:exported="false" />
         <activity
-            android:name=".TransaksiFotoActivity"
+            android:name=".transaksi.TransaksiFotoActivity"
             android:exported="false" />
         <activity
-            android:name=".TransaksiBelumStatusActivity"
+            android:name=".transaksi.TransaksiBelumStatusActivity"
             android:exported="false" />
         <activity
-            android:name=".TransaksiBelumActivity"
+            android:name=".transaksi.TransaksiBelumActivity"
             android:exported="false" />
         <activity
-            android:name=".TransaksiListActivity"
+            android:name=".transaksi.TransaksiListActivity"
             android:exported="false" />
         <activity
-            android:name=".RegisterActivity"
+            android:name=".ui.RegisterActivity"
             android:exported="false" />
         <activity
-            android:name=".LoginActivity"
+            android:name=".ui.LoginActivity"
             android:exported="false" />
         <activity
-            android:name=".ProfilCameraActivity"
+            android:name=".profil.ProfilCameraActivity"
             android:exported="false" />
         <activity
-            android:name=".ProfilEditActivity"
+            android:name=".profil.ProfilEditActivity"
             android:exported="false" />
         <activity
-            android:name=".BerandaChatActivity"
+            android:name=".beranda.BerandaChatActivity"
             android:exported="false" />
         <activity
-            android:name=".DaftarActivity"
+            android:name=".ui.DaftarActivity"
             android:exported="false" />
         <activity
-            android:name=".MasukActivity"
+            android:name=".ui.MasukActivity"
             android:exported="false" />
         <activity
-            android:name=".SplashOptionActivity"
+            android:name=".ui.SplashOptionActivity"
             android:exported="false" />
         <activity
-            android:name=".MainActivity"
+            android:name=".ui.MainActivity"
             android:exported="false" />
         <activity
-            android:name=".ProfilNotifActivity"
+            android:name=".profil.ProfilNotifActivity"
             android:exported="false" />
         <activity
-            android:name=".ProfileCameraActivity"
+            android:name=".profile.ProfileCameraActivity"
             android:exported="false" />
         <activity
-            android:name=".ProfileEditActivity"
+            android:name=".profile.ProfileEditActivity"
             android:exported="false" />
         <activity
-            android:name=".WalletPaymentActivity"
+            android:name=".wallet.WalletPaymentActivity"
             android:exported="false" />
         <activity
-            android:name=".WalletHistoryActivity"
+            android:name=".wallet.WalletHistoryActivity"
             android:exported="false" />
         <activity
-            android:name=".WalletListActivity"
+            android:name=".wallet.WalletListActivity"
             android:exported="false" />
         <activity
-            android:name=".ProfileNotifActivity"
+            android:name=".profile.ProfileNotifActivity"
             android:exported="false" />
         <activity
-            android:name=".ProfileHelpActivity"
+            android:name=".profile.ProfileHelpActivity"
             android:exported="false" />
         <activity
-            android:name=".ProfileAboutActivity"
+            android:name=".profile.ProfileAboutActivity"
             android:exported="false" />
         <activity
-            android:name=".ProfileListActivity"
+            android:name=".profile.ProfileListActivity"
             android:exported="false" />
         <activity
-            android:name=".ChatConversationActivity"
+            android:name=".chat.ChatConversationActivity"
             android:exported="false" />
         <activity
-            android:name=".ChatListActivity"
+            android:name=".chat.ChatListActivity"
             android:exported="false" />
         <activity
-            android:name=".OrderDoneActivity"
+            android:name=".order.OrderDoneActivity"
             android:exported="false" />
         <activity
-            android:name=".MapsProcessActivity"
+            android:name=".maps.MapsProcessActivity"
             android:exported="false" />
         <activity
-            android:name=".OrderDetailActivity"
+            android:name=".order.OrderDetailActivity"
             android:exported="false" />
         <activity
-            android:name=".MapsListActivity"
+            android:name=".maps.MapsListActivity"
             android:exported="false" />
         <activity
-            android:name=".OrderHistoryActivity"
+            android:name=".order.OrderHistoryActivity"
             android:exported="false" />
         <activity
-            android:name=".OrderRegionActivity"
+            android:name=".order.OrderRegionActivity"
             android:exported="false" />
         <activity
-            android:name=".OrderListActivity"
+            android:name=".order.OrderListActivity"
             android:exported="false" />
         <activity
-            android:name=".BerandaOrderSelesaiActivity"
+            android:name=".beranda.BerandaOrderSelesaiActivity"
             android:exported="false" />
         <activity
-            android:name=".BerandaProsesActivity"
+            android:name=".beranda.BerandaProsesActivity"
             android:exported="false" />
         <activity
-            android:name=".BerandaCariActivity"
+            android:name=".beranda.BerandaCariActivity"
             android:exported="false" />
         <activity
-            android:name=".BerandaOrderActivity"
+            android:name=".beranda.BerandaOrderActivity"
             android:exported="false" />
         <activity
-            android:name=".BerandaUpfotoActivity"
+            android:name=".beranda.BerandaUpfotoActivity"
             android:exported="false" />
         <activity
-            android:name=".BerandaCameraActivity"
+            android:name=".beranda.BerandaCameraActivity"
             android:exported="false" />
         <activity
-            android:name=".BerandaLokasiActivity"
+            android:name=".beranda.BerandaLokasiActivity"
             android:exported="false" />
         <activity
-            android:name=".BerandaListActivity"
+            android:name=".beranda.BerandaListActivity"
             android:exported="false" />
         <activity
-            android:name=".BerandaTukarActivity"
+            android:name=".dompet.BerandaTukarActivity"
             android:exported="false" />
         <activity
-            android:name=".BerandaTukarSelesaiActivity"
+            android:name=".dompet.BerandaTukarSelesaiActivity"
             android:exported="false" />
         <activity
-            android:name=".BerandaTukarKonfrimActivity"
+            android:name=".dompet.BerandaTukarKonfrimActivity"
             android:exported="false" />
         <activity
-            android:name=".WalletAddActivity"
+            android:name=".wallet.WalletAddActivity"
             android:exported="false" />
         <activity
-            android:name=".BerandaDompetActivity"
+            android:name=".dompet.BerandaDompetActivity"
             android:exported="false" />
         <activity
-            android:name=".SplashActivity"
+            android:name=".profil.ProfilBantuanActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.SplashActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

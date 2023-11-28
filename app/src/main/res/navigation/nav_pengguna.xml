@@ -7,29 +7,29 @@
 
     <fragment
         android:id="@+id/profilListFragment"
-        android:name="com.infinite.massiveprojectmobilezwh.ProfilListFragment"
+        android:name="com.infinite.massiveprojectmobilezwh.profil.ProfilListFragment"
         android:label="fragment_profil_list"
         tools:layout="@layout/fragment_profil_list" />
     <fragment
         android:id="@+id/berandaListFragment"
-        android:name="com.infinite.massiveprojectmobilezwh.BerandaListFragment"
+        android:name="com.infinite.massiveprojectmobilezwh.beranda.BerandaListFragment"
         android:label="fragment_beranda_list"
         tools:layout="@layout/fragment_beranda_list" />
     <fragment
         android:id="@+id/transaksiListFragment"
-        android:name="com.infinite.massiveprojectmobilezwh.TransaksiListFragment"
+        android:name="com.infinite.massiveprojectmobilezwh.transaksi.TransaksiListFragment"
         android:label="TransaksiListFragment"
         tools:layout="@layout/fragment_transaksi_list"/>
     <fragment
         android:id="@+id/transaksiBelumFragment"
-        android:name="com.infinite.massiveprojectmobilezwh.TransaksiBelumFragment"
+        android:name="com.infinite.massiveprojectmobilezwh.transaksi.TransaksiBelumFragment"
         android:label="fragment_transaksi_belum"
         tools:layout="@layout/fragment_transaksi_belum" />
     <fragment
         android:id="@+id/transaksiSudahFragment"
-        android:name="com.infinite.massiveprojectmobilezwh.TransaksiSudahFragment"
+        android:name="com.infinite.massiveprojectmobilezwh.transaksi.TransaksiSudahFragment"
         android:label="TransaksiSudahFragment"
-        tools:layout="@layout/activity_transakasi_sudah"/>
+        tools:layout="@layout/activity_transaksi_sudah"/>
     <fragment
         android:id="@+id/daftarFragment"
         android:name="com.infinite.massiveprojectmobilezwh.DaftarFragment"

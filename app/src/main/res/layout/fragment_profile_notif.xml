@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/two_color_background"
+    tools:context=".profile.ProfileNotifFragment">
+
+    <TextView
+        android:id="@+id/tvNotif"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="28dp"
+        android:layout_marginTop="40dp"
+        android:fontFamily="@font/poppinsbold"
+        android:text="Notifikasi"
+        android:textColor="@color/white"
+        android:textSize="25sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.019"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/notif1"
+        android:layout_width="350dp"
+        android:layout_height="40dp"
+        app:cardBackgroundColor="@color/green2"
+        app:cardCornerRadius="15dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.491"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvNotif"
+        app:layout_constraintVertical_bias="0.144">
+        <TextView
+            android:id="@+id/tvNotif1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:paddingStart="60dp"
+            android:paddingEnd="60dp"
+            android:text="Hore! Transaksi pertamamu berhasil"
+            tools:layout_editor_absoluteX="25dp"
+            tools:layout_editor_absoluteY="324dp" />
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/notif2"
+        android:layout_width="350dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="36dp"
+        app:cardBackgroundColor="@color/green2"
+        app:cardCornerRadius="15dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.491"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/notif1">
+
+        <TextView
+            android:id="@+id/tvNotif2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:paddingStart="60dp"
+            android:paddingEnd="60dp"
+            android:text="Hore! Transaksi pertamamu berhasil"
+            tools:layout_editor_absoluteX="25dp"
+            tools:layout_editor_absoluteY="324dp" />
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/notif3"
+        android:layout_width="350dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="36dp"
+        app:cardBackgroundColor="@color/green2"
+        app:cardCornerRadius="15dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.491"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/notif2"
+        app:layout_constraintVertical_bias="0.0">
+
+        <TextView
+            android:id="@+id/tvNotif3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:paddingStart="60dp"
+            android:paddingEnd="60dp"
+            android:text="Hore! Transaksi pertamamu berhasil"
+            tools:layout_editor_absoluteX="25dp"
+            tools:layout_editor_absoluteY="324dp" />
+    </androidx.cardview.widget.CardView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

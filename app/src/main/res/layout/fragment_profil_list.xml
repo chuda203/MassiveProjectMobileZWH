@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/colorutama"
-    tools:context=".ProfilListFragment">
+    tools:context=".profil.ProfilListFragment">
 
     <!-- TODO: Update blank fragment layout -->
     <TextView
@@ -18,14 +18,6 @@
         android:textStyle="bold"
         android:textColor="@color/white"
         android:text="Profile" />
-
-    <View
-        android:id="@+id/foreground"
-        android:layout_width="match_parent"
-        android:layout_height="560dp"
-        android:layout_marginTop="170dp"
-        android:background="@drawable/rounded"
-        />
 
     <View
         android:id="@+id/notifikasi"
@@ -64,6 +56,14 @@
         android:src="@drawable/foto_profile"
         android:layout_marginLeft="30dp"
         android:layout_marginTop="65dp"/>
+
+    <View
+        android:id="@+id/foreground"
+        android:layout_width="match_parent"
+        android:layout_height="560dp"
+        android:layout_marginTop="170dp"
+        android:background="@drawable/rounded"
+        />
 
     <View
         android:id="@+id/pengaturan_akun"

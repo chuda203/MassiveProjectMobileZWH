@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/two_color_background"
-    tools:context=".BerandaTukarSelesaiActivity">
+    tools:context=".dompet.BerandaTukarSelesaiActivity">
 
     <ImageView
         android:id="@+id/back"
@@ -73,6 +73,7 @@
         app:layout_constraintTop_toBottomOf="@id/img_ceklis"/>
 
     <Button
+        android:id="@+id/bt_confirmation"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Lanjutkan"

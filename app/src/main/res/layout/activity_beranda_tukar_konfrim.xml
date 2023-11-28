@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/two_color_background"
-    tools:context=".BerandaTukarKonfrimActivity">
+    tools:context=".dompet.BerandaTukarKonfrimActivity">
 
     <ImageView
         android:id="@+id/back"
@@ -128,6 +128,7 @@
 
 
     <Button
+        android:id="@+id/bt_confirmation"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Lanjutkan"
