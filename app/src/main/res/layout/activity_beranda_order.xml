@@ -69,13 +69,12 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent">
 
-            <ImageView
+            <fragment
                 android:id="@+id/iv_capture_preview"
+                android:name="com.infinite.massiveprojectmobilezwh.beranda.BerandaOrderFragment"
                 android:layout_width="100dp"
                 android:layout_height="140dp"
-                android:contentDescription="@string/todo"
                 android:scaleType="centerCrop"
-                android:src="@drawable/img_capture_sample_preview"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />

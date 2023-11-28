@@ -1,11 +1,14 @@
 package com.infinite.massiveprojectmobilezwh.profile
 
+import android.content.Intent
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Button
 import com.infinite.massiveprojectmobilezwh.R
+import com.infinite.massiveprojectmobilezwh.profil.ProfilCameraActivity
 
 // TODO: Rename parameter arguments, choose names that match
 // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -37,6 +40,17 @@ class ProfileEditFragment : Fragment() {
         // Inflate the layout for this fragment
         return inflater.inflate(R.layout.fragment_profile_edit, container, false)
     }
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+        val btn_confrim : Button = view.findViewById(R.id.bt_confirmation)
+
+        btn_confrim.setOnClickListener {
+            val intent = Intent(requireActivity(), ProfilCameraActivity::class.java)
+            startActivity(intent)
+        }
+
+    }
+
 
     companion object {
         /**

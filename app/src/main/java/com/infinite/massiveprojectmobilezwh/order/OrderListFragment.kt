@@ -1,11 +1,15 @@
 package com.infinite.massiveprojectmobilezwh.order
 
+import android.content.Intent
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Button
+import androidx.cardview.widget.CardView
 import com.infinite.massiveprojectmobilezwh.R
+import com.infinite.massiveprojectmobilezwh.beranda.BerandaCameraActivity
 
 // TODO: Rename parameter arguments, choose names that match
 // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -37,6 +41,22 @@ class OrderListFragment : Fragment() {
         // Inflate the layout for this fragment
         return inflater.inflate(R.layout.fragment_order_list, container, false)
     }
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+        val btn_region : CardView = view.findViewById(R.id.cardView_region1)
+        val btn_history : CardView = view.findViewById(R.id.cardView_history)
+
+        btn_region.setOnClickListener {
+            val intent = Intent(requireActivity(), OrderRegionActivity::class.java)
+            startActivity(intent)
+        }
+        btn_history.setOnClickListener {
+            val intent = Intent(requireActivity(), OrderHistoryActivity::class.java)
+            startActivity(intent)
+        }
+
+    }
+
 
     companion object {
         /**

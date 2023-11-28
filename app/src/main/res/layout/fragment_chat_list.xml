@@ -7,6 +7,7 @@
     android:background="@drawable/two_color_background"
     tools:context=".chat.ChatListFragment">
 
+
     <TextView
         android:id="@+id/tv_title"
         android:layout_width="wrap_content"
@@ -64,8 +65,8 @@
                         android:id="@+id/tv_profile1"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_marginTop="5dp"
                         android:layout_marginStart="20dp"
+                        android:layout_marginTop="5dp"
                         android:fontFamily="@font/poppinsbold"
                         android:text="Aldio Yohanes"
                         app:layout_constraintStart_toEndOf="@+id/iv_maps1"
@@ -75,8 +76,8 @@
                         android:id="@+id/tv_subtitle1"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Oke bang ditunggu"
                         android:fontFamily="@font/poppinsregular"
+                        android:text="Oke bang ditunggu"
                         android:textSize="11sp"
                         app:layout_constraintStart_toStartOf="@+id/tv_profile1"
                         app:layout_constraintTop_toBottomOf="@+id/tv_profile1" />
@@ -85,10 +86,10 @@
                         android:id="@+id/iv_maps1"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        android:contentDescription="@string/todo"
                         android:src="@drawable/ic_profile_order"
                         app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toTopOf="parent"
-                        android:contentDescription="@string/todo"/>
+                        app:layout_constraintTop_toTopOf="parent" />
 
                     <TextView
                         android:id="@+id/tv_distance1"
@@ -128,8 +129,8 @@
                         android:id="@+id/tv_profile2"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_marginTop="5dp"
                         android:layout_marginStart="20dp"
+                        android:layout_marginTop="5dp"
                         android:fontFamily="@font/poppinsbold"
                         android:text="Rizky Pramudia"
                         app:layout_constraintStart_toEndOf="@+id/iv_maps2"
@@ -139,8 +140,8 @@
                         android:id="@+id/tv_subtitle2"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Dah sampe kak ?"
                         android:fontFamily="@font/poppinsregular"
+                        android:text="Dah sampe kak ?"
                         android:textSize="11sp"
                         app:layout_constraintStart_toStartOf="@+id/tv_profile2"
                         app:layout_constraintTop_toBottomOf="@+id/tv_profile2" />
@@ -149,10 +150,10 @@
                         android:id="@+id/iv_maps2"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        android:contentDescription="@string/todo"
                         android:src="@drawable/ic_profile_process"
                         app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toTopOf="parent"
-                        android:contentDescription="@string/todo"/>
+                        app:layout_constraintTop_toTopOf="parent" />
 
                     <TextView
                         android:id="@+id/tv_distance2"
@@ -192,8 +193,8 @@
                         android:id="@+id/tv_profile3a"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_marginTop="5dp"
                         android:layout_marginStart="20dp"
+                        android:layout_marginTop="5dp"
                         android:fontFamily="@font/poppinsbold"
                         android:text="Aldio Yohanes"
                         app:layout_constraintStart_toEndOf="@+id/iv_maps3a"
@@ -203,8 +204,8 @@
                         android:id="@+id/tv_subtitle3a"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Oke bang ditunggu"
                         android:fontFamily="@font/poppinsregular"
+                        android:text="Oke bang ditunggu"
                         android:textSize="11sp"
                         app:layout_constraintStart_toStartOf="@+id/tv_profile3a"
                         app:layout_constraintTop_toBottomOf="@+id/tv_profile3a" />
@@ -213,10 +214,10 @@
                         android:id="@+id/iv_maps3a"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        android:contentDescription="@string/todo"
                         android:src="@drawable/ic_profile_order"
                         app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toTopOf="parent"
-                        android:contentDescription="@string/todo"/>
+                        app:layout_constraintTop_toTopOf="parent" />
 
                     <TextView
                         android:id="@+id/tv_distance3a"
@@ -256,8 +257,8 @@
                         android:id="@+id/tv_profile3"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_marginTop="5dp"
                         android:layout_marginStart="20dp"
+                        android:layout_marginTop="5dp"
                         android:fontFamily="@font/poppinsbold"
                         android:text="Rizky Pramudia"
                         app:layout_constraintStart_toEndOf="@+id/iv_maps3"
@@ -267,8 +268,8 @@
                         android:id="@+id/tv_subtitle3"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Dah sampe kak ?"
                         android:fontFamily="@font/poppinsregular"
+                        android:text="Dah sampe kak ?"
                         android:textSize="11sp"
                         app:layout_constraintStart_toStartOf="@+id/tv_profile3"
                         app:layout_constraintTop_toBottomOf="@+id/tv_profile3" />
@@ -277,10 +278,10 @@
                         android:id="@+id/iv_maps3"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        android:contentDescription="@string/todo"
                         android:src="@drawable/ic_profile_process"
                         app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toTopOf="parent"
-                        android:contentDescription="@string/todo"/>
+                        app:layout_constraintTop_toTopOf="parent" />
 
                     <TextView
                         android:id="@+id/tv_distance3"
@@ -320,8 +321,8 @@
                         android:id="@+id/tv_profile4"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_marginTop="5dp"
                         android:layout_marginStart="20dp"
+                        android:layout_marginTop="5dp"
                         android:fontFamily="@font/poppinsbold"
                         android:text="Aldio Yohanes"
                         app:layout_constraintStart_toEndOf="@+id/iv_maps4"
@@ -331,8 +332,8 @@
                         android:id="@+id/tv_subtitle4"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Oke bang ditunggu"
                         android:fontFamily="@font/poppinsregular"
+                        android:text="Oke bang ditunggu"
                         android:textSize="11sp"
                         app:layout_constraintStart_toStartOf="@+id/tv_profile4"
                         app:layout_constraintTop_toBottomOf="@+id/tv_profile4" />
@@ -341,10 +342,10 @@
                         android:id="@+id/iv_maps4"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        android:contentDescription="@string/todo"
                         android:src="@drawable/ic_profile_order"
                         app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toTopOf="parent"
-                        android:contentDescription="@string/todo"/>
+                        app:layout_constraintTop_toTopOf="parent" />
 
                     <TextView
                         android:id="@+id/tv_distance4"
@@ -384,8 +385,8 @@
                         android:id="@+id/tv_profile5"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_marginTop="5dp"
                         android:layout_marginStart="20dp"
+                        android:layout_marginTop="5dp"
                         android:fontFamily="@font/poppinsbold"
                         android:text="Rizky Pramudia"
                         app:layout_constraintStart_toEndOf="@+id/iv_maps5"
@@ -395,8 +396,8 @@
                         android:id="@+id/tv_subtitle5"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Dah sampe kak ?"
                         android:fontFamily="@font/poppinsregular"
+                        android:text="Dah sampe kak ?"
                         android:textSize="11sp"
                         app:layout_constraintStart_toStartOf="@+id/tv_profile5"
                         app:layout_constraintTop_toBottomOf="@+id/tv_profile5" />
@@ -405,10 +406,10 @@
                         android:id="@+id/iv_maps5"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        android:contentDescription="@string/todo"
                         android:src="@drawable/ic_profile_process"
                         app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toTopOf="parent"
-                        android:contentDescription="@string/todo"/>
+                        app:layout_constraintTop_toTopOf="parent" />
 
                     <TextView
                         android:id="@+id/tv_distance5"
@@ -448,8 +449,8 @@
                         android:id="@+id/tv_profile6"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_marginTop="5dp"
                         android:layout_marginStart="20dp"
+                        android:layout_marginTop="5dp"
                         android:fontFamily="@font/poppinsbold"
                         android:text="Aldio Yohanes"
                         app:layout_constraintStart_toEndOf="@+id/iv_maps6"
@@ -459,8 +460,8 @@
                         android:id="@+id/tv_subtitle6"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Oke bang ditunggu"
                         android:fontFamily="@font/poppinsregular"
+                        android:text="Oke bang ditunggu"
                         android:textSize="11sp"
                         app:layout_constraintStart_toStartOf="@+id/tv_profile6"
                         app:layout_constraintTop_toBottomOf="@+id/tv_profile6" />
@@ -469,10 +470,10 @@
                         android:id="@+id/iv_maps6"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        android:contentDescription="@string/todo"
                         android:src="@drawable/ic_profile_order"
                         app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toTopOf="parent"
-                        android:contentDescription="@string/todo"/>
+                        app:layout_constraintTop_toTopOf="parent" />
 
                     <TextView
                         android:id="@+id/tv_distance6"
@@ -512,8 +513,8 @@
                         android:id="@+id/tv_profile7"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_marginTop="5dp"
                         android:layout_marginStart="20dp"
+                        android:layout_marginTop="5dp"
                         android:fontFamily="@font/poppinsbold"
                         android:text="Rizky Pramudia"
                         app:layout_constraintStart_toEndOf="@+id/iv_maps7"
@@ -523,8 +524,8 @@
                         android:id="@+id/tv_subtitle7"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Dah sampe kak ?"
                         android:fontFamily="@font/poppinsregular"
+                        android:text="Dah sampe kak ?"
                         android:textSize="11sp"
                         app:layout_constraintStart_toStartOf="@+id/tv_profile7"
                         app:layout_constraintTop_toBottomOf="@+id/tv_profile7" />
@@ -533,10 +534,10 @@
                         android:id="@+id/iv_maps7"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        android:contentDescription="@string/todo"
                         android:src="@drawable/ic_profile_process"
                         app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toTopOf="parent"
-                        android:contentDescription="@string/todo"/>
+                        app:layout_constraintTop_toTopOf="parent" />
 
                     <TextView
                         android:id="@+id/tv_distance7"
@@ -576,8 +577,8 @@
                         android:id="@+id/tv_profile8"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_marginTop="5dp"
                         android:layout_marginStart="20dp"
+                        android:layout_marginTop="5dp"
                         android:fontFamily="@font/poppinsbold"
                         android:text="Aldio Yohanes"
                         app:layout_constraintStart_toEndOf="@+id/iv_maps8"
@@ -587,8 +588,8 @@
                         android:id="@+id/tv_subtitle8"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Oke bang ditunggu"
                         android:fontFamily="@font/poppinsregular"
+                        android:text="Oke bang ditunggu"
                         android:textSize="11sp"
                         app:layout_constraintStart_toStartOf="@+id/tv_profile8"
                         app:layout_constraintTop_toBottomOf="@+id/tv_profile8" />
@@ -597,10 +598,10 @@
                         android:id="@+id/iv_maps8"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        android:contentDescription="@string/todo"
                         android:src="@drawable/ic_profile_order"
                         app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toTopOf="parent"
-                        android:contentDescription="@string/todo"/>
+                        app:layout_constraintTop_toTopOf="parent" />
 
                     <TextView
                         android:id="@+id/tv_distance8"
@@ -640,8 +641,8 @@
                         android:id="@+id/tv_profile9"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_marginTop="5dp"
                         android:layout_marginStart="20dp"
+                        android:layout_marginTop="5dp"
                         android:fontFamily="@font/poppinsbold"
                         android:text="Rizky Pramudia"
                         app:layout_constraintStart_toEndOf="@+id/iv_maps9"
@@ -651,8 +652,8 @@
                         android:id="@+id/tv_subtitle9"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Dah sampe kak ?"
                         android:fontFamily="@font/poppinsregular"
+                        android:text="Dah sampe kak ?"
                         android:textSize="11sp"
                         app:layout_constraintStart_toStartOf="@+id/tv_profile9"
                         app:layout_constraintTop_toBottomOf="@+id/tv_profile9" />
@@ -661,10 +662,10 @@
                         android:id="@+id/iv_maps9"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        android:contentDescription="@string/todo"
                         android:src="@drawable/ic_profile_process"
                         app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toTopOf="parent"
-                        android:contentDescription="@string/todo"/>
+                        app:layout_constraintTop_toTopOf="parent" />
 
                     <TextView
                         android:id="@+id/tv_distance9"

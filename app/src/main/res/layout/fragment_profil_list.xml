@@ -20,14 +20,6 @@
         android:text="Profile" />
 
     <View
-        android:id="@+id/foreground"
-        android:layout_width="match_parent"
-        android:layout_height="560dp"
-        android:layout_marginTop="170dp"
-        android:background="@drawable/rounded"
-        />
-
-    <View
         android:id="@+id/notifikasi"
         android:layout_width="30dp"
         android:layout_height="30dp"
@@ -64,6 +56,14 @@
         android:src="@drawable/foto_profile"
         android:layout_marginLeft="30dp"
         android:layout_marginTop="65dp"/>
+
+    <View
+        android:id="@+id/foreground"
+        android:layout_width="match_parent"
+        android:layout_height="560dp"
+        android:layout_marginTop="170dp"
+        android:background="@drawable/rounded"
+        />
 
     <View
         android:id="@+id/pengaturan_akun"

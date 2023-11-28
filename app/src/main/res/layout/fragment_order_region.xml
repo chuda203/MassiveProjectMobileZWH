@@ -4,42 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/two_color_background"
     tools:context=".order.OrderRegionFragment">
-
-
-    <TextView
-        android:id="@+id/tv_title"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="20dp"
-        android:layout_marginTop="3dp"
-        android:fontFamily="@font/poppinsbold"
-        android:text="Pesanan"
-        android:textColor="@color/white"
-        android:textSize="22sp"
-        app:layout_constraintStart_toEndOf="@+id/iv_back"
-        app:layout_constraintTop_toTopOf="@id/iv_back" />
-
-    <ImageView
-        android:id="@+id/iv_back"
-        android:layout_width="40dp"
-        android:layout_height="40dp"
-        android:layout_marginTop="40dp"
-        android:layout_marginStart="30dp"
-        android:src="@drawable/ic_back"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        android:contentDescription="@string/todo" />
-
-    <View
-        android:id="@+id/separator"
-        android:layout_width="wrap_content"
-        android:layout_height="10dp"
-        android:layout_marginTop="120dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
 
 
     <ScrollView
@@ -47,7 +12,7 @@
         android:layout_height="wrap_content"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/separator">
+        app:layout_constraintTop_toTopOf="parent">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -77,10 +42,10 @@
                         android:id="@+id/tv_profile1"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_marginTop="3dp"
                         android:layout_marginStart="3dp"
-                        android:text="Aldio Yohanes, Blimbing"
+                        android:layout_marginTop="3dp"
                         android:fontFamily="@font/poppinsbold"
+                        android:text="Aldio Yohanes, Blimbing"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toTopOf="parent" />
 
@@ -88,8 +53,8 @@
                         android:id="@+id/tv_subtitle1"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Titik Jemput"
                         android:fontFamily="@font/poppinsregular"
+                        android:text="Titik Jemput"
                         android:textSize="11sp"
                         app:layout_constraintStart_toStartOf="@+id/tv_maps_detail1"
                         app:layout_constraintTop_toBottomOf="@+id/tv_profile1" />
@@ -98,18 +63,18 @@
                         android:id="@+id/iv_maps1"
                         android:layout_width="30dp"
                         android:layout_height="30dp"
+                        android:contentDescription="@string/todo"
                         android:src="@drawable/ic_maps"
                         app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toBottomOf="@id/tv_subtitle1"
-                        android:contentDescription="@string/todo"/>
+                        app:layout_constraintTop_toBottomOf="@id/tv_subtitle1" />
 
                     <TextView
                         android:id="@+id/tv_maps_detail1"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginStart="3dp"
-                        android:text="@string/maps_detail_beranda_jemput_pilih"
                         android:fontFamily="@font/poppinsregular"
+                        android:text="@string/maps_detail_beranda_jemput_pilih"
                         android:textSize="12sp"
                         android:textStyle="bold"
                         app:layout_constraintStart_toEndOf="@+id/iv_maps1"
@@ -287,10 +252,10 @@
                         android:id="@+id/tv_profile3"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_marginTop="3dp"
                         android:layout_marginStart="3dp"
-                        android:text="Aldio Yohanes, Blimbing"
+                        android:layout_marginTop="3dp"
                         android:fontFamily="@font/poppinsbold"
+                        android:text="Aldio Yohanes, Blimbing"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toTopOf="parent" />
 
@@ -298,8 +263,8 @@
                         android:id="@+id/tv_subtitle3"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Titik Jemput"
                         android:fontFamily="@font/poppinsregular"
+                        android:text="Titik Jemput"
                         android:textSize="11sp"
                         app:layout_constraintStart_toStartOf="@+id/tv_maps_detail3"
                         app:layout_constraintTop_toBottomOf="@+id/tv_profile3" />
@@ -308,18 +273,18 @@
                         android:id="@+id/iv_maps3"
                         android:layout_width="30dp"
                         android:layout_height="30dp"
+                        android:contentDescription="@string/todo"
                         android:src="@drawable/ic_maps"
                         app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toBottomOf="@id/tv_subtitle3"
-                        android:contentDescription="@string/todo"/>
+                        app:layout_constraintTop_toBottomOf="@id/tv_subtitle3" />
 
                     <TextView
                         android:id="@+id/tv_maps_detail3"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginStart="3dp"
-                        android:text="@string/maps_detail_beranda_jemput_pilih"
                         android:fontFamily="@font/poppinsregular"
+                        android:text="@string/maps_detail_beranda_jemput_pilih"
                         android:textSize="12sp"
                         android:textStyle="bold"
                         app:layout_constraintStart_toEndOf="@+id/iv_maps3"
@@ -392,10 +357,10 @@
                         android:id="@+id/tv_profile4"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_marginTop="3dp"
                         android:layout_marginStart="3dp"
-                        android:text="Aldio Yohanes, Blimbing"
+                        android:layout_marginTop="3dp"
                         android:fontFamily="@font/poppinsbold"
+                        android:text="Aldio Yohanes, Blimbing"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toTopOf="parent" />
 
@@ -403,8 +368,8 @@
                         android:id="@+id/tv_subtitle4"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Titik Jemput"
                         android:fontFamily="@font/poppinsregular"
+                        android:text="Titik Jemput"
                         android:textSize="11sp"
                         app:layout_constraintStart_toStartOf="@+id/tv_maps_detail4"
                         app:layout_constraintTop_toBottomOf="@+id/tv_profile4" />
@@ -413,18 +378,18 @@
                         android:id="@+id/iv_maps4"
                         android:layout_width="30dp"
                         android:layout_height="30dp"
+                        android:contentDescription="@string/todo"
                         android:src="@drawable/ic_maps"
                         app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toBottomOf="@id/tv_subtitle4"
-                        android:contentDescription="@string/todo"/>
+                        app:layout_constraintTop_toBottomOf="@id/tv_subtitle4" />
 
                     <TextView
                         android:id="@+id/tv_maps_detail4"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginStart="3dp"
-                        android:text="@string/maps_detail_beranda_jemput_pilih"
                         android:fontFamily="@font/poppinsregular"
+                        android:text="@string/maps_detail_beranda_jemput_pilih"
                         android:textSize="12sp"
                         android:textStyle="bold"
                         app:layout_constraintStart_toEndOf="@+id/iv_maps4"
@@ -497,10 +462,10 @@
                         android:id="@+id/tv_profile5"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_marginTop="3dp"
                         android:layout_marginStart="3dp"
-                        android:text="Aldio Yohanes, Blimbing"
+                        android:layout_marginTop="3dp"
                         android:fontFamily="@font/poppinsbold"
+                        android:text="Aldio Yohanes, Blimbing"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toTopOf="parent" />
 
@@ -508,8 +473,8 @@
                         android:id="@+id/tv_subtitle5"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Titik Jemput"
                         android:fontFamily="@font/poppinsregular"
+                        android:text="Titik Jemput"
                         android:textSize="11sp"
                         app:layout_constraintStart_toStartOf="@+id/tv_maps_detail5"
                         app:layout_constraintTop_toBottomOf="@+id/tv_profile5" />
@@ -518,18 +483,18 @@
                         android:id="@+id/iv_maps5"
                         android:layout_width="30dp"
                         android:layout_height="30dp"
+                        android:contentDescription="@string/todo"
                         android:src="@drawable/ic_maps"
                         app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toBottomOf="@id/tv_subtitle5"
-                        android:contentDescription="@string/todo"/>
+                        app:layout_constraintTop_toBottomOf="@id/tv_subtitle5" />
 
                     <TextView
                         android:id="@+id/tv_maps_detail5"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginStart="3dp"
-                        android:text="@string/maps_detail_beranda_jemput_pilih"
                         android:fontFamily="@font/poppinsregular"
+                        android:text="@string/maps_detail_beranda_jemput_pilih"
                         android:textSize="12sp"
                         android:textStyle="bold"
                         app:layout_constraintStart_toEndOf="@+id/iv_maps5"
@@ -602,10 +567,10 @@
                         android:id="@+id/tv_profile6"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_marginTop="3dp"
                         android:layout_marginStart="3dp"
-                        android:text="Aldio Yohanes, Blimbing"
+                        android:layout_marginTop="3dp"
                         android:fontFamily="@font/poppinsbold"
+                        android:text="Aldio Yohanes, Blimbing"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toTopOf="parent" />
 
@@ -613,8 +578,8 @@
                         android:id="@+id/tv_subtitle6"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Titik Jemput"
                         android:fontFamily="@font/poppinsregular"
+                        android:text="Titik Jemput"
                         android:textSize="11sp"
                         app:layout_constraintStart_toStartOf="@+id/tv_maps_detail6"
                         app:layout_constraintTop_toBottomOf="@+id/tv_profile6" />
@@ -623,18 +588,18 @@
                         android:id="@+id/iv_maps6"
                         android:layout_width="30dp"
                         android:layout_height="30dp"
+                        android:contentDescription="@string/todo"
                         android:src="@drawable/ic_maps"
                         app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toBottomOf="@id/tv_subtitle6"
-                        android:contentDescription="@string/todo"/>
+                        app:layout_constraintTop_toBottomOf="@id/tv_subtitle6" />
 
                     <TextView
                         android:id="@+id/tv_maps_detail6"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginStart="3dp"
-                        android:text="@string/maps_detail_beranda_jemput_pilih"
                         android:fontFamily="@font/poppinsregular"
+                        android:text="@string/maps_detail_beranda_jemput_pilih"
                         android:textSize="12sp"
                         android:textStyle="bold"
                         app:layout_constraintStart_toEndOf="@+id/iv_maps6"
@@ -707,10 +672,10 @@
                         android:id="@+id/tv_profile7"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_marginTop="3dp"
                         android:layout_marginStart="3dp"
-                        android:text="Aldio Yohanes, Blimbing"
+                        android:layout_marginTop="3dp"
                         android:fontFamily="@font/poppinsbold"
+                        android:text="Aldio Yohanes, Blimbing"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toTopOf="parent" />
 
@@ -718,8 +683,8 @@
                         android:id="@+id/tv_subtitle7"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Titik Jemput"
                         android:fontFamily="@font/poppinsregular"
+                        android:text="Titik Jemput"
                         android:textSize="11sp"
                         app:layout_constraintStart_toStartOf="@+id/tv_maps_detail7"
                         app:layout_constraintTop_toBottomOf="@+id/tv_profile7" />
@@ -728,18 +693,18 @@
                         android:id="@+id/iv_maps7"
                         android:layout_width="30dp"
                         android:layout_height="30dp"
+                        android:contentDescription="@string/todo"
                         android:src="@drawable/ic_maps"
                         app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toBottomOf="@id/tv_subtitle7"
-                        android:contentDescription="@string/todo"/>
+                        app:layout_constraintTop_toBottomOf="@id/tv_subtitle7" />
 
                     <TextView
                         android:id="@+id/tv_maps_detail7"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginStart="3dp"
-                        android:text="@string/maps_detail_beranda_jemput_pilih"
                         android:fontFamily="@font/poppinsregular"
+                        android:text="@string/maps_detail_beranda_jemput_pilih"
                         android:textSize="12sp"
                         android:textStyle="bold"
                         app:layout_constraintStart_toEndOf="@+id/iv_maps7"

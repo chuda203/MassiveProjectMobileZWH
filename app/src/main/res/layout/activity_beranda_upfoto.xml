@@ -40,22 +40,16 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <LinearLayout
-        android:layout_width="match_parent"
+    <fragment
+        android:id="@+id/fragment_container"
+        android:name="com.infinite.massiveprojectmobilezwh.beranda.BerandaUpfotoFragment"
+        android:layout_width="0dp"
         android:layout_height="0dp"
-        android:layout_marginBottom="30dp"
-        android:orientation="vertical"
-        app:layout_constraintTop_toTopOf="@+id/separator"
-        app:layout_constraintBottom_toTopOf="@id/bt_confirmation">
-
-        <ImageView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:scaleType="centerCrop"
-            android:src="@drawable/img_capture_sample"
-            android:contentDescription="@string/todo" />
-
-    </LinearLayout>
+        android:layout_marginBottom="20dp"
+        app:layout_constraintBottom_toTopOf="@+id/bt_confirmation"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/separator" />
 
     <Button
         android:id="@+id/bt_confirmation"

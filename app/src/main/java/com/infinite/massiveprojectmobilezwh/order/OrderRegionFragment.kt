@@ -1,10 +1,12 @@
 package com.infinite.massiveprojectmobilezwh.order
 
+import android.content.Intent
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.cardview.widget.CardView
 import com.infinite.massiveprojectmobilezwh.R
 
 // TODO: Rename parameter arguments, choose names that match
@@ -29,6 +31,16 @@ class OrderRegionFragment : Fragment() {
             param2 = it.getString(ARG_PARAM2)
         }
     }
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+        val btn_region : CardView = view.findViewById(R.id.cardView_region1)
+
+        btn_region.setOnClickListener {
+            val intent = Intent(requireActivity(), OrderHistoryActivity::class.java)
+            startActivity(intent)
+        }
+    }
+
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,

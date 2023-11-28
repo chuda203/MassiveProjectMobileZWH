@@ -4,32 +4,12 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/two_color_background"
     tools:context=".beranda.BerandaCameraActivity">
-
-    <LinearLayout
-        android:id="@+id/linearlayout_capture"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="vertical"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
-
-        <ImageView
-            android:id="@+id/img_capture_sample"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:contentDescription="@string/todo"
-            android:scaleType="centerCrop"
-            android:src="@drawable/img_capture_sample" />
-
-    </LinearLayout>
 
     <View
         android:id="@+id/view_top"
         android:layout_width="match_parent"
-        android:layout_height="100dp"
+        android:layout_height="70dp"
         android:background="@color/black_trasnparent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -37,8 +17,8 @@
 
     <ImageView
         android:id="@+id/iv_close"
-        android:layout_width="30dp"
-        android:layout_height="30dp"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
         android:layout_marginStart="30dp"
         android:src="@drawable/ic_close"
         app:layout_constraintBottom_toBottomOf="@+id/view_top"
@@ -48,8 +28,8 @@
 
     <ImageView
         android:id="@+id/iv_flash"
-        android:layout_width="40dp"
-        android:layout_height="40dp"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
         android:layout_marginEnd="30dp"
         android:src="@drawable/ic_flash"
         app:layout_constraintBottom_toBottomOf="@+id/view_top"
@@ -98,5 +78,17 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="@id/view_bottom"
         android:contentDescription="@string/todo"/>
+
+    <fragment
+        android:id="@+id/fragment_container"
+        android:name="com.infinite.massiveprojectmobilezwh.beranda.BerandaCameraFragment"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toTopOf="@+id/view_bottom"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/view_top" />
+
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

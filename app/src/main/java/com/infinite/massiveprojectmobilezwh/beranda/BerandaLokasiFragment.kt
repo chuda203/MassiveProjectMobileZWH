@@ -1,11 +1,17 @@
 package com.infinite.massiveprojectmobilezwh.beranda
 
+import android.content.Intent
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Button
+import android.widget.ImageView
+import androidx.cardview.widget.CardView
 import com.infinite.massiveprojectmobilezwh.R
+import com.infinite.massiveprojectmobilezwh.dompet.BerandaDompetActivity
+import com.infinite.massiveprojectmobilezwh.dompet.BerandaTukarActivity
 
 // TODO: Rename parameter arguments, choose names that match
 // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -36,6 +42,17 @@ class BerandaLokasiFragment : Fragment() {
     ): View? {
         // Inflate the layout for this fragment
         return inflater.inflate(R.layout.fragment_beranda_lokasi, container, false)
+    }
+
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+        val btn_confrim : Button = view.findViewById(R.id.bt_confirmation)
+
+        btn_confrim.setOnClickListener {
+            val intent = Intent(requireActivity(), BerandaCameraActivity::class.java)
+            startActivity(intent)
+        }
+
     }
 
     companion object {

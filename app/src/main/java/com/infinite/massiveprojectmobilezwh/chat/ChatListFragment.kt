@@ -1,11 +1,15 @@
 package com.infinite.massiveprojectmobilezwh.chat
 
+import android.content.Intent
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Button
+import androidx.cardview.widget.CardView
 import com.infinite.massiveprojectmobilezwh.R
+import com.infinite.massiveprojectmobilezwh.beranda.BerandaCameraActivity
 
 // TODO: Rename parameter arguments, choose names that match
 // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -29,6 +33,17 @@ class ChatListFragment : Fragment() {
             param2 = it.getString(ARG_PARAM2)
         }
     }
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+        val btn_confrim : CardView = view.findViewById(R.id.cardView_region1)
+
+        btn_confrim.setOnClickListener {
+            val intent = Intent(requireActivity(), ChatConversationActivity::class.java)
+            startActivity(intent)
+        }
+
+    }
+
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
