@@ -195,19 +195,22 @@
         app:layout_constraintStart_toStartOf="@+id/tv_category_sub"
         app:layout_constraintTop_toBottomOf="@+id/tv_category_sub" />
 
+
     <EditText
         android:id="@+id/et_subdetail"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginHorizontal="30dp"
+        android:layout_height="60dp"
+        android:layout_marginHorizontal="20dp"
+        android:layout_marginBottom="93dp"
         android:hint="@string/category_subnote_beranda_jemput_unggah"
-        android:textSize="11sp"
         android:inputType="text"
+        android:textSize="14sp"
+        app:layout_constraintBottom_toTopOf="@+id/bt_confirmation"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="@+id/tv_category_subdetail"
         app:layout_constraintTop_toBottomOf="@+id/tv_category_subdetail"
-        android:importantForAutofill="no" />
-
+        app:layout_constraintVertical_bias="0.0" />
 
     <Button
         android:id="@+id/bt_confirmation"

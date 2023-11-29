@@ -34,4 +34,8 @@
     <string name="alur7">7. Barang diambil</string>
     <string name="alur8">8. Pengepul melakukan pembayaran</string>
     <string name="alur9">9. Proses selesai</string>
+    <string name="cat_transaksi">catatan transaksi</string>
+    <string name="nominal">nominal</string>
+    <string name="no_hp">no_hp</string>
+    <string name="catatan">catatan</string>
 </resources>
