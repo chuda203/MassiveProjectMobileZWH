@@ -4,6 +4,7 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
+import android.widget.TextView
 import com.infinite.massiveprojectmobilezwh.R
 import com.infinite.massiveprojectmobilezwh.beranda.BerandaListActivity
 
@@ -17,6 +18,12 @@ class MasukActivity : AppCompatActivity() {
                 startActivity(it)
             }
         }
-
+        // Pengaturan OnClickListener untuk teks "Daftar"
+        val bt_regis = findViewById<TextView>(R.id.textview9)
+        bt_regis.setOnClickListener {
+            Intent(this, DaftarActivity::class.java).also {
+                startActivity(it)
+            }
+        }
     }
 }
