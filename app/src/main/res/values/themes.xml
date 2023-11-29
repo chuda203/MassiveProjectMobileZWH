@@ -1,9 +1,19 @@
 <resources xmlns:tools="http://schemas.android.com/tools">
     <!-- Base application theme. -->
-    <style name="Base.Theme.MassiveProjectMobileZWH" parent="Theme.AppCompat.DayNight.NoActionBar">
-        <item name="colorSecondary">@color/secondarycolor</item>
+    <style name="Base.Theme.MassiveProjectMobileZWH" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+        <item name="colorSecondary">@color/green</item>
         <!-- Customize your light theme here. -->
         <!-- <item name="colorPrimary">@color/my_light_primary</item> -->
+    </style>
+
+    <style name="ButtonNext" parent="Widget.MaterialComponents.Button">
+        <item name="backgroundTint">@color/green</item>
+        <item name="cornerRadius">8dp</item>
+    </style>
+
+    <style name="ButtonSubNext" parent="Widget.MaterialComponents.Button">
+        <item name="backgroundTint">@color/green_secondary_button</item>
+        <item name="cornerRadius">8dp</item>
     </style>
 
     <style name="Theme.MassiveProjectMobileZWH" parent="Base.Theme.MassiveProjectMobileZWH" />

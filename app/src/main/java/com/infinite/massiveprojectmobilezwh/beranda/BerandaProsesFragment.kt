@@ -1,6 +1,7 @@
 package com.infinite.massiveprojectmobilezwh.beranda
 
 import android.content.Intent
+import android.net.Uri
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
@@ -42,9 +43,22 @@ class BerandaProsesFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         val btn_confrim : Button = view.findViewById(R.id.bt_confirmation)
+        val btnPhone : Button = view.findViewById(R.id.bt_phone)
+        val btnChat : Button = view.findViewById(R.id.bt_chat)
 
         btn_confrim.setOnClickListener {
             val intent = Intent(requireActivity(), BerandaOrderSelesaiActivity::class.java)
+            startActivity(intent)
+        }
+
+        btnPhone.setOnClickListener {
+            val phoneNumber = "tel:081234567890"
+            val dialIntent = Intent(Intent.ACTION_DIAL, Uri.parse(phoneNumber))
+            startActivity(dialIntent)
+        }
+
+        btnChat.setOnClickListener {
+            val intent = Intent(requireActivity(), BerandaChatActivity::class.java)
             startActivity(intent)
         }
 

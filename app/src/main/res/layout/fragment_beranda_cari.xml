@@ -6,14 +6,6 @@
     android:layout_height="match_parent"
     tools:context=".beranda.BerandaCariFragment">
 
-    <androidx.appcompat.widget.SearchView
-        android:id="@+id/searchView"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginHorizontal="30dp"
-        android:background="@drawable/bg_search_jemput"
-        app:layout_constraintTop_toTopOf="parent"
-        tools:layout_editor_absoluteX="30dp" />
 
     <LinearLayout
         android:id="@+id/linearlayout_maps"
@@ -25,7 +17,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintBottom_toBottomOf="@id/cardView_maps_detail"
         android:elevation="-1dp"
-        app:layout_constraintTop_toTopOf="@+id/searchView">
+        app:layout_constraintTop_toTopOf="parent">
 
         <ImageView
             android:id="@+id/iv_map_sample"
