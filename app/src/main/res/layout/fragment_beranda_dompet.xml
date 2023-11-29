@@ -21,100 +21,127 @@
         android:id="@+id/judul"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginStart="70dp"
+        android:layout_marginTop="33dp"
+        android:fontFamily="@font/poppinsbold"
         android:text="Dompet"
         android:textColor="@color/white"
         android:textSize="20sp"
-        android:fontFamily="@font/poppinsbold"
-        android:layout_marginTop="33dp"
-        android:layout_marginStart="70dp"
         app:layout_constraintStart_toEndOf="@+id/back"
-        app:layout_constraintTop_toTopOf="parent"/>
+        app:layout_constraintTop_toTopOf="parent" />
 
-    <androidx.constraintlayout.widget.ConstraintLayout
-        android:id="@+id/card"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center_horizontal"
-        android:background="@drawable/rectangle_dompet"
-        android:paddingStart="320dp"
-        android:paddingEnd="50dp"
-        android:paddingTop="50dp"
-        android:paddingBottom="100dp"
-        android:layout_marginTop="90dp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent"/>
-
-    <TextView
-        android:id="@+id/textView2"
+    <androidx.cardview.widget.CardView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Koin Saya"
-        android:textColor="@color/green"
-        android:textSize="14sp"
-        android:fontFamily="@font/poppinsbold"
-        android:textAlignment="center"
-        android:layout_marginTop="109dp"
+        android:layout_marginHorizontal="30dp"
+        android:layout_marginTop="20dp"
+        app:cardCornerRadius="8dp"
+        app:contentPaddingBottom="25dp"
+        app:contentPaddingLeft="20dp"
+        app:contentPaddingRight="20dp"
+        app:contentPaddingTop="5dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@+id/judul">
 
-    <ImageView
-        android:id="@+id/koin"
-        android:layout_width="40dp"
-        android:layout_height="40dp"
-        android:src="@drawable/koin"
-        android:layout_marginTop="170dp"
-        android:layout_marginStart="40dp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <TextView
-        android:id="@+id/total"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="65.000"
-        android:textColor="@color/green"
-        android:textSize="14sp"
-        android:fontFamily="@font/poppinsmedium"
-        android:textAlignment="center"
-        android:layout_marginTop="180dp"
-        android:layout_marginStart="10dp"
-        app:layout_constraintStart_toEndOf="@id/koin"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <LinearLayout
-        android:layout_width="70dp"
-        android:layout_height="70dp"
-        android:orientation="vertical"
-        android:background="@drawable/rectangle_dompet"
-        android:layout_marginTop="150dp"
-        android:layout_marginEnd="40dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
-
-        <ImageView
-            android:id="@+id/koin_tukar"
-            android:layout_width="24dp"
-            android:layout_height="24dp"
-            android:src="@drawable/koin_tukar"
-            android:layout_marginTop="15dp"
-            android:layout_marginStart="22dp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
-
-        <TextView
-            android:id="@+id/tukar"
-            android:layout_width="wrap_content"
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/card"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Tukar"
-            android:textColor="@color/green"
-            android:textSize="12sp"
-            android:fontFamily="@font/poppinsmedium"
-            android:textAlignment="center"
-            android:layout_marginStart="14dp"
-            app:layout_constraintEnd_toEndOf="parent"/>
-    </LinearLayout>
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+
+            <TextView
+                android:id="@+id/textView2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:fontFamily="@font/poppinsbold"
+                android:text="Koin Saya"
+                android:textAlignment="center"
+                android:textColor="@color/green"
+                android:textSize="14sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                android:id="@+id/koin"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="10dp"
+                android:src="@drawable/koin"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView2" />
+
+            <TextView
+                android:id="@+id/total"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:fontFamily="@font/poppinsmedium"
+                android:text="65.000"
+                android:textAlignment="center"
+                android:textColor="@color/green"
+                android:textSize="14sp"
+                app:layout_constraintBottom_toBottomOf="@+id/koin"
+                app:layout_constraintStart_toEndOf="@id/koin"
+                app:layout_constraintTop_toTopOf="@+id/koin" />
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="30dp"
+                app:cardCornerRadius="10dp"
+                app:layout_constraintBottom_toBottomOf="@+id/koin"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/koin">
+
+                <LinearLayout
+                    android:id="@+id/linearlayout_tukar"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    app:layout_constraintBottom_toBottomOf="@+id/koin"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="@+id/koin">
+
+                    <ImageView
+                        android:id="@+id/koin_tukar"
+                        android:layout_width="34dp"
+                        android:layout_height="34dp"
+                        android:layout_gravity="center"
+                        android:src="@drawable/koin_tukar"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/tukar"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:fontFamily="@font/poppinsmedium"
+                        android:text="Tukar"
+                        android:textColor="@color/green"
+                        android:textSize="12sp"
+                        app:layout_constraintEnd_toEndOf="parent" />
+                </LinearLayout>
+
+
+            </androidx.cardview.widget.CardView>
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    </androidx.cardview.widget.CardView>
+
+
+
 
     <TextView
         android:id="@+id/riwayat"

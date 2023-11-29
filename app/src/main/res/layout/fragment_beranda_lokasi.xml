@@ -156,7 +156,7 @@
         android:textSize="15sp"
         android:textAllCaps="false"
         android:textColor="@color/white"
-        android:background="@drawable/bg_bt"
+        style="@style/ButtonNext"
         app:layout_constraintBottom_toBottomOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

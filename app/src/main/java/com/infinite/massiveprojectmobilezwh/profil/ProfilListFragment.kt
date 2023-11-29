@@ -65,7 +65,7 @@ class ProfilListFragment : Fragment() {
         }
 
         btn_about.setOnClickListener {
-            val intent = Intent(requireActivity(), ProfileHelpActivity::class.java)
+            val intent = Intent(requireActivity(), ProfilTentangActivity::class.java)
             startActivity(intent)
         }
 

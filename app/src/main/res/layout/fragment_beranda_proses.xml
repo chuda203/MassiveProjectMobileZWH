@@ -6,14 +6,6 @@
     android:layout_height="match_parent"
     tools:context=".beranda.BerandaProsesFragment">
 
-    <androidx.appcompat.widget.SearchView
-        android:id="@+id/searchView"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginHorizontal="30dp"
-        android:background="@drawable/bg_search_jemput"
-        app:layout_constraintTop_toTopOf="parent"/>
-
     <LinearLayout
         android:id="@+id/linearlayout_maps"
         android:layout_width="match_parent"
@@ -24,7 +16,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintBottom_toBottomOf="@id/cardView_profile"
         android:elevation="-1dp"
-        app:layout_constraintTop_toTopOf="@+id/searchView">
+        app:layout_constraintTop_toTopOf="parent">
 
         <ImageView
             android:id="@+id/iv_map_sample"
@@ -117,7 +109,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
                 android:layout_marginStart="30dp"
-                android:background="@drawable/bg_bt_process"
+                style="@style/ButtonSubNext"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/separator_profile" />
 
@@ -151,7 +143,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
                 android:layout_marginEnd="30dp"
-                android:background="@drawable/bg_bt_process"
+                style="@style/ButtonSubNext"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/separator_profile" />
 
@@ -194,7 +186,7 @@
         android:textSize="15sp"
         android:textAllCaps="false"
         android:textColor="@color/white"
-        android:background="@drawable/bg_bt"
+        style="@style/ButtonNext"
         app:layout_constraintBottom_toBottomOf="parent" />
 
 

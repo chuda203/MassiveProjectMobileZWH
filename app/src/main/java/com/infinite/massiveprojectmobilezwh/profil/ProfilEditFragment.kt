@@ -7,6 +7,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
+import android.widget.ImageView
 import com.infinite.massiveprojectmobilezwh.R
 import com.infinite.massiveprojectmobilezwh.beranda.BerandaCameraActivity
 
@@ -37,8 +38,7 @@ class ProfilEditFragment : Fragment() {
         val btn_confrim : Button = view.findViewById(R.id.bt_confirmation)
 
         btn_confrim.setOnClickListener {
-            val intent = Intent(requireActivity(), ProfilCameraActivity::class.java)
-            startActivity(intent)
+            requireActivity().onBackPressed()
         }
 
     }

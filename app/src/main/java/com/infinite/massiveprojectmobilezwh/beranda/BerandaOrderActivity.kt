@@ -3,7 +3,11 @@ package com.infinite.massiveprojectmobilezwh.beranda
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.widget.AdapterView
+import android.widget.ArrayAdapter
+import android.widget.AutoCompleteTextView
 import android.widget.Button
+import android.widget.Toast
 import androidx.fragment.app.Fragment
 import com.infinite.massiveprojectmobilezwh.R
 
@@ -20,6 +24,19 @@ class BerandaOrderActivity : AppCompatActivity() {
                 startActivity(it)
             }
         }
+
+        val items = listOf("Material", "Design", "Components", "Android")
+        val autoComplete : AutoCompleteTextView = findViewById(R.id.auto_complete)
+        val adapter = ArrayAdapter(this, R.layout.list_item, items)
+
+        autoComplete.setAdapter(adapter)
+
+        autoComplete.onItemClickListener = AdapterView.OnItemClickListener{
+            adapterView, view, i, l ->
+
+        }
+
+
     }
 
     private fun replaceFragment(fragment : Fragment) {

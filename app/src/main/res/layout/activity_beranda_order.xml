@@ -144,31 +144,33 @@
         app:layout_constraintTop_toBottomOf="@+id/tv_title_category"
         tools:layout_editor_absoluteX="30dp">
 
-        <androidx.constraintlayout.widget.ConstraintLayout
+        <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:focusableInTouchMode="true">
 
-            <TextView
-                android:id="@+id/tv_category"
-                android:layout_width="wrap_content"
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="10dp"
-                android:fontFamily="@font/poppinsregular"
-                android:text="@string/category_beranda_jemput_unggah"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense.ExposedDropdownMenu"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
+                app:layout_constraintTop_toTopOf="parent">
 
-            <ImageView
-                android:id="@+id/img_category"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:src="@drawable/ic_dropdown"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                android:contentDescription="@string/todo" />
+                <AutoCompleteTextView
+                    android:id="@+id/auto_complete"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/poppinsregular"
+                    android:hint="--Pilih Kategori --"
+                    android:inputType="none"
+                    android:textSize="11sp" />
 
-        </androidx.constraintlayout.widget.ConstraintLayout>
+            </com.google.android.material.textfield.TextInputLayout>
+
+
+
+        </LinearLayout>
 
     </androidx.cardview.widget.CardView>
 
@@ -221,9 +223,9 @@
         android:text="@string/confirmation_beranda_jemput_unggah"
         android:fontFamily="@font/poppinsbold"
         android:textSize="15sp"
+        style="@style/ButtonNext"
         android:textAllCaps="false"
         android:textColor="@color/white"
-        android:background="@drawable/bg_bt"
         app:layout_constraintBottom_toBottomOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
