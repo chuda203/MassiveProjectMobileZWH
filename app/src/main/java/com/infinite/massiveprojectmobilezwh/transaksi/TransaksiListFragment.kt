@@ -7,6 +7,7 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
 import com.infinite.massiveprojectmobilezwh.R
+import androidx.core.content.ContextCompat
 
 // TODO: Rename parameter arguments, choose names that match
 // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -44,14 +45,28 @@ class TransaksiListFragment : Fragment() {
 
         showFragment(TransaksiBelumFragment())
 
-        val btn_belum : Button = view.findViewById(R.id.bt_belum)
-        val btn_sudah : Button = view.findViewById(R.id.bt_sudah)
-        btn_belum.setOnClickListener {
+        val btBelum : Button = view.findViewById(R.id.bt_belum)
+        val btSudah : Button = view.findViewById(R.id.bt_sudah)
+        btBelum.setOnClickListener {
             showFragment(TransaksiBelumFragment())
+            setButtonColors(btBelum, btSudah)
         }
-        btn_sudah.setOnClickListener {
+        btSudah.setOnClickListener {
             showFragment(TransaksiSudahFragment())
+            setButtonColors(btSudah, btBelum)
         }
+    }
+
+    private fun setButtonColors(selectedButton: Button, unselectedButton: Button) {
+        // Set warna untuk tombol terpilih
+        selectedButton.backgroundTintList =
+            ContextCompat.getColorStateList(requireContext(), R.color.green)
+        selectedButton.setTextColor(ContextCompat.getColor(requireContext(), R.color.white))
+
+        // Set warna untuk tombol tidak terpilih
+        unselectedButton.backgroundTintList =
+            ContextCompat.getColorStateList(requireContext(), R.color.white)
+        unselectedButton.setTextColor(ContextCompat.getColor(requireContext(), R.color.black))
     }
 
     private fun showFragment(fragment: Fragment) {

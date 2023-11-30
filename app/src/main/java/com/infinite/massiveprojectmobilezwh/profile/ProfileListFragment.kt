@@ -12,6 +12,7 @@ import com.infinite.massiveprojectmobilezwh.dompet.BerandaDompetActivity
 import com.infinite.massiveprojectmobilezwh.profil.ProfilBantuanActivity
 import com.infinite.massiveprojectmobilezwh.profil.ProfilEditActivity
 import com.infinite.massiveprojectmobilezwh.profil.ProfilNotifActivity
+import com.infinite.massiveprojectmobilezwh.wallet.WalletListActivity
 
 // TODO: Rename parameter arguments, choose names that match
 // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -52,27 +53,27 @@ class ProfileListFragment : Fragment() {
         val btn_about : TextView = view.findViewById(R.id.tentang_kami1)
 
         btn_edit.setOnClickListener {
-            val intent = Intent(requireActivity(), ProfilEditActivity::class.java)
+            val intent = Intent(requireActivity(), ProfileEditActivity::class.java)
             startActivity(intent)
         }
 
         btn_wallet.setOnClickListener {
-            val intent = Intent(requireActivity(), BerandaDompetActivity::class.java)
+            val intent = Intent(requireActivity(), WalletListActivity::class.java)
             startActivity(intent)
         }
 
         btn_notif.setOnClickListener {
-            val intent = Intent(requireActivity(), ProfilNotifActivity::class.java)
+            val intent = Intent(requireActivity(), ProfileNotifActivity::class.java)
             startActivity(intent)
         }
 
         btn_help.setOnClickListener {
-            val intent = Intent(requireActivity(), ProfilBantuanActivity::class.java)
+            val intent = Intent(requireActivity(), ProfileHelpActivity::class.java)
             startActivity(intent)
         }
 
         btn_about.setOnClickListener {
-            val intent = Intent(requireActivity(), ProfileHelpActivity::class.java)
+            val intent = Intent(requireActivity(), ProfileAboutActivity::class.java)
             startActivity(intent)
         }
 

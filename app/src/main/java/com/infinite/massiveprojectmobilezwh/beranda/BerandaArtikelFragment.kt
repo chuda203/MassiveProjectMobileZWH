@@ -1,17 +1,11 @@
-package com.infinite.massiveprojectmobilezwh.maps
+package com.infinite.massiveprojectmobilezwh.beranda
 
-import android.content.Intent
 import android.os.Bundle
-import android.os.Handler
-import android.os.Looper
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.Button
-import android.widget.ImageView
 import com.infinite.massiveprojectmobilezwh.R
-import com.infinite.massiveprojectmobilezwh.beranda.BerandaCameraActivity
 
 // TODO: Rename parameter arguments, choose names that match
 // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -20,10 +14,10 @@ private const val ARG_PARAM2 = "param2"
 
 /**
  * A simple [Fragment] subclass.
- * Use the [MapsListFragment.newInstance] factory method to
+ * Use the [BerandaArtikelFragment.newInstance] factory method to
  * create an instance of this fragment.
  */
-class MapsListFragment : Fragment() {
+class BerandaArtikelFragment : Fragment() {
     // TODO: Rename and change types of parameters
     private var param1: String? = null
     private var param2: String? = null
@@ -41,21 +35,8 @@ class MapsListFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_maps_list, container, false)
+        return inflater.inflate(R.layout.fragment_beranda_artikel, container, false)
     }
-    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
-        super.onViewCreated(view, savedInstanceState)
-//        val btn_gps : ImageView = view.findViewById(R.id.iv_gps)
-
-        Handler(Looper.getMainLooper()).postDelayed( {
-            val fragmentTransaction = requireActivity().supportFragmentManager.beginTransaction()
-            fragmentTransaction.replace(R.id.fragment_container, MapsProcessFragment())
-            fragmentTransaction.addToBackStack(null)
-            fragmentTransaction.commit()
-        }, 1500)
-
-    }
-
 
     companion object {
         /**
@@ -64,12 +45,12 @@ class MapsListFragment : Fragment() {
          *
          * @param param1 Parameter 1.
          * @param param2 Parameter 2.
-         * @return A new instance of fragment MapsListFragment.
+         * @return A new instance of fragment BerandaArtikelFragment.
          */
         // TODO: Rename and change types and number of parameters
         @JvmStatic
         fun newInstance(param1: String, param2: String) =
-            MapsListFragment().apply {
+            BerandaArtikelFragment().apply {
                 arguments = Bundle().apply {
                     putString(ARG_PARAM1, param1)
                     putString(ARG_PARAM2, param2)
