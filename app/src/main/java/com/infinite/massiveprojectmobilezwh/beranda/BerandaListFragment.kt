@@ -8,10 +8,12 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
 import android.widget.ImageView
+import android.widget.TextView
 import androidx.cardview.widget.CardView
 import com.infinite.massiveprojectmobilezwh.R
 import com.infinite.massiveprojectmobilezwh.dompet.BerandaDompetActivity
 import com.infinite.massiveprojectmobilezwh.dompet.BerandaTukarActivity
+import com.infinite.massiveprojectmobilezwh.profil.ProfilNotifActivity
 
 // TODO: Rename parameter arguments, choose names that match
 // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -49,6 +51,8 @@ class BerandaListFragment : Fragment() {
         val btn_jemput : CardView = view.findViewById(R.id.cardView_jemput)
         val btn_tukar : CardView = view.findViewById(R.id.cardView_tukar)
         val btn_history : ImageView = view.findViewById(R.id.iv_history)
+        val btnArtikel : TextView = view.findViewById(R.id.tv_subtitle_artikel)
+        val btnNotif : ImageView =  view.findViewById(R.id.iv_notif)
 
         btn_jemput.setOnClickListener {
             val intent = Intent(requireActivity(), BerandaLokasiActivity::class.java)
@@ -62,6 +66,16 @@ class BerandaListFragment : Fragment() {
 
         btn_history.setOnClickListener {
             val intent = Intent(requireActivity(), BerandaDompetActivity::class.java)
+            startActivity(intent)
+        }
+
+        btnArtikel.setOnClickListener {
+            val intent = Intent(requireActivity(), BerandaArtikelActivity::class.java)
+            startActivity(intent)
+        }
+
+        btnNotif.setOnClickListener {
+            val intent = Intent(requireActivity(), ProfilNotifActivity::class.java)
             startActivity(intent)
         }
 

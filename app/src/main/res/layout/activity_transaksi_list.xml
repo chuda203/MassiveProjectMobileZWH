@@ -39,7 +39,7 @@
             android:gravity="center">
 
             <Button
-                android:id="@+id/textView3"
+                android:id="@+id/bt_belum"
                 android:layout_width="161dp"
                 android:layout_height="46dp"
                 android:backgroundTint="@color/green"
@@ -50,6 +50,7 @@
                 android:gravity="center"/>
 
             <Button
+                android:id="@+id/bt_sudah"
                 android:layout_width="161dp"
                 android:layout_height="46dp"
                 android:backgroundTint="@color/white"
