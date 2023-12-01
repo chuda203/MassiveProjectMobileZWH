@@ -15,9 +15,8 @@ class ProfilNotifActivity : AppCompatActivity() {
         // Pengaturan OnClickListener untuk teks "back ke profile Customer"
         val bt_back = findViewById<ImageView>(R.id.back1)
         bt_back.setOnClickListener {
-            Intent(this, ProfilListFragment::class.java).also {
-                startActivity(it)
-            }
+            onBackPressed()
         }
+
     }
 }

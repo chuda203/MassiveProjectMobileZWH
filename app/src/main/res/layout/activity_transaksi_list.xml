@@ -10,16 +10,16 @@
 
     <TextView
         android:id="@+id/judul"
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="39dp"
+        android:fontFamily="@font/poppinsbold"
         android:text="Transaksi"
         android:textColor="@color/white"
         android:textSize="20sp"
-        android:fontFamily="@font/poppinsbold"
-        android:layout_marginTop="39dp"
-        android:layout_marginStart="20dp"
-        app:layout_constraintStart_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent"/>
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <FrameLayout
         android:id="@+id/frame2"

@@ -4,6 +4,7 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
+import android.widget.ImageView
 import com.infinite.massiveprojectmobilezwh.R
 
 class BerandaUpfotoActivity : AppCompatActivity() {
@@ -15,6 +16,10 @@ class BerandaUpfotoActivity : AppCompatActivity() {
             Intent(this, BerandaOrderActivity::class.java).also {
                 startActivity(it)
             }
+        }
+        val btnBack = findViewById<ImageView>(R.id.iv_back)
+        btnBack.setOnClickListener {
+            onBackPressed()
         }
     }
 }

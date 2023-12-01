@@ -7,6 +7,7 @@ import android.widget.AdapterView
 import android.widget.ArrayAdapter
 import android.widget.AutoCompleteTextView
 import android.widget.Button
+import android.widget.ImageView
 import android.widget.Toast
 import androidx.fragment.app.Fragment
 import com.infinite.massiveprojectmobilezwh.R
@@ -15,6 +16,11 @@ class BerandaOrderActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_beranda_order)
+
+        val btnBack = findViewById<ImageView>(R.id.iv_back)
+        btnBack.setOnClickListener {
+            onBackPressed()
+        }
 
         replaceFragment(BerandaOrderFragment())
 
@@ -25,7 +31,7 @@ class BerandaOrderActivity : AppCompatActivity() {
             }
         }
 
-        val items = listOf("Material", "Design", "Components", "Android")
+        val items = listOf("Kaleng", "Plastik", "Besi", "Elektronik")
         val autoComplete : AutoCompleteTextView = findViewById(R.id.auto_complete)
         val adapter = ArrayAdapter(this, R.layout.list_item, items)
 

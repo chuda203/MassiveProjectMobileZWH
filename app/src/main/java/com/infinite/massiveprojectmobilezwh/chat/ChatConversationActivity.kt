@@ -13,11 +13,9 @@ class ChatConversationActivity : AppCompatActivity() {
         setContentView(R.layout.activity_chat_conversation)
 
         // Pengaturan OnClickListener untuk teks "back ke chat"
-        val bt_back2 = findViewById<ImageView>(R.id.back)
-        bt_back2.setOnClickListener {
-            Intent(this, ChatListFragment::class.java).also {
-                startActivity(it)
-            }
+        val btnBack = findViewById<ImageView>(R.id.back)
+        btnBack.setOnClickListener {
+            onBackPressed()
         }
     }
 }
