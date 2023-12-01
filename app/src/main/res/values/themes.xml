@@ -1,6 +1,6 @@
 <resources xmlns:tools="http://schemas.android.com/tools">
     <!-- Base application theme. -->
-    <style name="Base.Theme.MassiveProjectMobileZWH" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+    <style name="Base.Theme.MassiveProjectMobileZWH.light" parent="Theme.MaterialComponents.Light.NoActionBar">
         <item name="colorSecondary">@color/green</item>
         <!-- Customize your light theme here. -->
         <!-- <item name="colorPrimary">@color/my_light_primary</item> -->
@@ -16,5 +16,18 @@
         <item name="cornerRadius">8dp</item>
     </style>
 
-    <style name="Theme.MassiveProjectMobileZWH" parent="Base.Theme.MassiveProjectMobileZWH" />
+    <style name="TextBottomNav" parent="TextAppearance.MaterialComponents.Button">
+        <item name="color">@color/black</item>
+        <item name="fontFamily">@font/poppinsbold</item>
+        <item name="android:textSize">10dp</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="TextBottomNavOff" parent="TextAppearance.MaterialComponents.Button">
+        <item name="color">@color/black</item>
+        <item name="fontFamily">@font/poppinsregular</item>
+        <item name="android:textSize">10dp</item>
+    </style>
+
+    <style name="Theme.MassiveProjectMobileZWH.light" parent="Base.Theme.MassiveProjectMobileZWH.light" />
 </resources>

@@ -19,4 +19,15 @@
                 android:color="#ffffff" />
         </shape>
     </item>
+    <item android:top="230dp">
+        <shape android:shape="rectangle">
+            <solid android:color="#ffffff" />
+            <!-- Tambahkan elemen corners untuk lengkungan -->
+            <corners android:radius="0dp" />
+            <!-- Tambahkan elemen stroke untuk border -->
+            <stroke
+                android:width="20dp"
+                android:color="#ffffff" />
+        </shape>
+    </item>
 </layer-list>

@@ -14,14 +14,12 @@ class BerandaDompetActivity : AppCompatActivity() {
         setContentView(R.layout.activity_beranda_dompet)
 
 //nanti kalian testing dibagian ini pas saya testing kyk gimana mungkin di  hp saya atau dicodingannya
+// -> pake onBackPressed masalah selesai, tapi commitNow gak bisa jalan
         val btn_back = findViewById<ImageView>(R.id.back)
         btn_back.setOnClickListener {
-            // Replace or add BerandaListFragment
-            val berandaListFragment = BerandaListFragment()
-            supportFragmentManager.beginTransaction()
-                .replace(R.id.fragment_container, berandaListFragment)
-                .addToBackStack(null)
-                .commitNow() // guna commit untuk transasi
+            onBackPressed()
+            //.commitNow() // guna commit untuk transasi
+
         }
 
         val btn_tukar = findViewById<LinearLayout>(R.id.linearlayout_tukar)

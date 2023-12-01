@@ -18,6 +18,10 @@ class ProfilEditActivity : AppCompatActivity() {
             val intent = Intent(this, ProfilCameraActivity::class.java)
             startActivity(intent)
         }
+        val btnBack = findViewById<ImageView>(R.id.iv_back)
+        btnBack.setOnClickListener {
+            onBackPressed()
+        }
 
 
     }
