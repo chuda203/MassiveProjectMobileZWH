@@ -8,7 +8,7 @@
     </item>
 
     <!-- Warna di atas (ukuran kecil) -->
-    <item android:top="300dp">
+    <item android:top="250dp">
         <shape android:shape="rectangle">
             <solid android:color="#ffffff" />
             <!-- Tambahkan elemen corners untuk lengkungan -->

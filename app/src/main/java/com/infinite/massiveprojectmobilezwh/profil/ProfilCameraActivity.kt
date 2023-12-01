@@ -13,9 +13,7 @@ class ProfilCameraActivity : AppCompatActivity() {
         setContentView(R.layout.activity_profil_camera)
         val btn_shutter = findViewById<ImageView>(R.id.iv_shutter)
         btn_shutter.setOnClickListener {
-            Intent(this, ProfilEditActivity::class.java).also {
-                startActivity(it)
-            }
+            onBackPressed()
         }
     }
 }

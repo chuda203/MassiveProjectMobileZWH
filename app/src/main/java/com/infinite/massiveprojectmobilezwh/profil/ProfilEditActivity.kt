@@ -13,11 +13,11 @@ class ProfilEditActivity : AppCompatActivity() {
         setContentView(R.layout.activity_profil_edit)
         replaceFragment(ProfilEditFragment())
 
-//        val btnEdit : ImageView = findViewById(R.id.iv_edit_avatar)
-//        btnEdit.setOnClickListener {
-//            val intent = Intent(this, ProfilCameraActivity::class.java)
-//            startActivity(intent)
-//        }
+        val btnEdit : ImageView = findViewById(R.id.iv_edit_avatar)
+        btnEdit.setOnClickListener {
+            val intent = Intent(this, ProfilCameraActivity::class.java)
+            startActivity(intent)
+        }
 
 
     }
