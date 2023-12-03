@@ -10,17 +10,11 @@ class BerandaLokasiActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_beranda_lokasi)
-        replaceFragment(BerandaLokasiFragment())
-
+        // kembali ke Activity sebelumnya
         val btnBack = findViewById<ImageView>(R.id.iv_back)
         btnBack.setOnClickListener {
-            onBackPressed()
+            // akhiri Activity, alternatif onBackPressed
+            finish()
         }
-    }
-    private fun replaceFragment(fragment : Fragment) {
-        val fragmentManager = supportFragmentManager
-        val transaction = fragmentManager.beginTransaction()
-        transaction.replace(R.id.fragment_container, fragment)
-        transaction.commit()
     }
 }

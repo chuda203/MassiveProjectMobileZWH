@@ -11,25 +11,21 @@ class BerandaCameraActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_beranda_camera)
-        replaceFragment(BerandaCameraFragment())
 
+        // OnClick shutter
         val btnShutter = findViewById<ImageView>(R.id.iv_shutter)
         btnShutter.setOnClickListener {
             Intent(this, BerandaUpfotoActivity::class.java).apply {
                 startActivity(this)
             }
         }
-        val iv_close = findViewById<ImageView>(R.id.iv_close)
-        iv_close.setOnClickListener {
-            Intent(this, BerandaLokasiActivity::class.java).apply {
-                startActivity(this)
+
+        // OnClick close button
+        val ivClose = findViewById<ImageView>(R.id.iv_close)
+        ivClose.setOnClickListener {
+            // akhiri Activity, alternatif onBackPressed
+            finish()
             }
         }
     }
 
-    private fun replaceFragment(fragment: Fragment) {
-        supportFragmentManager.beginTransaction()
-            .replace(R.id.fragment_container, fragment)
-            .commit()
-    }
-}

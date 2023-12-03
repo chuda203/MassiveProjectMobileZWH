@@ -4,53 +4,20 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/two_color_background"
     tools:context=".wallet.WalletListFragment">
-
-    <TextView
-        android:id="@+id/tv_title"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="20dp"
-        android:layout_marginTop="3dp"
-        android:fontFamily="@font/poppinsbold"
-        android:text="Dompet"
-        android:textColor="@color/white"
-        android:textSize="22sp"
-        app:layout_constraintStart_toEndOf="@+id/iv_back"
-        app:layout_constraintTop_toTopOf="@id/iv_back" />
-
-    <ImageView
-        android:id="@+id/iv_back"
-        android:layout_width="40dp"
-        android:layout_height="40dp"
-        android:layout_marginTop="40dp"
-        android:layout_marginStart="30dp"
-        android:src="@drawable/ic_back"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        android:contentDescription="@string/todo" />
-
-    <View
-        android:id="@+id/separator"
-        android:layout_width="wrap_content"
-        android:layout_height="10dp"
-        android:layout_marginTop="120dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
 
     <androidx.cardview.widget.CardView
         android:id="@+id/cardView_wallet"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginHorizontal="30dp"
-        android:layout_marginTop="20dp"
-        app:cardBackgroundColor="@color/colorutama"
+        app:cardBackgroundColor="@color/green"
         app:cardCornerRadius="20dp"
         app:contentPadding="20dp"
-        app:layout_constraintTop_toBottomOf="@+id/separator"
-        tools:layout_editor_absoluteX="30dp">
+        android:layout_marginTop="10dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
@@ -61,7 +28,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/poppinsbold"
-                android:text="Smart Recycling"
+                android:text="@string/wallet_list_title"
                 android:textColor="@color/white"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
@@ -72,7 +39,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="15dp"
                 android:fontFamily="@font/poppinsregular"
-                android:text="Coins"
+                android:text="@string/wallet_list_title_value"
                 android:textColor="@color/white"
                 app:layout_constraintStart_toStartOf="@id/tv_title_wallet"
                 app:layout_constraintTop_toBottomOf="@id/tv_title_wallet" />
@@ -82,7 +49,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/poppinsregular"
-                android:text="800.000"
+                android:text="@string/wallet_list_value"
                 android:textColor="@color/white"
                 app:layout_constraintStart_toStartOf="@id/tv_title_coins"
                 app:layout_constraintTop_toBottomOf="@id/tv_title_coins" />
@@ -160,7 +127,8 @@
         app:layout_constraintBottom_toBottomOf="@+id/view_subframe_topup"
         app:layout_constraintEnd_toEndOf="@+id/view_subframe_topup"
         app:layout_constraintStart_toStartOf="@+id/view_subframe_topup"
-        app:layout_constraintTop_toTopOf="@+id/view_subframe_topup" />
+        app:layout_constraintTop_toTopOf="@+id/view_subframe_topup"
+        android:contentDescription="@string/todo" />
 
     <ImageView
         android:id="@+id/iv_payment"
@@ -170,7 +138,8 @@
         app:layout_constraintBottom_toBottomOf="@+id/view_subframe_payment"
         app:layout_constraintEnd_toEndOf="@+id/view_subframe_payment"
         app:layout_constraintStart_toStartOf="@+id/view_subframe_payment"
-        app:layout_constraintTop_toTopOf="@+id/view_subframe_payment" />
+        app:layout_constraintTop_toTopOf="@+id/view_subframe_payment"
+        android:contentDescription="@string/todo" />
 
     <ImageView
         android:id="@+id/iv_history"
@@ -180,7 +149,8 @@
         app:layout_constraintBottom_toBottomOf="@+id/view_subframe_history"
         app:layout_constraintEnd_toEndOf="@+id/view_subframe_history"
         app:layout_constraintStart_toStartOf="@+id/view_subframe_history"
-        app:layout_constraintTop_toTopOf="@+id/view_subframe_history" />
+        app:layout_constraintTop_toTopOf="@+id/view_subframe_history"
+        android:contentDescription="@string/todo" />
 
     <TextView
         android:id="@+id/textView3"
@@ -188,7 +158,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="5dp"
         android:fontFamily="@font/poppinsregular"
-        android:text="Isi Saldo"
+        android:text="@string/wallet_list_add"
         android:textColor="@color/white"
         android:textSize="10sp"
         app:layout_constraintEnd_toEndOf="@+id/view_frame_topup"
@@ -200,7 +170,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="5dp"
         android:fontFamily="@font/poppinsregular"
-        android:text="Transaksi"
+        android:text="@string/wallet_list_transaction"
         android:textColor="@color/white"
         android:textSize="10sp"
         app:layout_constraintEnd_toEndOf="@+id/view_frame_payment"
@@ -212,7 +182,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="2dp"
         android:fontFamily="@font/poppinsregular"
-        android:text="Riwayat Transaksi"
+        android:text="@string/wallet_list_history"
         android:textColor="@color/white"
         android:textSize="10sp"
         android:gravity="center"
@@ -224,16 +194,15 @@
         android:id="@+id/tv_subtitle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="20dp"
         android:layout_marginTop="40dp"
         android:fontFamily="@font/poppinsbold"
-        android:text="Riwayat Transaksi"
-        app:layout_constraintStart_toStartOf="parent"
+        android:text="@string/wallet_list_title_history"
+        app:layout_constraintStart_toStartOf="@+id/cardView_wallet"
         app:layout_constraintTop_toBottomOf="@+id/view_frame_payment" />
 
     <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="0dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/tv_subtitle">

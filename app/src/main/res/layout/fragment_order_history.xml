@@ -6,7 +6,6 @@
     android:layout_height="match_parent"
     tools:context=".order.OrderHistoryFragment">
 
-
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -45,7 +44,7 @@
                         android:layout_marginStart="3dp"
                         android:layout_marginTop="3dp"
                         android:fontFamily="@font/poppinsbold"
-                        android:text="Aldio Yohanes, Blimbing"
+                        android:text="@string/order_history_name"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toTopOf="parent" />
 
@@ -54,7 +53,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:fontFamily="@font/poppinsregular"
-                        android:text="Titik Jemput"
+                        android:text="@string/order_history_title_address"
                         android:textSize="11sp"
                         app:layout_constraintStart_toStartOf="@+id/tv_maps_detail1"
                         app:layout_constraintTop_toBottomOf="@+id/tv_profile1" />
@@ -74,7 +73,7 @@
                         android:layout_height="wrap_content"
                         android:layout_marginStart="3dp"
                         android:fontFamily="@font/poppinsregular"
-                        android:text="@string/maps_detail_beranda_jemput_pilih"
+                        android:text="@string/order_history_address"
                         android:textSize="12sp"
                         android:textStyle="bold"
                         app:layout_constraintStart_toEndOf="@+id/iv_maps1"
@@ -85,8 +84,8 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:fontFamily="@font/poppinsbold"
-                        android:text="Catatan : 10 Botol Aqua, Besi Kecil, TV Tabung"
-                        android:textSize="10dp"
+                        android:text="@string/order_history_note"
+                        android:textSize="10sp"
                         app:layout_constraintStart_toStartOf="@+id/tv_maps_detail1"
                         app:layout_constraintTop_toBottomOf="@+id/tv_maps_detail1" />
 
@@ -95,8 +94,8 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:fontFamily="@font/poppinsbold"
-                        android:text="Estimasi : 8kg"
-                        android:textSize="10dp"
+                        android:text="@string/order_history_weight"
+                        android:textSize="10sp"
                         app:layout_constraintStart_toStartOf="@+id/tv_maps_detail1"
                         app:layout_constraintTop_toBottomOf="@+id/tv_note1" />
 
@@ -105,8 +104,8 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:fontFamily="@font/poppinsregular"
-                        android:text="(500 m)"
-                        android:textSize="10dp"
+                        android:text="@string/order_history_distance"
+                        android:textSize="10sp"
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintTop_toTopOf="@+id/tv_profile1" />
 
@@ -115,9 +114,9 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:fontFamily="@font/poppinsbold"
-                        android:text="200.000 Coins"
+                        android:text="@string/order_history_value"
                         android:textColor="@color/red"
-                        android:textSize="10dp"
+                        android:textSize="10sp"
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintTop_toTopOf="@+id/tv_maps_detail1" />
 
@@ -151,7 +150,7 @@
                         android:layout_marginStart="3dp"
                         android:layout_marginTop="3dp"
                         android:fontFamily="@font/poppinsbold"
-                        android:text="Aldio Yohanes, Blimbing"
+                        android:text="@string/order_history_name"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toTopOf="parent" />
 
@@ -160,7 +159,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:fontFamily="@font/poppinsregular"
-                        android:text="Titik Jemput"
+                        android:text="@string/order_history_title_address"
                         android:textSize="11sp"
                         app:layout_constraintStart_toStartOf="@+id/tv_maps_detail2"
                         app:layout_constraintTop_toBottomOf="@+id/tv_profile2" />
@@ -180,7 +179,7 @@
                         android:layout_height="wrap_content"
                         android:layout_marginStart="3dp"
                         android:fontFamily="@font/poppinsregular"
-                        android:text="@string/maps_detail_beranda_jemput_pilih"
+                        android:text="@string/order_history_address"
                         android:textSize="12sp"
                         android:textStyle="bold"
                         app:layout_constraintStart_toEndOf="@+id/iv_maps2"
@@ -191,8 +190,8 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:fontFamily="@font/poppinsbold"
-                        android:text="Catatan : 10 Botol Aqua, Besi Kecil, TV Tabung"
-                        android:textSize="10dp"
+                        android:text="@string/order_history_note"
+                        android:textSize="10sp"
                         app:layout_constraintStart_toStartOf="@+id/tv_maps_detail2"
                         app:layout_constraintTop_toBottomOf="@+id/tv_maps_detail2" />
 
@@ -201,8 +200,8 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:fontFamily="@font/poppinsbold"
-                        android:text="Estimasi : 8kg"
-                        android:textSize="10dp"
+                        android:text="@string/order_history_weight"
+                        android:textSize="10sp"
                         app:layout_constraintStart_toStartOf="@+id/tv_maps_detail2"
                         app:layout_constraintTop_toBottomOf="@+id/tv_note2" />
 
@@ -211,8 +210,8 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:fontFamily="@font/poppinsregular"
-                        android:text="(500 m)"
-                        android:textSize="10dp"
+                        android:text="@string/order_history_weight"
+                        android:textSize="10sp"
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintTop_toTopOf="@+id/tv_profile2" />
 
@@ -221,9 +220,9 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:fontFamily="@font/poppinsbold"
-                        android:text="200.000 Coins"
+                        android:text="@string/order_history_value"
                         android:textColor="@color/red"
-                        android:textSize="10dp"
+                        android:textSize="10sp"
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintTop_toTopOf="@+id/tv_maps_detail2" />
 
@@ -257,7 +256,7 @@
                         android:layout_marginStart="3dp"
                         android:layout_marginTop="3dp"
                         android:fontFamily="@font/poppinsbold"
-                        android:text="Aldio Yohanes, Blimbing"
+                        android:text="@string/order_history_name"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toTopOf="parent" />
 
@@ -266,7 +265,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:fontFamily="@font/poppinsregular"
-                        android:text="Titik Jemput"
+                        android:text="@string/order_history_title_address"
                         android:textSize="11sp"
                         app:layout_constraintStart_toStartOf="@+id/tv_maps_detail3"
                         app:layout_constraintTop_toBottomOf="@+id/tv_profile3" />
@@ -286,7 +285,7 @@
                         android:layout_height="wrap_content"
                         android:layout_marginStart="3dp"
                         android:fontFamily="@font/poppinsregular"
-                        android:text="@string/maps_detail_beranda_jemput_pilih"
+                        android:text="@string/order_history_address"
                         android:textSize="12sp"
                         android:textStyle="bold"
                         app:layout_constraintStart_toEndOf="@+id/iv_maps3"
@@ -297,8 +296,8 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:fontFamily="@font/poppinsbold"
-                        android:text="Catatan : 10 Botol Aqua, Besi Kecil, TV Tabung"
-                        android:textSize="10dp"
+                        android:text="@string/order_history_note"
+                        android:textSize="10sp"
                         app:layout_constraintStart_toStartOf="@+id/tv_maps_detail3"
                         app:layout_constraintTop_toBottomOf="@+id/tv_maps_detail3" />
 
@@ -307,8 +306,8 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:fontFamily="@font/poppinsbold"
-                        android:text="Estimasi : 8kg"
-                        android:textSize="10dp"
+                        android:text="@string/order_history_weight"
+                        android:textSize="10sp"
                         app:layout_constraintStart_toStartOf="@+id/tv_maps_detail3"
                         app:layout_constraintTop_toBottomOf="@+id/tv_note3" />
 
@@ -317,8 +316,8 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:fontFamily="@font/poppinsregular"
-                        android:text="(500 m)"
-                        android:textSize="10dp"
+                        android:text="@string/order_history_distance"
+                        android:textSize="10sp"
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintTop_toTopOf="@+id/tv_profile3" />
 
@@ -327,9 +326,9 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:fontFamily="@font/poppinsbold"
-                        android:text="200.000 Coins"
+                        android:text="@string/order_history_value"
                         android:textColor="@color/red"
-                        android:textSize="10dp"
+                        android:textSize="10sp"
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintTop_toTopOf="@+id/tv_maps_detail3" />
 
@@ -363,7 +362,7 @@
                         android:layout_marginStart="3dp"
                         android:layout_marginTop="3dp"
                         android:fontFamily="@font/poppinsbold"
-                        android:text="Aldio Yohanes, Blimbing"
+                        android:text="@string/order_history_name"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toTopOf="parent" />
 
@@ -372,7 +371,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:fontFamily="@font/poppinsregular"
-                        android:text="Titik Jemput"
+                        android:text="@string/order_history_title_address"
                         android:textSize="11sp"
                         app:layout_constraintStart_toStartOf="@+id/tv_maps_detail4"
                         app:layout_constraintTop_toBottomOf="@+id/tv_profile4" />
@@ -392,7 +391,7 @@
                         android:layout_height="wrap_content"
                         android:layout_marginStart="3dp"
                         android:fontFamily="@font/poppinsregular"
-                        android:text="@string/maps_detail_beranda_jemput_pilih"
+                        android:text="@string/order_history_address"
                         android:textSize="12sp"
                         android:textStyle="bold"
                         app:layout_constraintStart_toEndOf="@+id/iv_maps4"
@@ -403,8 +402,8 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:fontFamily="@font/poppinsbold"
-                        android:text="Catatan : 10 Botol Aqua, Besi Kecil, TV Tabung"
-                        android:textSize="10dp"
+                        android:text="@string/order_history_note"
+                        android:textSize="10sp"
                         app:layout_constraintStart_toStartOf="@+id/tv_maps_detail4"
                         app:layout_constraintTop_toBottomOf="@+id/tv_maps_detail4" />
 
@@ -413,8 +412,8 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:fontFamily="@font/poppinsbold"
-                        android:text="Estimasi : 8kg"
-                        android:textSize="10dp"
+                        android:text="@string/order_history_weight"
+                        android:textSize="10sp"
                         app:layout_constraintStart_toStartOf="@+id/tv_maps_detail4"
                         app:layout_constraintTop_toBottomOf="@+id/tv_note4" />
 
@@ -423,8 +422,8 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:fontFamily="@font/poppinsregular"
-                        android:text="(500 m)"
-                        android:textSize="10dp"
+                        android:text="@string/order_history_distance"
+                        android:textSize="10sp"
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintTop_toTopOf="@+id/tv_profile4" />
 
@@ -433,9 +432,9 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:fontFamily="@font/poppinsbold"
-                        android:text="200.000 Coins"
+                        android:text="@string/order_history_value"
                         android:textColor="@color/red"
-                        android:textSize="10dp"
+                        android:textSize="10sp"
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintTop_toTopOf="@+id/tv_maps_detail4" />
 
@@ -469,7 +468,7 @@
                         android:layout_marginStart="3dp"
                         android:layout_marginTop="3dp"
                         android:fontFamily="@font/poppinsbold"
-                        android:text="Aldio Yohanes, Blimbing"
+                        android:text="@string/order_history_name"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toTopOf="parent" />
 
@@ -478,7 +477,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:fontFamily="@font/poppinsregular"
-                        android:text="Titik Jemput"
+                        android:text="@string/order_history_title_address"
                         android:textSize="11sp"
                         app:layout_constraintStart_toStartOf="@+id/tv_maps_detail5"
                         app:layout_constraintTop_toBottomOf="@+id/tv_profile5" />
@@ -498,7 +497,7 @@
                         android:layout_height="wrap_content"
                         android:layout_marginStart="3dp"
                         android:fontFamily="@font/poppinsregular"
-                        android:text="@string/maps_detail_beranda_jemput_pilih"
+                        android:text="@string/order_history_address"
                         android:textSize="12sp"
                         android:textStyle="bold"
                         app:layout_constraintStart_toEndOf="@+id/iv_maps5"
@@ -509,8 +508,8 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:fontFamily="@font/poppinsbold"
-                        android:text="Catatan : 10 Botol Aqua, Besi Kecil, TV Tabung"
-                        android:textSize="10dp"
+                        android:text="@string/order_history_note"
+                        android:textSize="10sp"
                         app:layout_constraintStart_toStartOf="@+id/tv_maps_detail5"
                         app:layout_constraintTop_toBottomOf="@+id/tv_maps_detail5" />
 
@@ -519,8 +518,8 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:fontFamily="@font/poppinsbold"
-                        android:text="Estimasi : 8kg"
-                        android:textSize="10dp"
+                        android:text="@string/order_history_weight"
+                        android:textSize="10sp"
                         app:layout_constraintStart_toStartOf="@+id/tv_maps_detail5"
                         app:layout_constraintTop_toBottomOf="@+id/tv_note5" />
 
@@ -529,8 +528,8 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:fontFamily="@font/poppinsregular"
-                        android:text="(500 m)"
-                        android:textSize="10dp"
+                        android:text="@string/order_history_distance"
+                        android:textSize="10sp"
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintTop_toTopOf="@+id/tv_profile5" />
 
@@ -539,9 +538,9 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:fontFamily="@font/poppinsbold"
-                        android:text="200.000 Coins"
+                        android:text="@string/order_history_value"
                         android:textColor="@color/red"
-                        android:textSize="10dp"
+                        android:textSize="10sp"
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintTop_toTopOf="@+id/tv_maps_detail5" />
 
@@ -575,7 +574,7 @@
                         android:layout_marginStart="3dp"
                         android:layout_marginTop="3dp"
                         android:fontFamily="@font/poppinsbold"
-                        android:text="Aldio Yohanes, Blimbing"
+                        android:text="@string/order_history_name"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toTopOf="parent" />
 
@@ -584,7 +583,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:fontFamily="@font/poppinsregular"
-                        android:text="Titik Jemput"
+                        android:text="@string/order_history_title_address"
                         android:textSize="11sp"
                         app:layout_constraintStart_toStartOf="@+id/tv_maps_detail6"
                         app:layout_constraintTop_toBottomOf="@+id/tv_profile6" />
@@ -604,7 +603,7 @@
                         android:layout_height="wrap_content"
                         android:layout_marginStart="3dp"
                         android:fontFamily="@font/poppinsregular"
-                        android:text="@string/maps_detail_beranda_jemput_pilih"
+                        android:text="@string/order_history_address"
                         android:textSize="12sp"
                         android:textStyle="bold"
                         app:layout_constraintStart_toEndOf="@+id/iv_maps6"
@@ -615,8 +614,8 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:fontFamily="@font/poppinsbold"
-                        android:text="Catatan : 10 Botol Aqua, Besi Kecil, TV Tabung"
-                        android:textSize="10dp"
+                        android:text="@string/order_history_note"
+                        android:textSize="10sp"
                         app:layout_constraintStart_toStartOf="@+id/tv_maps_detail6"
                         app:layout_constraintTop_toBottomOf="@+id/tv_maps_detail6" />
 
@@ -625,8 +624,8 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:fontFamily="@font/poppinsbold"
-                        android:text="Estimasi : 8kg"
-                        android:textSize="10dp"
+                        android:text="@string/order_history_weight"
+                        android:textSize="10sp"
                         app:layout_constraintStart_toStartOf="@+id/tv_maps_detail6"
                         app:layout_constraintTop_toBottomOf="@+id/tv_note6" />
 
@@ -635,8 +634,8 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:fontFamily="@font/poppinsregular"
-                        android:text="(500 m)"
-                        android:textSize="10dp"
+                        android:text="@string/order_history_distance"
+                        android:textSize="10sp"
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintTop_toTopOf="@+id/tv_profile6" />
 
@@ -645,9 +644,9 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:fontFamily="@font/poppinsbold"
-                        android:text="200.000 Coins"
+                        android:text="@string/order_history_value"
                         android:textColor="@color/red"
-                        android:textSize="10dp"
+                        android:textSize="10sp"
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintTop_toTopOf="@+id/tv_maps_detail6" />
 
@@ -681,7 +680,7 @@
                         android:layout_marginStart="3dp"
                         android:layout_marginTop="3dp"
                         android:fontFamily="@font/poppinsbold"
-                        android:text="Aldio Yohanes, Blimbing"
+                        android:text="@string/order_history_name"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toTopOf="parent" />
 
@@ -690,7 +689,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:fontFamily="@font/poppinsregular"
-                        android:text="Titik Jemput"
+                        android:text="@string/order_history_title_address"
                         android:textSize="11sp"
                         app:layout_constraintStart_toStartOf="@+id/tv_maps_detail7"
                         app:layout_constraintTop_toBottomOf="@+id/tv_profile7" />
@@ -710,7 +709,7 @@
                         android:layout_height="wrap_content"
                         android:layout_marginStart="3dp"
                         android:fontFamily="@font/poppinsregular"
-                        android:text="@string/maps_detail_beranda_jemput_pilih"
+                        android:text="@string/order_history_address"
                         android:textSize="12sp"
                         android:textStyle="bold"
                         app:layout_constraintStart_toEndOf="@+id/iv_maps7"
@@ -721,8 +720,8 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:fontFamily="@font/poppinsbold"
-                        android:text="Catatan : 10 Botol Aqua, Besi Kecil, TV Tabung"
-                        android:textSize="10dp"
+                        android:text="@string/order_history_note"
+                        android:textSize="10sp"
                         app:layout_constraintStart_toStartOf="@+id/tv_maps_detail7"
                         app:layout_constraintTop_toBottomOf="@+id/tv_maps_detail7" />
 
@@ -731,8 +730,8 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:fontFamily="@font/poppinsbold"
-                        android:text="Estimasi : 8kg"
-                        android:textSize="10dp"
+                        android:text="@string/order_history_weight"
+                        android:textSize="10sp"
                         app:layout_constraintStart_toStartOf="@+id/tv_maps_detail7"
                         app:layout_constraintTop_toBottomOf="@+id/tv_note7" />
 
@@ -741,8 +740,8 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:fontFamily="@font/poppinsregular"
-                        android:text="(500 m)"
-                        android:textSize="10dp"
+                        android:text="@string/order_history_distance"
+                        android:textSize="10sp"
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintTop_toTopOf="@+id/tv_profile7" />
 
@@ -751,9 +750,9 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:fontFamily="@font/poppinsbold"
-                        android:text="200.000 Coins"
+                        android:text="@string/order_history_value"
                         android:textColor="@color/red"
-                        android:textSize="10dp"
+                        android:textSize="10sp"
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintTop_toTopOf="@+id/tv_maps_detail7" />
 

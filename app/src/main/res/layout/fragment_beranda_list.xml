@@ -3,7 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:background="@drawable/two_color_beranda"
+    android:background="@drawable/bg_base_beranda"
     android:layout_height="match_parent"
     tools:context=".beranda.BerandaListFragment">
 
@@ -12,10 +12,11 @@
         android:layout_width="60dp"
         android:layout_height="60dp"
         android:layout_marginTop="20dp"
-        android:src="@drawable/foto_profile"
+        android:src="@drawable/img_avatar"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        android:contentDescription="@string/todo" />
 
     <ImageView
         android:id="@+id/iv_notif"
@@ -25,7 +26,8 @@
         android:layout_marginTop="30dp"
         android:src="@drawable/ic_notif"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        android:contentDescription="@string/todo" />
 
     <TextView
         android:id="@+id/tv_profil"
@@ -33,7 +35,7 @@
         android:layout_height="wrap_content"
         android:fontFamily="@font/poppinsbold"
         android:layout_marginTop="10dp"
-        android:text="Hi! Aldio"
+        android:text="@string/beranda_list"
         android:textColor="@color/white"
         android:textSize="25sp"
         app:layout_constraintEnd_toEndOf="parent"
@@ -46,7 +48,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="0dp"
         android:fontFamily="@font/poppinsbold"
-        android:text="Selamat datang di Smart Recycling"
+        android:text="@string/beranda_list_welcome"
         android:textColor="@color/white"
         android:textSize="15sp"
         app:layout_constraintEnd_toEndOf="parent"
@@ -89,7 +91,8 @@
                 android:src="@drawable/ic_coin"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
+                app:layout_constraintTop_toTopOf="parent"
+                android:contentDescription="@string/todo" />
 
             <TextView
                 android:id="@+id/tv_coin_title"
@@ -97,7 +100,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="10dp"
                 android:fontFamily="@font/poppinsbold"
-                android:text="Koin Saya"
+                android:text="@string/beranda_list_coin_title"
                 android:textColor="@color/green"
                 android:textSize="11sp"
                 app:layout_constraintStart_toEndOf="@+id/iv_coin"
@@ -108,7 +111,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/poppinsregular"
-                android:text="65.500"
+                android:text="@string/beranda_list_coin_value"
                 android:textColor="@color/green"
                 android:textSize="11sp"
                 android:textStyle="bold"
@@ -125,7 +128,8 @@
                 android:layout_marginEnd="10dp"
                 android:src="@drawable/ic_history"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
+                app:layout_constraintTop_toTopOf="parent"
+                android:contentDescription="@string/todo" />
 
             <TextView
                 android:id="@+id/tv_history"
@@ -133,7 +137,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="10dp"
                 android:fontFamily="@font/poppinsregular"
-                android:text="Riwayat"
+                android:text="@string/beranda_list_history"
                 android:textColor="@color/green"
                 android:textSize="11sp"
                 android:textStyle="bold"
@@ -159,7 +163,8 @@
         <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:orientation="vertical">
+            android:orientation="vertical"
+            tools:ignore="UseCompoundDrawables">
 
             <ImageView
                 android:id="@+id/iv_jemput"
@@ -170,7 +175,8 @@
                 android:src="@drawable/ic_jemput"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
+                app:layout_constraintTop_toTopOf="parent"
+                android:contentDescription="@string/todo" />
 
             <TextView
                 android:id="@+id/tv_jemput"
@@ -178,7 +184,7 @@
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/poppinsbold"
                 android:gravity="center"
-                android:text="Penjemputan Sampah"
+                android:text="@string/beranda_list_pickup"
                 android:textSize="11sp"
                 android:textColor="@color/black"
                 app:layout_constraintStart_toStartOf="@+id/iv_jemput"
@@ -201,7 +207,8 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:orientation="vertical">
+            android:orientation="vertical"
+            tools:ignore="UseCompoundDrawables">
 
             <ImageView
                 android:id="@+id/iv_tukar"
@@ -212,7 +219,8 @@
                 android:layout_gravity="center"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
+                app:layout_constraintTop_toTopOf="parent"
+                android:contentDescription="@string/todo" />
 
             <TextView
                 android:id="@+id/tv_tukar"
@@ -220,7 +228,7 @@
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/poppinsbold"
                 android:gravity="center"
-                android:text="Tukar Koin"
+                android:text="@string/beranda_list_reedem"
                 android:textColor="@color/black"
                 android:textSize="11sp"
                 app:layout_constraintStart_toStartOf="@+id/iv_tukar"
@@ -238,7 +246,7 @@
         android:layout_marginTop="30dp"
         android:layout_marginStart="30dp"
         android:fontFamily="@font/poppinsbold"
-        android:text="Artikel"
+        android:text="@string/beranda_list_article"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/cardView_jemput" />
 
@@ -249,196 +257,23 @@
         android:layout_marginEnd="30dp"
         android:layout_marginTop="30dp"
         android:fontFamily="@font/poppinsbold"
-        android:text="Lihat Lainya"
+        android:text="@string/beranda_list_article_more"
         android:textColor="@color/green"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/cardView_jemput" />
 
-
-    <ScrollView
-        android:layout_width="match_parent"
+    <androidx.fragment.app.FragmentContainerView
+        android:id="@+id/fragment_container_article"
+        android:name="com.infinite.massiveprojectmobilezwh.beranda.BerandaArtikelFragment"
+        tools:layout="@layout/fragment_beranda_artikel"
+        android:layout_width="0dp"
         android:layout_height="0dp"
+        android:layout_marginTop="10dp"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tv_title_artikel"
-        app:layout_constraintBottom_toBottomOf="parent">
+        app:layout_constraintTop_toBottomOf="@id/tv_subtitle_artikel"/>
 
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="vertical">
-
-            <androidx.cardview.widget.CardView
-                android:id="@+id/cardView_artikel"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginHorizontal="30dp"
-                android:layout_marginTop="0dp"
-                app:cardBackgroundColor="@color/green_secondary_button"
-                app:cardCornerRadius="8dp"
-                app:contentPaddingBottom="5dp"
-                app:contentPaddingLeft="20dp"
-                app:contentPaddingRight="20dp"
-                app:contentPaddingTop="5dp"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/tv_title_artikel">
-
-                <androidx.constraintlayout.widget.ConstraintLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content">
-
-                    <TextView
-                        android:id="@+id/tv_title_artikel1"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:fontFamily="@font/poppinsbold"
-                        android:text="Recycling Made Easier"
-                        android:textColor="@color/green"
-                        android:textStyle="bold"
-                        app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toTopOf="parent" />
-
-                    <TextView
-                        android:id="@+id/tv_artikel1"
-                        android:layout_width="0dp"
-                        android:layout_height="wrap_content"
-                        android:fontFamily="@font/poppinsregular"
-                        android:text="Welcome to our homepage, a place where we inspire positive change through recycling waste to keep our earth green and sustainainable."
-                        android:textColor="@color/green"
-                        android:textSize="11sp"
-                        app:layout_constraintEnd_toStartOf="@+id/imageView2"
-                        app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toBottomOf="@id/tv_title_artikel1" />
-
-                    <ImageView
-                        android:id="@+id/imageView2"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:src="@drawable/ic_artikel_vector"
-                        app:layout_constraintBottom_toBottomOf="parent"
-                        app:layout_constraintEnd_toEndOf="parent"
-                        app:layout_constraintTop_toTopOf="@+id/tv_title_artikel1" />
-
-                </androidx.constraintlayout.widget.ConstraintLayout>
-
-            </androidx.cardview.widget.CardView>
-
-            <androidx.cardview.widget.CardView
-                android:id="@+id/cardView_artikel2"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginHorizontal="30dp"
-                android:layout_marginTop="10dp"
-                app:cardBackgroundColor="@color/green_secondary_button"
-                app:cardCornerRadius="8dp"
-                app:contentPaddingBottom="5dp"
-                app:contentPaddingLeft="20dp"
-                app:contentPaddingRight="20dp"
-                app:contentPaddingTop="5dp"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/tv_title_artikel">
-
-                <androidx.constraintlayout.widget.ConstraintLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content">
-
-                    <TextView
-                        android:id="@+id/tv_title_artikel2"
-                        android:layout_width="0dp"
-                        android:layout_height="wrap_content"
-                        android:fontFamily="@font/poppinsbold"
-                        android:text="We invest in the world’s potential"
-                        android:textColor="@color/green"
-                        android:textStyle="bold"
-                        app:layout_constraintEnd_toStartOf="@+id/iv_artikel2"
-                        app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toTopOf="parent" />
-
-                    <TextView
-                        android:id="@+id/tv_artikel2"
-                        android:layout_width="0dp"
-                        android:layout_height="wrap_content"
-                        android:fontFamily="@font/poppinsregular"
-                        android:text="At GreenSaver, our primary commitment lies in revolutionizing rubbish disposal through the power of technology, innovation, and strategic investment."
-                        android:textColor="@color/green"
-                        android:textSize="11sp"
-                        app:layout_constraintEnd_toStartOf="@+id/iv_artikel2"
-                        app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toBottomOf="@id/tv_title_artikel2" />
-
-                    <ImageView
-                        android:id="@+id/iv_artikel2"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:src="@drawable/ic_artikel_vector"
-                        app:layout_constraintBottom_toBottomOf="parent"
-                        app:layout_constraintEnd_toEndOf="parent"
-                        app:layout_constraintTop_toTopOf="@+id/tv_title_artikel2" />
-
-                </androidx.constraintlayout.widget.ConstraintLayout>
-
-            </androidx.cardview.widget.CardView>
-
-            <androidx.cardview.widget.CardView
-                android:id="@+id/cardView_artikel3"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginHorizontal="30dp"
-                android:layout_marginTop="10dp"
-                app:cardBackgroundColor="@color/green_secondary_button"
-                app:cardCornerRadius="8dp"
-                app:contentPaddingBottom="5dp"
-                app:contentPaddingLeft="20dp"
-                app:contentPaddingRight="20dp"
-                app:contentPaddingTop="5dp"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/tv_title_artikel">
-
-                <androidx.constraintlayout.widget.ConstraintLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content">
-
-                    <TextView
-                        android:id="@+id/tv_title_artikel3"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:fontFamily="@font/poppinsbold"
-                        android:text="We help people dispose of rubbish"
-                        android:textColor="@color/green"
-                        android:textStyle="bold"
-                        app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toTopOf="parent" />
-
-                    <TextView
-                        android:id="@+id/tv_artikel3"
-                        android:layout_width="0dp"
-                        android:layout_height="wrap_content"
-                        android:fontFamily="@font/poppinsregular"
-                        android:text="At GreenSaver, we`re dedicated to transforming the way you handle waste management, making it easier and more convenient for you to dispose of rubbish. Our innovative solutions are designed to simplify the process, ensuring a cleaner and more sustainable environment for all."
-                        android:textColor="@color/green"
-                        android:textSize="11sp"
-                        app:layout_constraintEnd_toStartOf="@+id/iv_artikel3"
-                        app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toBottomOf="@id/tv_title_artikel3" />
-
-                    <ImageView
-                        android:id="@+id/iv_artikel3"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:src="@drawable/ic_artikel_vector"
-                        app:layout_constraintEnd_toEndOf="parent"
-                        app:layout_constraintTop_toTopOf="@+id/tv_title_artikel3" />
-
-                </androidx.constraintlayout.widget.ConstraintLayout>
-
-            </androidx.cardview.widget.CardView>
-
-        </LinearLayout>
-
-    </ScrollView>
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

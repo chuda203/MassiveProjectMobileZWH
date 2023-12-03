@@ -13,6 +13,18 @@ class MapsListActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_maps_list)
+
+        // Cek apakah Intent membawa informasi fragment yang akan ditampilkan
+        // Buat atur fragment_container nampilin fragment_order_list
+        if (intent.hasExtra("fragmentToLoad")) {
+            val fragmentToLoad = intent.getStringExtra("fragmentToLoad")
+            when (fragmentToLoad) {
+                "OrderListFragment" -> replaceFragment(OrderListFragment())
+            }
+        } else {
+            replaceFragment(MapsListFragment())
+        }
+
         val bottomNav = findViewById<BottomNavigationView>(R.id.bottomNavigationView)
         bottomNav.setOnItemSelectedListener {
             when(it.itemId){

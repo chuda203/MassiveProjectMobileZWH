@@ -4,41 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/two_color_background"
     tools:context=".beranda.BerandaOrderSelesaiFragment">
-
-    <TextView
-        android:id="@+id/tv_title"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="20dp"
-        android:layout_marginTop="3dp"
-        android:fontFamily="@font/poppinsbold"
-        android:text="@string/title_beranda_jemput"
-        android:textColor="@color/white"
-        android:textSize="22sp"
-        app:layout_constraintStart_toEndOf="@+id/iv_back"
-        app:layout_constraintTop_toTopOf="@id/iv_back" />
-
-    <ImageView
-        android:id="@+id/iv_back"
-        android:layout_width="40dp"
-        android:layout_height="40dp"
-        android:layout_marginTop="40dp"
-        android:layout_marginStart="30dp"
-        android:src="@drawable/ic_back"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        android:contentDescription="@string/todo" />
-
-    <View
-        android:id="@+id/separator"
-        android:layout_width="wrap_content"
-        android:layout_height="10dp"
-        android:layout_marginTop="120dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
 
     <ImageView
         android:id="@+id/img_done"
@@ -48,7 +14,8 @@
         android:src="@drawable/ic_done"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/separator" />
+        app:layout_constraintTop_toTopOf="parent"
+        android:contentDescription="@string/todo" />
 
     <TextView
         android:id="@+id/tv_title_done"
@@ -56,9 +23,9 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
         android:fontFamily="@font/poppinsregular"
-        android:text="Selesai"
+        android:text="@string/beranda_order_selesai_status"
         android:textColor="@color/black"
-        android:textSize="25dp"
+        android:textSize="25sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -70,9 +37,9 @@
         android:layout_height="wrap_content"
         android:fontFamily="@font/poppinsregular"
         android:paddingHorizontal="30dp"
-        android:text="Koin telah ditambahkan oleh pengepul"
+        android:text="@string/beranda_order_selesai_detail"
         android:textColor="@color/black"
-        android:textSize="25dp"
+        android:textSize="25sp"
         android:textStyle="bold"
         android:gravity="center"
         app:layout_constraintEnd_toEndOf="parent"
@@ -85,7 +52,7 @@
         android:layout_height="wrap_content"
         android:layout_marginHorizontal="30dp"
         android:layout_marginBottom="20dp"
-        android:text="@string/confirm_beranda_jemput_proses"
+        android:text="@string/beranda_order_selesai_home"
         android:fontFamily="@font/poppinsbold"
         android:textSize="15sp"
         android:textAllCaps="false"
@@ -100,9 +67,9 @@
         android:layout_marginBottom="20dp"
         android:fontFamily="@font/poppinsregular"
         android:gravity="center"
-        android:text="Atau"
+        android:text="@string/beranda_order_selesai_option"
         android:textColor="@color/black"
-        android:textSize="20dp"
+        android:textSize="20sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toTopOf="@+id/bt_confirmation_history"
         app:layout_constraintEnd_toEndOf="parent"
@@ -115,7 +82,7 @@
         android:layout_height="wrap_content"
         android:layout_marginHorizontal="30dp"
         android:layout_marginBottom="40dp"
-        android:text="@string/confirm_beranda_jemput_proses"
+        android:text="@string/beranda_order_selesai_history"
         android:fontFamily="@font/poppinsbold"
         android:textSize="15sp"
         android:textAllCaps="false"

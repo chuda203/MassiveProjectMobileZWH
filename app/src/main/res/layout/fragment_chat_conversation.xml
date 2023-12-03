@@ -4,234 +4,159 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/background_chat"
     tools:context=".chat.ChatConversationFragment">
 
-    <ImageView
-        android:id="@+id/back"
-        android:layout_width="30dp"
-        android:layout_height="30dp"
-        android:layout_marginStart="12dp"
-        android:layout_marginTop="18dp"
-        android:src="@drawable/img"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <de.hdodenhof.circleimageview.CircleImageView
-        android:id="@+id/fotoProfil"
-        android:layout_width="40dp"
-        android:layout_height="40dp"
-        android:layout_marginStart="14dp"
-        android:layout_marginTop="13dp"
-        android:src="@drawable/profil_aldio"
-        app:layout_constraintStart_toEndOf="@+id/back"
-        app:layout_constraintTop_toTopOf="parent"/>
-
-    <TextView
-        android:id="@+id/namaUser"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="12dp"
-        android:layout_marginTop="10dp"
-        android:textSize="15sp"
-        android:fontFamily="@font/poppinsbold"
-        android:text="Aldio"
-        android:textColor="@color/white"
-        app:layout_constraintStart_toEndOf="@+id/fotoProfil"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <TextView
-        android:id="@+id/statusOnline"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="12dp"
-        android:fontFamily="@font/poppinsregular"
-        android:text="online"
-        android:textColor="@color/white"
-        android:textSize="12sp"
-        app:layout_constraintStart_toEndOf="@+id/fotoProfil"
-        app:layout_constraintTop_toBottomOf="@+id/namaUser" />
-
-    <ImageView
-        android:id="@+id/menutitik3"
-        android:layout_width="30dp"
-        android:layout_height="30dp"
-        android:src="@drawable/titiktiga"
-        app:layout_constraintBottom_toBottomOf="@+id/statusOnline"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.931"
-        app:layout_constraintStart_toEndOf="@+id/namaUser"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.666" />
-
     <androidx.cardview.widget.CardView
-        android:id="@+id/cardView3"
+        android:id="@+id/cardView_day"
         android:layout_width="80dp"
         android:layout_height="30dp"
-        android:layout_marginTop="80dp"
+        android:layout_marginTop="10dp"
         app:cardBackgroundColor="@color/green"
         app:cardCornerRadius="5dp"
-        app:flow_horizontalAlign="center"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
         <TextView
-            android:id="@+id/textHariIni"
+            android:id="@+id/tv_date"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="13dp"
+            android:layout_marginHorizontal="13dp"
             android:fontFamily="@font/poppinsregular"
             android:padding="6dp"
             android:textSize="12sp"
-            android:text="Hari ini"
-            android:textAlignment="center"
+            android:text="@string/beranda_obrolan_day"
             android:textColor="@color/white" />
     </androidx.cardview.widget.CardView>
 
-    <de.hdodenhof.circleimageview.CircleImageView
-        android:id="@+id/circleImageView"
+    <ImageView
+        android:id="@+id/iv_profile_sender"
         android:layout_width="60dp"
         android:layout_height="60dp"
+        android:layout_marginTop="50dp"
         android:layout_marginEnd="24dp"
-        android:src="@drawable/foto_rizky"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:src="@drawable/img_avatar_driver"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.201" />
+        app:layout_constraintTop_toBottomOf="@+id/cardView_day"
+        android:contentDescription="@string/todo" />
 
     <androidx.appcompat.widget.AppCompatImageView
-        android:id="@+id/appCompatImageView2"
+        android:id="@+id/bubble_sender"
         android:layout_width="229dp"
         android:layout_height="108dp"
-        android:layout_marginStart="88dp"
-        android:layout_marginTop="144dp"
-        android:src="@drawable/chat1"
-        app:layout_constraintEnd_toStartOf="@+id/circleImageView"
-        app:layout_constraintHorizontal_bias="0.617"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"/>
+        android:src="@drawable/img_bubble_sender"
+        app:layout_constraintEnd_toStartOf="@+id/iv_profile_sender"
+        app:layout_constraintTop_toBottomOf="@+id/iv_profile_sender" />
 
     <TextView
-        android:id="@+id/tv1"
+        android:id="@+id/tv_chat_sender"
         android:layout_width="185dp"
         android:layout_height="wrap_content"
         android:fontFamily="@font/poppinsregular"
-        android:text="Hallo, Saya akan mengambil orderan kamu, mohon ditunggu di rumah ya"
+        android:text="@string/beranda_obrolan_content_sender"
         android:textColor="@color/black"
         android:textSize="12sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.247" />
+        app:layout_constraintBottom_toBottomOf="@+id/bubble_sender"
+        app:layout_constraintEnd_toEndOf="@+id/bubble_sender"
+        app:layout_constraintStart_toStartOf="@+id/bubble_sender"
+        app:layout_constraintTop_toTopOf="@+id/bubble_sender" />
 
-    <de.hdodenhof.circleimageview.CircleImageView
-        android:id="@+id/fotoAldio"
+    <ImageView
+        android:id="@+id/iv_profile_receiver"
         android:layout_width="60dp"
         android:layout_height="60dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="4dp"
-        android:src="@drawable/profil_aldio"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="10dp"
+        android:src="@drawable/img_avatar"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/appCompatImageView2" />
+        app:layout_constraintTop_toBottomOf="@+id/bubble_sender"
+        android:contentDescription="@string/todo" />
 
     <ImageView
-        android:id="@+id/chat2"
+        android:id="@+id/iv_bubble_receiver"
         android:layout_width="185dp"
         android:layout_height="49dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="12dp"
-        android:src="@drawable/chat2"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toEndOf="@+id/fotoAldio"
-        app:layout_constraintTop_toBottomOf="@+id/appCompatImageView2" />
+        android:src="@drawable/img_bubble_receiver"
+        app:layout_constraintStart_toEndOf="@+id/iv_profile_receiver"
+        app:layout_constraintTop_toBottomOf="@+id/iv_profile_receiver"
+        android:contentDescription="@string/todo" />
 
     <TextView
-        android:id="@+id/tv2"
+        android:id="@+id/tv_chat_receiver"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:fontFamily="@font/poppinsregular"
-        android:text="Ok bang, ditunggu"
+        android:text="@string/beranda_obrolan_content_receiver"
         android:textColor="@color/black"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.389"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.39" />
+        app:layout_constraintBottom_toBottomOf="@+id/iv_bubble_receiver"
+        app:layout_constraintEnd_toEndOf="@+id/iv_bubble_receiver"
+        app:layout_constraintStart_toStartOf="@+id/iv_bubble_receiver"
+        app:layout_constraintTop_toTopOf="@+id/iv_bubble_receiver" />
 
     <TextView
-        android:id="@+id/textView"
+        android:id="@+id/tv_typing_status"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="22dp"
+        android:layout_marginStart="10dp"
         android:fontFamily="@font/poppinsregular"
-        android:text="Sedang mengetik, silahkan tunggu"
+        android:text="@string/beranda_obrolan_typing_status"
         android:textColor="@color/black"
         android:textSize="12sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.08"
-        app:layout_constraintStart_toEndOf="@+id/titik3horizontal"
-        app:layout_constraintTop_toBottomOf="@+id/chat2" />
+        app:layout_constraintBottom_toBottomOf="@+id/iv_typing_status"
+        app:layout_constraintStart_toEndOf="@+id/iv_typing_status"
+        app:layout_constraintTop_toTopOf="@+id/iv_typing_status" />
 
     <ImageView
-        android:id="@+id/titik3horizontal"
+        android:id="@+id/iv_typing_status"
         android:layout_width="50dp"
         android:layout_height="10dp"
-        android:layout_marginStart="24dp"
-        android:layout_marginTop="24dp"
-        android:src="@drawable/titik3horizontal"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/fotoAldio"
-        app:layout_constraintVertical_bias="0.0" />
+        android:layout_marginTop="10dp"
+        android:src="@drawable/ic_typing"
+        app:layout_constraintStart_toStartOf="@+id/iv_bubble_receiver"
+        app:layout_constraintTop_toBottomOf="@+id/iv_bubble_receiver"
+        android:contentDescription="@string/todo" />
 
     <EditText
-        android:id="@+id/etKetik"
-        android:layout_width="288dp"
+        android:id="@+id/et_typing"
+        android:layout_width="275dp"
         android:layout_height="50dp"
         android:layout_marginStart="12dp"
         android:layout_marginBottom="16dp"
-        android:background="@drawable/edit_text_background"
-        android:backgroundTint="@color/black2"
-        android:drawableLeft="@drawable/baseline_emoji_emotions_24"
+        android:background="@drawable/bg_et_chat"
+        android:backgroundTint="@color/semi_black"
+        android:drawableStart="@drawable/ic_emoji"
         android:drawablePadding="10dp"
         android:fontFamily="@font/poppinsregular"
-        android:hint="Ketik pesan"
+        android:hint="@string/beranda_obrolan_typing"
+        android:inputType="text"
         android:padding="10dp"
-        android:paddingStart="20dp"
         android:textColor="@color/black"
         android:textColorHint="@color/white"
-        android:textSize="16dp"
+        android:textSize="16sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView"
-        app:layout_constraintVertical_bias="1.0" />
+        android:importantForAutofill="no" />
 
     <ImageView
-        android:id="@+id/camera"
+        android:id="@+id/iv_camera"
         android:layout_width="45dp"
         android:layout_height="45dp"
-        android:layout_marginStart="6dp"
-        android:src="@drawable/baseline_photo_camera_24"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/etKetik"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.973" />
+        android:layout_marginEnd="6dp"
+        android:contentDescription="@string/todo"
+        android:src="@drawable/ic_capture_chat"
+        app:layout_constraintBottom_toBottomOf="@+id/et_typing"
+        app:layout_constraintEnd_toStartOf="@+id/iv_voicenote"
+        app:layout_constraintStart_toEndOf="@+id/et_typing"
+        app:layout_constraintTop_toTopOf="@+id/et_typing" />
 
     <ImageView
-        android:id="@+id/voicenote"
+        android:id="@+id/iv_voicenote"
         android:layout_width="41dp"
         android:layout_height="41dp"
-        android:layout_marginEnd="12dp"
-        android:src="@drawable/voicenote"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginEnd="10dp"
+        android:src="@drawable/ic_voice_chat"
+        app:layout_constraintBottom_toBottomOf="@+id/iv_camera"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toEndOf="@+id/camera"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.966" />
+        app:layout_constraintTop_toTopOf="@+id/iv_camera"
+        android:contentDescription="@string/todo" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

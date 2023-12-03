@@ -17,22 +17,25 @@ class MasukActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_masuk)
-        val bt_pengguna = findViewById<Button>(R.id.Button1)
-        bt_pengguna.setOnClickListener {
+        // berhasil masuk, masuk ke beranda pengguna
+        val btnMasuk = findViewById<Button>(R.id.bt_confirmation)
+        btnMasuk.setOnClickListener {
             Intent(this, BerandaListActivity::class.java).also {
                 startActivity(it)
             }
         }
+
         // Pengaturan OnClickListener untuk teks "Daftar"
-        val bt_regis = findViewById<TextView>(R.id.textview9)
-        bt_regis.setOnClickListener {
+        val btnRegis = findViewById<TextView>(R.id.tv_to_register)
+        btnRegis.setOnClickListener {
             Intent(this, DaftarActivity::class.java).also {
                 startActivity(it)
             }
         }
-        val editTextPassword = findViewById<EditText>(R.id.edt_username2)
-        val imageViewToggle = findViewById<ImageView>(R.id.kunci1)
 
+        // Mengaktifkan fungsi hide dan unhide password
+        val editTextPassword = findViewById<EditText>(R.id.et_password)
+        val imageViewToggle = findViewById<ImageView>(R.id.ic_password)
         imageViewToggle.setOnClickListener {
             // Saat ImageView diklik, ubah tipe input teks
             isPasswordVisible = !isPasswordVisible
@@ -40,6 +43,8 @@ class MasukActivity : AppCompatActivity() {
         }
 
     }
+
+    // Function untuk fitur hide/unhide password
     private fun togglePasswordVisibility(editText: EditText, isVisible: Boolean) {
         if (isVisible) {
             // Jika terlihat, ubah ke tipe teks biasa

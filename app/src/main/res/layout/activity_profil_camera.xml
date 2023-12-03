@@ -10,7 +10,7 @@
         android:id="@+id/view_top"
         android:layout_width="match_parent"
         android:layout_height="100dp"
-        android:background="@color/darkgrey"
+        android:background="@color/dark_grey"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -41,7 +41,7 @@
         android:id="@+id/view_bottom"
         android:layout_width="match_parent"
         android:layout_height="130dp"
-        android:background="@color/darkgrey"
+        android:background="@color/dark_grey"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintBottom_toBottomOf="parent" />
@@ -79,9 +79,10 @@
         app:layout_constraintTop_toTopOf="@id/view_bottom"
         android:contentDescription="@string/todo"/>
 
-    <fragment
+    <androidx.fragment.app.FragmentContainerView
         android:id="@+id/fragment_container"
         android:name="com.infinite.massiveprojectmobilezwh.profil.ProfilCameraFragment"
+        tools:layout="@layout/fragment_profil_camera"
         android:layout_width="0dp"
         android:layout_height="0dp"
         app:layout_constraintBottom_toTopOf="@+id/view_bottom"

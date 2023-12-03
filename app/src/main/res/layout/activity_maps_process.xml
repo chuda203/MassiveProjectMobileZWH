@@ -105,7 +105,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/poppinsregular"
-                android:text="@string/maps_detail_beranda_jemput_pilih"
+                android:text="@string/beranda_lokasi_address"
                 android:textSize="11sp"
                 android:textStyle="bold"
                 app:layout_constraintStart_toStartOf="@+id/tv_process"
@@ -139,7 +139,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="2dp"
                 android:layout_marginTop="5dp"
-                android:background="@color/colorutama"
+                android:background="@color/green"
                 app:layout_constraintTop_toBottomOf="@+id/img_profile" />
 
             <ImageView

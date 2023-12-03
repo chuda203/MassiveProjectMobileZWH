@@ -13,9 +13,10 @@ class ProfilNotifActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_profil_notif)
         // Pengaturan OnClickListener untuk teks "back ke profile Customer"
-        val bt_back = findViewById<ImageView>(R.id.back1)
+        val bt_back = findViewById<ImageView>(R.id.iv_back)
         bt_back.setOnClickListener {
-            onBackPressed()
+            // akhiri Activity, alternatif onBackPressed
+            finish()
         }
 
     }

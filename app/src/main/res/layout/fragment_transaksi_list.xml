@@ -5,61 +5,78 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/two_color_background"
+    android:background="@drawable/bg_base"
     tools:context=".transaksi.TransaksiListFragment">
 
-
-    <FrameLayout
-        android:id="@+id/frame2"
-        android:layout_width="322dp"
-        android:layout_height="41dp"
-        android:layout_marginTop="130dp"
-        android:elevation="10dp"
+    <TextView
+        android:id="@+id/tv_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="39dp"
+        android:fontFamily="@font/poppinsbold"
+        android:text="@string/transaksi_list"
+        android:textColor="@color/white"
+        android:textSize="20sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+        app:layout_constraintTop_toTopOf="parent" />
 
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:orientation="horizontal"
-            android:gravity="center">
+    <View
+        android:id="@+id/separator"
+        android:layout_width="wrap_content"
+        android:layout_height="10dp"
+        android:layout_marginTop="120dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
-            <Button
-                android:id="@+id/bt_belum"
-                android:layout_width="161dp"
-                android:layout_height="46dp"
-                android:backgroundTint="@color/green"
-                android:text="Belum Diangkut"
-                android:textAllCaps="false"
-                android:fontFamily="@font/poppinsregular"
-                android:textColor="@color/white"
-                android:textSize="13sp"
-                android:gravity="center"/>
+    <LinearLayout
+        android:id="@+id/linearlayout_status"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/separator">
 
-            <Button
-                android:id="@+id/bt_sudah"
-                android:layout_width="161dp"
-                android:layout_height="46dp"
-                android:backgroundTint="@color/white"
-                android:text="Selesai"
-                android:textAllCaps="false"
-                android:fontFamily="@font/poppinsregular"
-                android:textColor="@color/black"
-                android:textSize="13sp"
-                android:gravity="center"/>
-        </LinearLayout>
-    </FrameLayout>
+        <Button
+            android:id="@+id/bt_belum"
+            android:layout_width="161dp"
+            android:layout_height="46dp"
+            android:backgroundTint="@color/green"
+            android:fontFamily="@font/poppinsregular"
+            android:gravity="center"
+            android:text="@string/transaksi_list_pending"
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+            android:textSize="13sp"
+            style="?android:attr/buttonBarButtonStyle" />
+
+        <Button
+            android:id="@+id/bt_sudah"
+            android:layout_width="161dp"
+            android:layout_height="46dp"
+            android:backgroundTint="@color/white"
+            android:fontFamily="@font/poppinsregular"
+            android:gravity="center"
+            android:text="@string/transaksi_list_done"
+            android:textAllCaps="false"
+            android:textColor="@color/black"
+            android:textSize="13sp"
+            style="?android:attr/buttonBarButtonStyle" />
+    </LinearLayout>
 
     <androidx.fragment.app.FragmentContainerView
         android:id="@+id/fragment_container_transaksi"
+        tools:layout="@layout/fragment_transaksi_belum"
         android:layout_width="match_parent"
         android:layout_height="0dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:navGraph="@navigation/nav_pengguna"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/frame2" />
+        app:layout_constraintTop_toBottomOf="@+id/linearlayout_status" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

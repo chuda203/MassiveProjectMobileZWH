@@ -35,13 +35,13 @@ class ChatListFragment : Fragment() {
     }
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        val btn_confrim : CardView = view.findViewById(R.id.cardView_region1)
-
-        btn_confrim.setOnClickListener {
-            val intent = Intent(requireActivity(), ChatConversationActivity::class.java)
-            startActivity(intent)
+        // Intent ke isi chat
+        val btnConfrim : CardView = view.findViewById(R.id.cardView_region1)
+        btnConfrim.setOnClickListener {
+            Intent(requireActivity(), ChatConversationActivity::class.java).also {
+                startActivity(it)
+            }
         }
-
     }
 
 

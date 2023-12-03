@@ -10,9 +10,11 @@ class WalletHistoryActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_wallet_history)
-        val btnBack = findViewById<ImageView>(R.id.back)
+        // kembali ke Activity sebelumnya
+        val btnBack = findViewById<ImageView>(R.id.iv_back)
         btnBack.setOnClickListener {
-            onBackPressed()
+            // akhiri Activity, alternatif onBackPressed
+            finish()
         }
 
     }

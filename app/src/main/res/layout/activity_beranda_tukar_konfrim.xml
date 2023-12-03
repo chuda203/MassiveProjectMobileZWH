@@ -4,144 +4,52 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/two_color_background"
+    android:background="@drawable/bg_base"
     tools:context=".dompet.BerandaTukarKonfrimActivity">
 
     <ImageView
-        android:id="@+id/back"
+        android:id="@+id/iv_back"
         android:layout_width="28dp"
         android:layout_height="28dp"
-        android:src="@drawable/back"
+        android:src="@drawable/ic_back"
         android:layout_marginTop="35dp"
         android:layout_marginStart="20dp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"/>
+        app:layout_constraintTop_toTopOf="parent"
+        android:contentDescription="@string/todo" />
 
     <TextView
-        android:id="@+id/judul"
+        android:id="@+id/tv_title"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Tukar Koin"
+        android:text="@string/beranda_tukar_konfrim"
         android:textColor="@color/white"
         android:textSize="20sp"
         android:fontFamily="@font/poppinsbold"
         android:layout_marginTop="33dp"
         android:layout_marginStart="70dp"
-        app:layout_constraintStart_toEndOf="@+id/back"
+        app:layout_constraintStart_toEndOf="@+id/iv_back"
         app:layout_constraintTop_toTopOf="parent"/>
 
-    <TextView
-        android:id="@+id/no_hp"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Nomor Tujuan"
-        android:textColor="@color/black"
-        android:textSize="14sp"
-        android:fontFamily="@font/poppinsmedium"
-        android:layout_marginTop="160dp"
-        android:layout_marginStart="20dp"
-        android:layout_marginEnd="20dp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent"/>
-
-    <ImageView
-        android:id="@+id/img_dana"
-        android:layout_width="80dp"
-        android:layout_height="80dp"
-        android:src="@drawable/img_dana"
-        android:layout_marginStart="20dp"
-        android:layout_marginTop="10dp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/no_hp"/>
-
-    <TextView
-        android:id="@+id/nama_dana"
+    <View
+        android:id="@+id/separator"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Aldio Yohanes"
-        android:textColor="@color/black"
-        android:textSize="14sp"
-        android:fontFamily="@font/poppinsmedium"
-        android:layout_marginTop="50dp"
-        android:layout_marginStart="30dp"
-        app:layout_constraintStart_toEndOf="@id/img_dana"
-        app:layout_constraintTop_toTopOf="@id/no_hp"/>
-
-    <TextView
-        android:id="@+id/no_dana"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="082112345678"
-        android:textColor="@color/black"
-        android:textSize="14sp"
-        android:fontFamily="@font/poppinslight"
-        android:layout_marginStart="30dp"
-        app:layout_constraintStart_toEndOf="@id/img_dana"
-        app:layout_constraintTop_toBottomOf="@id/nama_dana"/>
-
-    <TextView
-        android:id="@+id/nominal"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Nominal"
-        android:textColor="@color/black"
-        android:textSize="14sp"
-        android:fontFamily="@font/poppinsmedium"
-        android:layout_marginTop="110dp"
-        android:layout_marginStart="20dp"
-        android:layout_marginEnd="20dp"
-        app:layout_constraintStart_toStartOf="parent"
+        android:layout_height="10dp"
+        android:layout_marginTop="120dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/no_hp"/>
-
-    <TextView
-        android:id="@+id/nominal_value"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Rp.50.000"
-        android:textColor="@color/black"
-        android:textSize="14sp"
-        android:fontFamily="@font/poppinslight"
-        android:textAlignment="textEnd"
-        android:layout_marginTop="110dp"
-        android:layout_marginStart="20dp"
-        android:layout_marginEnd="20dp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/no_hp"/>
+        app:layout_constraintTop_toTopOf="parent" />
 
-    <TextView
-        android:id="@+id/catatan"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Catatan Transaksi"
-        android:textColor="@color/black"
-        android:textSize="14sp"
-        android:fontFamily="@font/poppinsmedium"
-        android:layout_marginTop="10dp"
-        android:layout_marginStart="20dp"
-        android:layout_marginEnd="20dp"
+    <androidx.fragment.app.FragmentContainerView
+        android:id="@+id/fragment_container"
+        android:name="com.infinite.massiveprojectmobilezwh.dompet.BerandaTukarKonfrimFragment"
+        tools:layout="@layout/fragment_beranda_tukar_konfrim"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/nominal"/>
+        app:layout_constraintTop_toBottomOf="@id/separator"/>
 
-
-    <Button
-        android:id="@+id/bt_confirmation"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Lanjutkan"
-        style="@style/ButtonNext"
-        android:textColor="@color/white"
-        android:textSize="14sp"
-        android:fontFamily="@font/poppinsbold"
-        android:textAlignment="center"
-        android:layout_marginStart="20dp"
-        android:layout_marginEnd="20dp"
-        android:layout_marginBottom="50dp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintBottom_toBottomOf="parent"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

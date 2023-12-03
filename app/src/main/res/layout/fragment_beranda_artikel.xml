@@ -24,8 +24,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginHorizontal="30dp"
-                android:layout_marginTop="0dp"
-                app:cardBackgroundColor="@color/green_secondary_button"
+                app:cardBackgroundColor="@color/green_secondary"
                 app:cardCornerRadius="8dp"
                 app:contentPaddingBottom="5dp"
                 app:contentPaddingLeft="20dp"
@@ -44,7 +43,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:fontFamily="@font/poppinsbold"
-                        android:text="Recycling Made Easier"
+                        android:text="@string/beranda_artikel_title"
                         android:textColor="@color/green"
                         android:textStyle="bold"
                         app:layout_constraintStart_toStartOf="parent"
@@ -55,7 +54,7 @@
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:fontFamily="@font/poppinsregular"
-                        android:text="Welcome to our homepage, a place where we inspire positive change through recycling waste to keep our earth green and sustainainable."
+                        android:text="@string/beranda_artikel_content"
                         android:textColor="@color/green"
                         android:textSize="11sp"
                         app:layout_constraintEnd_toStartOf="@+id/imageView2"
@@ -69,7 +68,8 @@
                         android:src="@drawable/ic_artikel_vector"
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintEnd_toEndOf="parent"
-                        app:layout_constraintTop_toTopOf="@+id/tv_title_artikel1" />
+                        app:layout_constraintTop_toTopOf="@+id/tv_title_artikel1"
+                        android:contentDescription="@string/todo"/>
 
                 </androidx.constraintlayout.widget.ConstraintLayout>
 
@@ -81,7 +81,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginHorizontal="30dp"
                 android:layout_marginTop="10dp"
-                app:cardBackgroundColor="@color/green_secondary_button"
+                app:cardBackgroundColor="@color/green_secondary"
                 app:cardCornerRadius="8dp"
                 app:contentPaddingBottom="5dp"
                 app:contentPaddingLeft="20dp"
@@ -100,7 +100,7 @@
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:fontFamily="@font/poppinsbold"
-                        android:text="We invest in the world’s potential"
+                        android:text="@string/beranda_artikel_title2"
                         android:textColor="@color/green"
                         android:textStyle="bold"
                         app:layout_constraintEnd_toStartOf="@+id/iv_artikel2"
@@ -112,7 +112,7 @@
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:fontFamily="@font/poppinsregular"
-                        android:text="At GreenSaver, our primary commitment lies in revolutionizing rubbish disposal through the power of technology, innovation, and strategic investment."
+                        android:text="@string/beranda_artikel_content2"
                         android:textColor="@color/green"
                         android:textSize="11sp"
                         app:layout_constraintEnd_toStartOf="@+id/iv_artikel2"
@@ -126,7 +126,8 @@
                         android:src="@drawable/ic_artikel_vector"
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintEnd_toEndOf="parent"
-                        app:layout_constraintTop_toTopOf="@+id/tv_title_artikel2" />
+                        app:layout_constraintTop_toTopOf="@+id/tv_title_artikel2"
+                        android:contentDescription="@string/todo"/>
 
                 </androidx.constraintlayout.widget.ConstraintLayout>
 
@@ -138,7 +139,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginHorizontal="30dp"
                 android:layout_marginTop="10dp"
-                app:cardBackgroundColor="@color/green_secondary_button"
+                app:cardBackgroundColor="@color/green_secondary"
                 app:cardCornerRadius="8dp"
                 app:contentPaddingBottom="5dp"
                 app:contentPaddingLeft="20dp"
@@ -157,7 +158,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:fontFamily="@font/poppinsbold"
-                        android:text="We help people dispose of rubbish"
+                        android:text="@string/beranda_artikel_title3"
                         android:textColor="@color/green"
                         android:textStyle="bold"
                         app:layout_constraintStart_toStartOf="parent"
@@ -168,7 +169,7 @@
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:fontFamily="@font/poppinsregular"
-                        android:text="At GreenSaver, we`re dedicated to transforming the way you handle waste management, making it easier and more convenient for you to dispose of rubbish. Our innovative solutions are designed to simplify the process, ensuring a cleaner and more sustainable environment for all."
+                        android:text="@string/beranda_artikel_content3"
                         android:textColor="@color/green"
                         android:textSize="11sp"
                         app:layout_constraintEnd_toStartOf="@+id/iv_artikel3"
@@ -181,7 +182,8 @@
                         android:layout_height="wrap_content"
                         android:src="@drawable/ic_artikel_vector"
                         app:layout_constraintEnd_toEndOf="parent"
-                        app:layout_constraintTop_toTopOf="@+id/tv_title_artikel3" />
+                        app:layout_constraintTop_toTopOf="@+id/tv_title_artikel3"
+                        android:contentDescription="@string/todo"/>
 
                 </androidx.constraintlayout.widget.ConstraintLayout>
 
@@ -193,7 +195,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginHorizontal="30dp"
                 android:layout_marginTop="10dp"
-                app:cardBackgroundColor="@color/green_secondary_button"
+                app:cardBackgroundColor="@color/green_secondary"
                 app:cardCornerRadius="8dp"
                 app:contentPaddingBottom="5dp"
                 app:contentPaddingLeft="20dp"
@@ -212,7 +214,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:fontFamily="@font/poppinsbold"
-                        android:text="Recycling Made Easier"
+                        android:text="@string/beranda_artikel_title"
                         android:textColor="@color/green"
                         android:textStyle="bold"
                         app:layout_constraintStart_toStartOf="parent"
@@ -223,7 +225,7 @@
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:fontFamily="@font/poppinsregular"
-                        android:text="Welcome to our homepage, a place where we inspire positive change through recycling waste to keep our earth green and sustainainable."
+                        android:text="@string/beranda_artikel_content"
                         android:textColor="@color/green"
                         android:textSize="11sp"
                         app:layout_constraintEnd_toStartOf="@+id/imageView4"
@@ -237,7 +239,8 @@
                         android:src="@drawable/ic_artikel_vector"
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintEnd_toEndOf="parent"
-                        app:layout_constraintTop_toTopOf="@+id/tv_title_artikel4" />
+                        app:layout_constraintTop_toTopOf="@+id/tv_title_artikel4"
+                        android:contentDescription="@string/todo"/>
 
                 </androidx.constraintlayout.widget.ConstraintLayout>
 
@@ -249,7 +252,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginHorizontal="30dp"
                 android:layout_marginTop="10dp"
-                app:cardBackgroundColor="@color/green_secondary_button"
+                app:cardBackgroundColor="@color/green_secondary"
                 app:cardCornerRadius="8dp"
                 app:contentPaddingBottom="5dp"
                 app:contentPaddingLeft="20dp"
@@ -268,7 +271,7 @@
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:fontFamily="@font/poppinsbold"
-                        android:text="We invest in the world’s potential"
+                        android:text="@string/beranda_artikel_title2"
                         android:textColor="@color/green"
                         android:textStyle="bold"
                         app:layout_constraintEnd_toStartOf="@+id/iv_artikel5"
@@ -280,7 +283,7 @@
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:fontFamily="@font/poppinsregular"
-                        android:text="At GreenSaver, our primary commitment lies in revolutionizing rubbish disposal through the power of technology, innovation, and strategic investment."
+                        android:text="@string/beranda_artikel_content2"
                         android:textColor="@color/green"
                         android:textSize="11sp"
                         app:layout_constraintEnd_toStartOf="@+id/iv_artikel5"
@@ -294,7 +297,8 @@
                         android:src="@drawable/ic_artikel_vector"
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintEnd_toEndOf="parent"
-                        app:layout_constraintTop_toTopOf="@+id/tv_title_artikel5" />
+                        app:layout_constraintTop_toTopOf="@+id/tv_title_artikel5"
+                        android:contentDescription="@string/todo"/>
 
                 </androidx.constraintlayout.widget.ConstraintLayout>
 
@@ -306,7 +310,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginHorizontal="30dp"
                 android:layout_marginTop="10dp"
-                app:cardBackgroundColor="@color/green_secondary_button"
+                app:cardBackgroundColor="@color/green_secondary"
                 app:cardCornerRadius="8dp"
                 app:contentPaddingBottom="5dp"
                 app:contentPaddingLeft="20dp"
@@ -325,7 +329,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:fontFamily="@font/poppinsbold"
-                        android:text="We help people dispose of rubbish"
+                        android:text="@string/beranda_artikel_title3"
                         android:textColor="@color/green"
                         android:textStyle="bold"
                         app:layout_constraintStart_toStartOf="parent"
@@ -336,7 +340,7 @@
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:fontFamily="@font/poppinsregular"
-                        android:text="At GreenSaver, we`re dedicated to transforming the way you handle waste management, making it easier and more convenient for you to dispose of rubbish. Our innovative solutions are designed to simplify the process, ensuring a cleaner and more sustainable environment for all."
+                        android:text="@string/beranda_artikel_content3"
                         android:textColor="@color/green"
                         android:textSize="11sp"
                         app:layout_constraintEnd_toStartOf="@+id/iv_artikel6"
@@ -349,7 +353,8 @@
                         android:layout_height="wrap_content"
                         android:src="@drawable/ic_artikel_vector"
                         app:layout_constraintEnd_toEndOf="parent"
-                        app:layout_constraintTop_toTopOf="@+id/tv_title_artikel6" />
+                        app:layout_constraintTop_toTopOf="@+id/tv_title_artikel6"
+                        android:contentDescription="@string/todo"/>
 
                 </androidx.constraintlayout.widget.ConstraintLayout>
 

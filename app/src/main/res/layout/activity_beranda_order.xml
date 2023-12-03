@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/two_color_background"
+    android:background="@drawable/bg_base"
     tools:context=".beranda.BerandaOrderActivity">
 
     <TextView
@@ -14,7 +14,7 @@
         android:layout_marginStart="20dp"
         android:layout_marginTop="3dp"
         android:fontFamily="@font/poppinsbold"
-        android:text="@string/title_beranda_jemput"
+        android:text="@string/beranda_lokasi"
         android:textColor="@color/white"
         android:textSize="22sp"
         app:layout_constraintStart_toEndOf="@+id/iv_back"
@@ -46,7 +46,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="30dp"
         android:fontFamily="@font/poppinsbold"
-        android:text="@string/sub_title_beranda_jemput_unggah"
+        android:text="@string/beranda_order_title"
         android:textColor="@color/black"
         android:textSize="17sp"
         app:layout_constraintEnd_toEndOf="parent"
@@ -69,9 +69,10 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent">
 
-            <fragment
+            <androidx.fragment.app.FragmentContainerView
                 android:id="@+id/iv_capture_preview"
                 android:name="com.infinite.massiveprojectmobilezwh.beranda.BerandaOrderFragment"
+                tools:layout="@layout/fragment_beranda_order"
                 android:layout_width="100dp"
                 android:layout_height="140dp"
                 android:scaleType="centerCrop"
@@ -85,7 +86,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="20dp"
                 android:layout_marginTop="20dp"
-                android:text="@string/title_maps_beranda_jemput_unggah"
+                android:text="@string/beranda_order_title_address"
                 android:fontFamily="@font/poppinsregular"
                 android:textSize="11sp"
                 android:textStyle="bold"
@@ -109,7 +110,7 @@
                 android:paddingEnd="170dp"
                 android:fontFamily="@font/poppinsregular"
                 android:textSize="11sp"
-                android:text="@string/maps_detail_beranda_jemput_unggah"
+                android:text="@string/beranda_order_address"
                 app:layout_constraintStart_toEndOf="@+id/iv_maps"
                 app:layout_constraintTop_toTopOf="@id/iv_maps"
                 android:ellipsize="end"
@@ -127,7 +128,7 @@
         android:layout_marginStart="20dp"
         android:layout_marginTop="15dp"
         android:fontFamily="@font/poppinsregular"
-        android:text="@string/title_category_beranda_jemput_unggah"
+        android:text="@string/beranda_order_title_category"
         android:textStyle="bold"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/cardView_maps_detail" />
@@ -162,13 +163,11 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:fontFamily="@font/poppinsregular"
-                    android:hint="--Pilih Kategori --"
+                    android:hint="@string/beranda_order_choose_category"
                     android:inputType="none"
                     android:textSize="11sp" />
 
             </com.google.android.material.textfield.TextInputLayout>
-
-
 
         </LinearLayout>
 
@@ -180,7 +179,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
         android:layout_marginStart="20dp"
-        android:text="@string/title_category_sub_beranda_jemput_unggah"
+        android:text="@string/beranda_order_title_note"
         android:fontFamily="@font/poppinsregular"
         android:textStyle="bold"
         app:layout_constraintStart_toStartOf="parent"
@@ -192,7 +191,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:fontFamily="@font/poppinsregular"
-        android:text="@string/category_sub_beranda_jemput_unggah"
+        android:text="@string/beranda_order_hint_detail"
         android:textSize="11sp"
         app:layout_constraintStart_toStartOf="@+id/tv_category_sub"
         app:layout_constraintTop_toBottomOf="@+id/tv_category_sub" />
@@ -204,7 +203,7 @@
         android:layout_height="60dp"
         android:layout_marginHorizontal="20dp"
         android:layout_marginBottom="93dp"
-        android:hint="@string/category_subnote_beranda_jemput_unggah"
+        android:hint="@string/beranda_order_hint_note"
         android:inputType="text"
         android:textSize="14sp"
         app:layout_constraintBottom_toTopOf="@+id/bt_confirmation"
@@ -212,7 +211,8 @@
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="@+id/tv_category_subdetail"
         app:layout_constraintTop_toBottomOf="@+id/tv_category_subdetail"
-        app:layout_constraintVertical_bias="0.0" />
+        app:layout_constraintVertical_bias="0.0"
+        android:autofillHints="" />
 
     <Button
         android:id="@+id/bt_confirmation"
@@ -220,7 +220,7 @@
         android:layout_height="wrap_content"
         android:layout_marginHorizontal="30dp"
         android:layout_marginBottom="30dp"
-        android:text="@string/confirmation_beranda_jemput_unggah"
+        android:text="@string/beranda_order_confirmation"
         android:fontFamily="@font/poppinsbold"
         android:textSize="15sp"
         style="@style/ButtonNext"

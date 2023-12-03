@@ -14,20 +14,12 @@ class BerandaDompetActivity : AppCompatActivity() {
         setContentView(R.layout.activity_beranda_dompet)
 
 //nanti kalian testing dibagian ini pas saya testing kyk gimana mungkin di  hp saya atau dicodingannya
-// -> pake onBackPressed masalah selesai, tapi commitNow gak bisa jalan
-        val btn_back = findViewById<ImageView>(R.id.back)
-        btn_back.setOnClickListener {
-            onBackPressed()
+// -> pake finish() masalah selesai, tapi commitNow gak bisa jalan
+        val btnBack = findViewById<ImageView>(R.id.iv_back)
+        btnBack.setOnClickListener {
+            // akhiri Activity, alternatif onBackPressed
+            finish()
             //.commitNow() // guna commit untuk transasi
-
-        }
-
-        val btn_tukar = findViewById<LinearLayout>(R.id.linearlayout_tukar)
-        btn_tukar.setOnClickListener {
-            // Start BerandaTukarActivity
-            Intent(this, BerandaTukarActivity::class.java).also {
-                startActivity(it)
-            }
         }
     }
 }

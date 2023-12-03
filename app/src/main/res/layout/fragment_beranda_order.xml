@@ -12,7 +12,7 @@
         android:layout_height="match_parent"
         android:contentDescription="@string/todo"
         android:scaleType="centerCrop"
-        android:src="@drawable/img_capture_sample_preview"
+        android:src="@drawable/img_capture_order_preview"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"

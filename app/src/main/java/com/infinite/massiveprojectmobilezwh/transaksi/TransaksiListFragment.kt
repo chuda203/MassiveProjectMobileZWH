@@ -45,18 +45,20 @@ class TransaksiListFragment : Fragment() {
 
         showFragment(TransaksiBelumFragment())
 
-        val btBelum : Button = view.findViewById(R.id.bt_belum)
-        val btSudah : Button = view.findViewById(R.id.bt_sudah)
-        btBelum.setOnClickListener {
+        // mengatur respon saat button belum transaksi dan sudah
+        val btnBelum : Button = view.findViewById(R.id.bt_belum)
+        val btnSudah : Button = view.findViewById(R.id.bt_sudah)
+        btnBelum.setOnClickListener {
             showFragment(TransaksiBelumFragment())
-            setButtonColors(btBelum, btSudah)
+            setButtonColors(btnBelum, btnSudah)
         }
-        btSudah.setOnClickListener {
+        btnSudah.setOnClickListener {
             showFragment(TransaksiSudahFragment())
-            setButtonColors(btSudah, btBelum)
+            setButtonColors(btnSudah, btnBelum)
         }
     }
 
+    // function untuk ubah warna button belum transaksi dan sudah
     private fun setButtonColors(selectedButton: Button, unselectedButton: Button) {
         // Set warna untuk tombol terpilih
         selectedButton.backgroundTintList =
@@ -69,6 +71,7 @@ class TransaksiListFragment : Fragment() {
         unselectedButton.setTextColor(ContextCompat.getColor(requireContext(), R.color.black))
     }
 
+    // function untuk ganti fragment
     private fun showFragment(fragment: Fragment) {
         childFragmentManager.beginTransaction()
             .replace(R.id.fragment_container_transaksi, fragment)

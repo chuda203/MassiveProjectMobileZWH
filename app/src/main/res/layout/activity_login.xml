@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/two_color_pengepul"
+    android:background="@drawable/bg_base_pengepul_login"
     tools:context=".ui.MasukActivity">
 
     <ImageView
@@ -12,34 +12,32 @@
         android:layout_width="87dp"
         android:layout_height="137dp"
         android:layout_marginTop="130dp"
-        android:layout_alignParentTop="true"
-        android:layout_alignParentEnd="true"
-        android:layout_centerHorizontal="true"
         android:src="@drawable/img_logo"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        android:contentDescription="@string/todo" />
 
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_marginTop="10dp"
-        app:layout_constraintBottom_toTopOf="@+id/Button1"
+        app:layout_constraintBottom_toTopOf="@+id/bt_confirmation"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/splash_logo">
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_height="wrap_content"
             android:orientation="vertical">
             <TextView
-                android:id="@+id/textview1"
+                android:id="@+id/tv_phone"
                 android:layout_width="216dp"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="16dp"
                 android:fontFamily="@font/poppinsregular"
-                android:text="Nomor Hp"
+                android:text="@string/login_title_phone"
                 android:textColor="@color/white"
                 android:textSize="14sp"
                 app:layout_constraintStart_toStartOf="parent"
@@ -47,52 +45,59 @@
                 app:layout_constraintVertical_bias="0.027" />
 
             <EditText
-                android:id="@+id/edt_username1"
+                android:id="@+id/et_phone"
                 android:layout_width="match_parent"
                 android:layout_height="35dp"
                 android:layout_marginStart="16dp"
                 android:layout_marginTop="1dp"
                 android:layout_marginEnd="20dp"
-                android:background="@drawable/rounded_rectangle"
+                android:inputType="phone"
+                android:hint="@string/login_hint_phone"
+                android:fontFamily="@font/poppinsregular"
+                android:textSize="11sp"
+                android:paddingHorizontal="10dp"
+                android:background="@drawable/bg_et_login"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/textview1" />
+                app:layout_constraintTop_toBottomOf="@+id/textview1"
+                android:importantForAutofill="no" />
             <TextView
-                android:id="@+id/textview2"
+                android:id="@+id/tv_password"
                 android:layout_width="216dp"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="16dp"
                 android:fontFamily="@font/poppinsregular"
-                android:text="Kata Sandi"
+                android:text="@string/login_title_password"
                 android:textColor="@color/white"
-                android:textSize="14sp"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/edt_username1"
-                app:layout_constraintVertical_bias="0.027" />
+                android:textSize="14sp"/>
             <RelativeLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content">
 
                 <EditText
-                    android:id="@+id/edt_username2"
+                    android:id="@+id/et_password"
                     android:layout_width="match_parent"
                     android:layout_height="35dp"
+                    android:hint="@string/login_hint_password"
+                    android:fontFamily="@font/poppinsregular"
+                    android:textSize="11sp"
+                    android:paddingHorizontal="10dp"
                     android:layout_marginStart="16dp"
                     android:layout_marginTop="1dp"
                     android:layout_marginEnd="20dp"
-                    android:background="@drawable/rounded_rectangle"
-
-                    android:inputType="textPassword"/>
+                    android:background="@drawable/bg_et_login"
+                    android:inputType="textPassword"
+                    android:importantForAutofill="no" />
 
                 <ImageView
-                    android:id="@+id/kunci1"
+                    android:id="@+id/ic_password"
                     android:layout_width="27dp"
                     android:layout_height="41dp"
                     android:layout_marginEnd="10dp"
-                    android:layout_alignEnd="@+id/edt_username2"
-                    android:layout_alignTop="@+id/edt_username2"
-                    android:layout_alignBottom="@+id/edt_username2"
-                    android:src="@drawable/mdi_eye" />
-
+                    android:layout_alignEnd="@+id/et_password"
+                    android:layout_alignTop="@+id/et_password"
+                    android:layout_alignBottom="@+id/et_password"
+                    android:src="@drawable/ic_hide"
+                    android:contentDescription="@string/todo" />
 
             </RelativeLayout>
 
@@ -100,111 +105,92 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content">
 
-
                 <CheckBox
-                    android:id="@+id/icon1"
+                    android:id="@+id/ic_check"
                     android:layout_width="26dp"
                     android:layout_height="26dp"
                     android:layout_marginStart="10dp"
                     android:layout_marginTop="5dp"/>
 
                 <TextView
-                    android:id="@+id/textview3"
+                    android:id="@+id/tv_remember"
                     android:layout_width="wrap_content"
                     android:layout_height="23dp"
                     android:layout_marginStart="5dp"
-                    android:layout_alignTop="@+id/icon1"
-                    android:layout_alignBottom="@+id/icon1"
-                    android:layout_toEndOf="@+id/icon1"
+                    android:layout_alignTop="@+id/ic_check"
+                    android:layout_alignBottom="@+id/ic_check"
+                    android:layout_toEndOf="@+id/ic_check"
                     android:fontFamily="@font/poppinsregular"
-                    android:text="Ingat Saya"
+                    android:text="@string/login_remember"
                     android:textColor="@color/white"
                     android:textSize="14sp" />
 
                 <TextView
-                    android:id="@+id/textview4"
+                    android:id="@+id/tv_forgot"
                     android:layout_width="wrap_content"
                     android:layout_height="23dp"
                     android:layout_marginEnd="20dp"
-                    android:layout_alignTop="@+id/icon1"
-                    android:layout_alignBottom="@+id/icon1"
+                    android:layout_alignTop="@+id/ic_check"
+                    android:layout_alignBottom="@+id/ic_check"
                     android:layout_alignParentEnd="true"
-                    android:fontFamily="@font/poppinsregular"
-                    android:text="Lupa Sandi?"
+                    android:fontFamily="@font/poppinsbold"
+                    android:text="@string/login_forgot"
                     android:textColor="@color/white"
-                    android:textSize="14sp" />
+                    android:textSize="14sp"
+                    tools:ignore="RelativeOverlap" />
             </RelativeLayout>
-
-
-
 
         </LinearLayout>
 
-
     </ScrollView>
 
-
     <Button
-        android:id="@+id/Button1"
+        android:id="@+id/bt_confirmation"
         style="@style/ButtonSubNext"
         android:layout_width="match_parent"
         android:layout_height="50dp"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentEnd="true"
-        android:layout_centerHorizontal="true"
-        android:layout_gravity="center"
         android:layout_marginHorizontal="30dp"
         android:layout_marginBottom="10dp"
-        android:paddingStart="16dp"
-        android:paddingTop="8dp"
-        android:paddingEnd="16dp"
-        android:paddingBottom="8dp"
-        android:text="Masuk"
+        android:paddingHorizontal="16dp"
+        android:paddingVertical="8dp"
+        android:text="@string/login_confirmation"
+        android:textAllCaps="false"
         android:textColor="@color/black"
         android:textSize="18sp"
-        app:layout_constraintBottom_toTopOf="@+id/textview5"
+        app:layout_constraintBottom_toTopOf="@+id/tv_option"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
 
     <TextView
-        android:id="@+id/textview5"
+        android:id="@+id/tv_option"
         android:layout_width="42dp"
         android:layout_height="17dp"
-        android:layout_alignStart="@+id/Button1"
-        android:layout_alignEnd="@+id/Button1"
-        android:layout_alignBottom="@+id/Button1"
-        android:layout_centerHorizontal="true"
         android:layout_gravity="center"
         android:layout_marginBottom="15dp"
         android:fontFamily="@font/poppinsregular"
-        android:text="Atau"
+        android:text="@string/login_option"
         android:textColor="@color/white"
         android:textSize="14sp"
-        app:layout_constraintBottom_toTopOf="@+id/myButton2"
-        app:layout_constraintEnd_toEndOf="@+id/Button1"
-        app:layout_constraintStart_toStartOf="@+id/Button1"/>
+        app:layout_constraintBottom_toTopOf="@+id/iv_with_google"
+        app:layout_constraintEnd_toEndOf="@+id/bt_confirmation"
+        app:layout_constraintStart_toStartOf="@+id/bt_confirmation"/>
 
     <ImageButton
-        android:id="@+id/myButton2"
+        android:id="@+id/iv_with_google"
         android:layout_width="121dp"
         android:layout_height="44dp"
-        android:layout_alignBottom="@+id/splash_logo"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentEnd="true"
-        android:layout_centerHorizontal="true"
-        android:layout_gravity="center"
         android:layout_marginStart="29dp"
         android:layout_marginBottom="15dp"
-        android:paddingStart="16dp"
         android:paddingTop="8dp"
-        android:src="@drawable/google"
+        android:src="@drawable/img_with_google"
         android:textColor="#ffffff"
         android:textSize="18sp"
-        app:layout_constraintBottom_toTopOf="@+id/textview8"
-        app:layout_constraintStart_toStartOf="parent"/>
+        app:layout_constraintBottom_toTopOf="@+id/tv_title_to_register"
+        app:layout_constraintStart_toStartOf="parent"
+        android:contentDescription="@string/todo" />
 
     <ImageButton
-        android:id="@+id/myButton3"
+        android:id="@+id/iv_with_fb"
         android:layout_width="121dp"
         android:layout_height="44dp"
         android:layout_alignBottom="@+id/splash_logo"
@@ -213,47 +199,37 @@
         android:layout_centerHorizontal="true"
         android:layout_gravity="center"
         android:layout_marginEnd="30dp"
-        android:paddingStart="16dp"
         android:paddingTop="8dp"
-        android:src="@drawable/fb"
+        android:src="@drawable/img_with_fb"
         android:textColor="#ffffff"
         android:textSize="18sp"
-        app:layout_constraintBottom_toBottomOf="@+id/myButton2"
+        app:layout_constraintBottom_toBottomOf="@+id/iv_with_google"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/myButton2" />
+        app:layout_constraintTop_toTopOf="@+id/iv_with_google"
+        android:contentDescription="@string/todo" />
 
     <TextView
-        android:id="@+id/textview8"
+        android:id="@+id/tv_title_to_register"
         android:layout_width="wrap_content"
         android:layout_height="18dp"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentTop="true"
-        android:layout_alignParentEnd="true"
-        android:layout_centerHorizontal="true"
-        android:layout_gravity="center"
         android:layout_marginBottom="50dp"
         android:fontFamily="@font/poppinsregular"
-        android:text="Apakah Anda sudah memiliki akun? "
+        android:text="@string/login_title_to_register"
         android:textColor="@color/white"
         android:textSize="14sp"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="@+id/myButton2"/>
+        app:layout_constraintStart_toStartOf="@+id/iv_with_google"/>
 
     <TextView
-        android:id="@+id/textview9"
+        android:id="@+id/tv_to_register"
         android:layout_width="51dp"
         android:layout_height="17dp"
         android:layout_marginStart="10dp"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentTop="true"
-        android:layout_alignParentEnd="true"
-        android:layout_centerHorizontal="true"
-        android:layout_gravity="center"
-        android:fontFamily="@font/poppinsregular"
-        android:text="Daftar"
+        android:fontFamily="@font/poppinsbold"
+        android:text="@string/login_to_register"
         android:textColor="@color/white"
         android:textSize="14sp"
-        app:layout_constraintStart_toEndOf="@+id/textview8"
-        app:layout_constraintTop_toTopOf="@+id/textview8" />
+        app:layout_constraintStart_toEndOf="@+id/tv_title_to_register"
+        app:layout_constraintTop_toTopOf="@+id/tv_title_to_register" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

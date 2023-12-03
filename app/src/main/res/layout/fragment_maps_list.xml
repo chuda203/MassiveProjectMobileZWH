@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/two_color_background"
+    android:background="@drawable/bg_base"
     tools:context=".maps.MapsListFragment">
 
     <ImageView
@@ -14,7 +14,8 @@
         android:scaleType="centerCrop"
         android:src="@drawable/img_map_sampe_xl"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        android:contentDescription="@string/todo" />
 
     <ImageView
         android:id="@+id/iv_maps_mode"
@@ -24,7 +25,8 @@
         android:layout_marginEnd="20dp"
         android:src="@drawable/ic_maps_mode"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        android:contentDescription="@string/todo" />
 
     <ImageView
         android:id="@+id/iv_compass"
@@ -34,16 +36,30 @@
         android:layout_marginEnd="20dp"
         android:src="@drawable/ic_compass"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/iv_maps_mode" />
+        app:layout_constraintTop_toBottomOf="@id/iv_maps_mode"
+        android:contentDescription="@string/todo" />
 
     <ImageView
         android:id="@+id/iv_gps"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_height="0dp"
         android:layout_marginEnd="20dp"
         android:layout_marginBottom="20dp"
+        android:contentDescription="@string/todo"
         android:src="@drawable/ic_gps"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/fragment_container_order" />
+
+    <androidx.fragment.app.FragmentContainerView
+        android:id="@+id/fragment_container_order"
+        android:name="com.infinite.massiveprojectmobilezwh.FragmentZDummy"
+        tools:layout="@layout/fragment_maps_process"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="30dp"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

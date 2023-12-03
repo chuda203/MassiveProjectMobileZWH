@@ -1,10 +1,12 @@
 package com.infinite.massiveprojectmobilezwh.transaksi
 
+import android.content.Intent
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.TextView
 import com.infinite.massiveprojectmobilezwh.R
 
 // TODO: Rename parameter arguments, choose names that match
@@ -29,6 +31,24 @@ class TransaksiSudahFragment : Fragment() {
             param2 = it.getString(ARG_PARAM2)
         }
     }
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+        // Intent ke detail foto
+        val btnImage : TextView = view.findViewById(R.id.tv_photo1)
+        btnImage.setOnClickListener {
+            Intent(requireActivity(), TransaksiFotoActivity::class.java).also {
+                startActivity(it)
+            }
+        }
+        // Intent ke detail pesanan
+        val btnDetail : TextView = view.findViewById(R.id.tv_status1)
+        btnDetail.setOnClickListener {
+            Intent(requireActivity(), TransaksiBelumStatusActivity::class.java).also {
+                startActivity(it)
+            }
+        }
+    }
+
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,

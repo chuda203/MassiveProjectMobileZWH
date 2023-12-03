@@ -4,52 +4,18 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/two_color_background"
     tools:context=".order.OrderDetailFragment">
 
-    <TextView
-        android:id="@+id/tv_title"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="20dp"
-        android:layout_marginTop="3dp"
-        android:fontFamily="@font/poppinsbold"
-        android:text="Detail Order"
-        android:textColor="@color/white"
-        android:textSize="22sp"
-        app:layout_constraintStart_toEndOf="@+id/iv_back"
-        app:layout_constraintTop_toTopOf="@id/iv_back" />
-
-    <ImageView
-        android:id="@+id/iv_back"
-        android:layout_width="40dp"
-        android:layout_height="40dp"
-        android:layout_marginTop="40dp"
-        android:layout_marginStart="30dp"
-        android:src="@drawable/ic_back"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        android:contentDescription="@string/todo" />
-
-    <View
-        android:id="@+id/separator"
-        android:layout_width="wrap_content"
-        android:layout_height="10dp"
-        android:layout_marginTop="120dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
 
     <androidx.cardview.widget.CardView
         android:id="@+id/cardView_maps_detail"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginHorizontal="30dp"
-        android:layout_marginTop="15dp"
         android:background="@drawable/bg_cardview"
         app:cardCornerRadius="8dp"
         app:contentPadding="20dp"
-        app:layout_constraintTop_toBottomOf="@id/separator">
+        app:layout_constraintTop_toTopOf="parent">
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
@@ -61,7 +27,8 @@
                 android:layout_height="wrap_content"
                 android:src="@drawable/ic_profile_order"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
+                app:layout_constraintTop_toTopOf="parent"
+                android:contentDescription="@string/todo" />
 
             <TextView
                 android:id="@+id/tv_profile"
@@ -69,7 +36,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="20dp"
                 android:fontFamily="@font/poppinsbold"
-                android:text="Aldio Yohanes"
+                android:text="@string/order_detail_name"
                 android:textColor="@color/black"
                 app:layout_constraintBottom_toBottomOf="@+id/iv_profile"
                 app:layout_constraintStart_toEndOf="@+id/iv_profile"
@@ -82,7 +49,8 @@
                 android:layout_marginEnd="20dp"
                 android:src="@drawable/ic_phone"
                 app:layout_constraintEnd_toStartOf="@+id/img_chat"
-                app:layout_constraintTop_toTopOf="@+id/img_chat" />
+                app:layout_constraintTop_toTopOf="@+id/img_chat"
+                android:contentDescription="@string/todo" />
 
             <ImageView
                 android:id="@+id/img_chat"
@@ -92,10 +60,8 @@
                 android:layout_marginEnd="10dp"
                 android:src="@drawable/ic_chat"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
-
-
-
+                app:layout_constraintTop_toTopOf="parent"
+                android:contentDescription="@string/todo" />
 
             <View
                 android:id="@+id/separator_profile"
@@ -109,11 +75,11 @@
                 android:id="@+id/iv_capture_preview"
                 android:layout_width="100dp"
                 android:layout_height="140dp"
-                android:layout_marginTop="20dp"
                 android:layout_marginStart="10dp"
+                android:layout_marginTop="20dp"
                 android:contentDescription="@string/todo"
                 android:scaleType="centerCrop"
-                android:src="@drawable/img_capture_sample_preview"
+                android:src="@drawable/img_capture_order_preview"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/iv_profile" />
 
@@ -124,7 +90,7 @@
                 android:layout_marginStart="20dp"
                 android:layout_marginTop="40dp"
                 android:fontFamily="@font/poppinsregular"
-                android:text="@string/title_maps_beranda_jemput_unggah"
+                android:text="@string/beranda_order_title_address"
                 android:textSize="11sp"
                 android:textStyle="bold"
                 app:layout_constraintStart_toEndOf="@+id/iv_capture_preview"
@@ -144,14 +110,14 @@
                 android:id="@+id/tv_maps_detail"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:paddingEnd="170dp"
+                android:ellipsize="end"
                 android:fontFamily="@font/poppinsregular"
+                android:maxLines="3"
+                android:paddingEnd="170dp"
+                android:text="@string/beranda_order_address"
                 android:textSize="11sp"
-                android:text="@string/maps_detail_beranda_jemput_unggah"
                 app:layout_constraintStart_toEndOf="@+id/iv_maps"
                 app:layout_constraintTop_toTopOf="@id/iv_maps"
-                android:ellipsize="end"
-                android:maxLines="3"
                 tools:ignore="RtlSymmetry" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
@@ -165,7 +131,7 @@
         android:layout_marginTop="15dp"
         android:layout_marginStart="20dp"
         android:fontFamily="@font/poppinsbold"
-        android:text="Catatan :"
+        android:text="@string/order_detail_title_note"
         android:textStyle="bold"
         app:layout_constraintStart_toStartOf="@+id/cardView_maps_detail"
         app:layout_constraintTop_toBottomOf="@+id/cardView_maps_detail" />
@@ -191,7 +157,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="20dp"
                 android:fontFamily="@font/poppinsregular"
-                android:text="Sampah botol plastik"
+                android:text="@string/order_detail_note"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
 
@@ -205,7 +171,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
         android:fontFamily="@font/poppinsbold"
-        android:text="Estimasi Berat :"
+        android:text="@string/order_detail_title_weight"
         android:textStyle="bold"
         app:layout_constraintStart_toStartOf="@+id/tv_title_note"
         app:layout_constraintTop_toBottomOf="@+id/cardView_note" />
@@ -232,7 +198,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="20dp"
                 android:fontFamily="@font/poppinsregular"
-                android:text="2 Kg"
+                android:text="@string/order_detail_weight"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
 
@@ -242,13 +208,13 @@
 
     <Button
         android:id="@+id/bt_confirmation"
-        android:layout_width="wrap_content"
+        android:layout_width="120dp"
         android:layout_height="wrap_content"
         android:layout_marginHorizontal="60dp"
         android:layout_marginBottom="70dp"
         style="@style/ButtonNext"
         android:fontFamily="@font/poppinsbold"
-        android:text="Diterima"
+        android:text="@string/order_detail_confirmation"
         android:textAllCaps="false"
         android:textColor="@color/white"
         android:textSize="15sp"
@@ -257,13 +223,13 @@
 
     <Button
         android:id="@+id/bt_payment"
-        android:layout_width="wrap_content"
+        android:layout_width="120dp"
         android:layout_height="wrap_content"
         android:layout_marginHorizontal="60dp"
         android:layout_marginBottom="70dp"
-        style="@style/ButtonNext"
+        style="@style/ButtonSubNext"
         android:fontFamily="@font/poppinsbold"
-        android:text="Bayar"
+        android:text="@string/order_detail_payment"
         android:textAllCaps="false"
         android:textColor="@color/black"
         android:textSize="15sp"

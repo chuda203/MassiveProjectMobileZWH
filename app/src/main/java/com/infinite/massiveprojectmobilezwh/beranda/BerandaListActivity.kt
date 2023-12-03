@@ -12,10 +12,10 @@ class BerandaListActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_beranda_list)
+        // atur bottom navigation, aksi setiap klik icon
         val bottomNav = findViewById<BottomNavigationView>(R.id.bottomNavigationView)
         bottomNav.setOnItemSelectedListener {
             when(it.itemId){
-
                 R.id.home_icon -> replaceFragment(BerandaListFragment())
                 R.id.transaksi_icon -> replaceFragment(TransaksiListFragment())
                 R.id.profile_icon -> replaceFragment(ProfilListFragment())
@@ -25,10 +25,9 @@ class BerandaListActivity : AppCompatActivity() {
             true
         }
     }
+    // function ganti fragment
     private fun replaceFragment(fragment: Fragment){
-
-        val fragmentManager = supportFragmentManager
-        val fragmentTransaction = fragmentManager.beginTransaction()
+        val fragmentTransaction = supportFragmentManager.beginTransaction()
         fragmentTransaction.replace(R.id.fragment_container,fragment)
         fragmentTransaction.commit()
     }

@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/two_color_background"
+    android:background="@drawable/bg_base"
     tools:context=".beranda.BerandaUpfotoActivity">
 
     <TextView
@@ -14,7 +14,7 @@
         android:layout_marginStart="20dp"
         android:layout_marginTop="3dp"
         android:fontFamily="@font/poppinsbold"
-        android:text="@string/title_beranda_jemput"
+        android:text="@string/beranda_lokasi"
         android:textColor="@color/white"
         android:textSize="22sp"
         app:layout_constraintStart_toEndOf="@+id/iv_back"
@@ -40,9 +40,10 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <fragment
+    <androidx.fragment.app.FragmentContainerView
         android:id="@+id/fragment_container"
         android:name="com.infinite.massiveprojectmobilezwh.beranda.BerandaUpfotoFragment"
+        tools:layout="@layout/fragment_beranda_upfoto"
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:layout_marginBottom="20dp"
@@ -57,7 +58,7 @@
         android:layout_height="wrap_content"
         android:layout_marginHorizontal="30dp"
         android:layout_marginBottom="30dp"
-        android:text="@string/confirmation_beranda_jemput_upfoto"
+        android:text="@string/beranda_upfoto_confirmation"
         android:fontFamily="@font/poppinsbold"
         android:textSize="15sp"
         android:textAllCaps="false"

@@ -1,10 +1,12 @@
 package com.infinite.massiveprojectmobilezwh.dompet
 
+import android.content.Intent
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.LinearLayout
 import com.infinite.massiveprojectmobilezwh.R
 
 // TODO: Rename parameter arguments, choose names that match
@@ -36,6 +38,16 @@ class BerandaDompetFragment : Fragment() {
     ): View? {
         // Inflate the layout for this fragment
         return inflater.inflate(R.layout.fragment_beranda_dompet, container, false)
+    }
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+        // Intent ke reedem
+        val btnTukar = view.findViewById<LinearLayout>(R.id.linearlayout_reedem)
+        btnTukar.setOnClickListener {
+            Intent(requireActivity(), BerandaTukarActivity::class.java).also {
+                startActivity(it)
+            }
+        }
     }
 
     companion object {

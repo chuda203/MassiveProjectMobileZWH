@@ -4,37 +4,13 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/two_color_background"
     tools:context=".dompet.BerandaDompetFragment">
 
-    <ImageView
-        android:id="@+id/back"
-        android:layout_width="28dp"
-        android:layout_height="28dp"
-        android:src="@drawable/back"
-        android:layout_marginTop="35dp"
-        android:layout_marginStart="20dp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"/>
-
-    <TextView
-        android:id="@+id/judul"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="70dp"
-        android:layout_marginTop="33dp"
-        android:fontFamily="@font/poppinsbold"
-        android:text="Dompet"
-        android:textColor="@color/white"
-        android:textSize="20sp"
-        app:layout_constraintStart_toEndOf="@+id/back"
-        app:layout_constraintTop_toTopOf="parent" />
-
     <androidx.cardview.widget.CardView
+        android:id="@+id/cardView_wallet"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginHorizontal="30dp"
-        android:layout_marginTop="20dp"
         app:cardCornerRadius="8dp"
         app:contentPaddingBottom="25dp"
         app:contentPaddingLeft="20dp"
@@ -42,24 +18,23 @@
         app:contentPaddingTop="5dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/judul">
+        app:layout_constraintTop_toTopOf="parent">
 
         <androidx.constraintlayout.widget.ConstraintLayout
-            android:id="@+id/card"
+            android:id="@+id/constraintLayout_wallet"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent">
 
-
             <TextView
-                android:id="@+id/textView2"
+                android:id="@+id/tv_title"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
                 android:fontFamily="@font/poppinsbold"
-                android:text="Koin Saya"
+                android:text="@string/beranda_dompet_title"
                 android:textAlignment="center"
                 android:textColor="@color/green"
                 android:textSize="14sp"
@@ -68,28 +43,29 @@
                 app:layout_constraintTop_toTopOf="parent" />
 
             <ImageView
-                android:id="@+id/koin"
+                android:id="@+id/iv_coin"
                 android:layout_width="40dp"
                 android:layout_height="40dp"
                 android:layout_marginStart="20dp"
                 android:layout_marginTop="10dp"
-                android:src="@drawable/koin"
+                android:src="@drawable/ic_coins"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/textView2" />
+                app:layout_constraintTop_toBottomOf="@+id/tv_title"
+                android:contentDescription="@string/todo" />
 
             <TextView
-                android:id="@+id/total"
+                android:id="@+id/tv_coin"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="10dp"
                 android:fontFamily="@font/poppinsmedium"
-                android:text="65.000"
+                android:text="@string/beranda_dompet_value"
                 android:textAlignment="center"
                 android:textColor="@color/green"
                 android:textSize="14sp"
-                app:layout_constraintBottom_toBottomOf="@+id/koin"
-                app:layout_constraintStart_toEndOf="@id/koin"
-                app:layout_constraintTop_toTopOf="@+id/koin" />
+                app:layout_constraintBottom_toBottomOf="@+id/iv_coin"
+                app:layout_constraintStart_toEndOf="@id/iv_coin"
+                app:layout_constraintTop_toTopOf="@+id/iv_coin" />
 
             <androidx.cardview.widget.CardView
                 android:layout_width="50dp"
@@ -97,35 +73,34 @@
                 android:layout_marginTop="10dp"
                 android:layout_marginEnd="30dp"
                 app:cardCornerRadius="10dp"
-                app:layout_constraintBottom_toBottomOf="@+id/koin"
+                app:layout_constraintBottom_toBottomOf="@+id/tv_coin"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintTop_toTopOf="@+id/koin">
+                app:layout_constraintTop_toTopOf="@+id/tv_coin">
 
                 <LinearLayout
-                    android:id="@+id/linearlayout_tukar"
+                    android:id="@+id/linearlayout_reedem"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:orientation="vertical"
-                    app:layout_constraintBottom_toBottomOf="@+id/koin"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintTop_toTopOf="@+id/koin">
+                    tools:ignore="UseCompoundDrawables">
 
                     <ImageView
-                        android:id="@+id/koin_tukar"
+                        android:id="@+id/iv_reedem"
                         android:layout_width="34dp"
                         android:layout_height="34dp"
                         android:layout_gravity="center"
-                        android:src="@drawable/koin_tukar"
+                        android:src="@drawable/ic_coins_reedem"
                         app:layout_constraintEnd_toEndOf="parent"
-                        app:layout_constraintTop_toTopOf="parent" />
+                        app:layout_constraintTop_toTopOf="parent"
+                        android:contentDescription="@string/todo" />
 
                     <TextView
-                        android:id="@+id/tukar"
+                        android:id="@+id/tv_reedem"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_gravity="center"
                         android:fontFamily="@font/poppinsmedium"
-                        android:text="Tukar"
+                        android:text="@string/beranda_dompet_title_reedem"
                         android:textColor="@color/green"
                         android:textSize="12sp"
                         app:layout_constraintEnd_toEndOf="parent" />
@@ -147,13 +122,13 @@
         android:id="@+id/riwayat"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Riwayat Transaksi Koin"
+        android:text="@string/beranda_dompet_title_history"
         android:textColor="@color/green"
         android:textSize="14sp"
         android:fontFamily="@font/poppinsmedium"
-        android:layout_marginTop="28dp"
+        android:layout_marginTop="30dp"
         android:layout_marginStart="20dp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/card"/>
+        app:layout_constraintTop_toBottomOf="@+id/cardView_wallet"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

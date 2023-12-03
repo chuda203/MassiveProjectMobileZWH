@@ -12,18 +12,18 @@ class ProfileEditActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_profile_edit)
-        replaceFragment(ProfileEditFragment())
 
+        // Intent ke camera untuk capture photo profil
         val btnEdit : ImageView = findViewById(R.id.iv_edit_avatar)
         btnEdit.setOnClickListener {
-            val intent = Intent(this, ProfilCameraActivity::class.java)
+            val intent = Intent(this, ProfileCameraActivity::class.java)
             startActivity(intent)
         }
-    }
-    private fun replaceFragment(fragment : Fragment) {
-        val fragmentManager = supportFragmentManager
-        val transaction = fragmentManager.beginTransaction()
-        transaction.replace(R.id.fragment_container, fragment)
-        transaction.commit()
+        // kembali ke activity sebelumnya
+        val btnBack = findViewById<ImageView>(R.id.iv_back)
+        btnBack.setOnClickListener {
+            // akhiri Activity, alternatif onBackPressed
+            finish()
+        }
     }
 }

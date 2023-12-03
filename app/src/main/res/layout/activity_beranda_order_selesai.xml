@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/two_color_background"
+    android:background="@drawable/bg_base"
     tools:context=".beranda.BerandaOrderSelesaiActivity">
 
     <TextView
@@ -13,13 +13,12 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="40dp"
         android:fontFamily="@font/poppinsbold"
-        android:text="@string/title_beranda_jemput"
+        android:text="@string/beranda_lokasi"
         android:textColor="@color/white"
         android:textSize="22sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
-
 
     <View
         android:id="@+id/separator"
@@ -30,87 +29,16 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <ImageView
-        android:id="@+id/img_done"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="50dp"
-        android:src="@drawable/ic_done"
+    <androidx.fragment.app.FragmentContainerView
+        android:id="@+id/fragment_container"
+        android:name="com.infinite.massiveprojectmobilezwh.beranda.BerandaOrderSelesaiFragment"
+        tools:layout="@layout/fragment_beranda_order_selesai"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/separator" />
+        app:layout_constraintTop_toBottomOf="@id/separator"/>
 
-    <TextView
-        android:id="@+id/tv_title_done"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
-        android:fontFamily="@font/poppinsregular"
-        android:text="Selesai"
-        android:textColor="@color/black"
-        android:textSize="25dp"
-        android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/img_done" />
-
-    <TextView
-        android:id="@+id/tv_subtitle_done"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:fontFamily="@font/poppinsregular"
-        android:paddingHorizontal="30dp"
-        android:text="Koin telah ditambahkan oleh pengepul"
-        android:textColor="@color/black"
-        android:textSize="25dp"
-        android:textStyle="bold"
-        android:gravity="center"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tv_title_done" />
-
-    <Button
-        android:id="@+id/bt_confirmation_home"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginHorizontal="30dp"
-        android:layout_marginBottom="20dp"
-        android:text="Kembali ke Beranda"
-        android:fontFamily="@font/poppinsbold"
-        android:textSize="15sp"
-        android:textAllCaps="false"
-        android:textColor="@color/white"
-        style="@style/ButtonNext"
-        app:layout_constraintBottom_toTopOf="@id/tv_option" />
-
-    <TextView
-        android:id="@+id/tv_option"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="20dp"
-        android:fontFamily="@font/poppinsregular"
-        android:gravity="center"
-        android:text="Atau"
-        android:textColor="@color/black"
-        android:textSize="20dp"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toTopOf="@+id/bt_confirmation_history"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
-
-
-    <Button
-        android:id="@+id/bt_confirmation_history"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginHorizontal="30dp"
-        android:layout_marginBottom="40dp"
-        android:text="Lihat Riwayat Transaksi"
-        android:fontFamily="@font/poppinsbold"
-        android:textSize="15sp"
-        android:textAllCaps="false"
-        android:textColor="@color/white"
-        style="@style/ButtonNext"
-        app:layout_constraintBottom_toBottomOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

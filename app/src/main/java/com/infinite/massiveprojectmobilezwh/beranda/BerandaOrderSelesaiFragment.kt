@@ -1,11 +1,14 @@
 package com.infinite.massiveprojectmobilezwh.beranda
 
+import android.content.Intent
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Button
 import com.infinite.massiveprojectmobilezwh.R
+import com.infinite.massiveprojectmobilezwh.dompet.BerandaDompetActivity
 
 // TODO: Rename parameter arguments, choose names that match
 // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -38,7 +41,26 @@ class BerandaOrderSelesaiFragment : Fragment() {
         return inflater.inflate(R.layout.fragment_beranda_order_selesai, container, false)
     }
 
-    companion object {
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+        // kembali ke beranda
+        val btnHome = view.findViewById<Button>(R.id.bt_confirmation_home)
+        btnHome.setOnClickListener {
+            Intent(requireActivity(), BerandaListActivity::class.java).also {
+                startActivity(it)
+            }
+        }
+        // Intent ke riwayat transaksi
+        val btnHistory = view.findViewById<Button>(R.id.bt_confirmation_history)
+        btnHistory.setOnClickListener {
+            Intent(requireActivity(), BerandaDompetActivity::class.java).also {
+                startActivity(it)
+            }
+        }
+
+    }
+
+        companion object {
         /**
          * Use this factory method to create a new instance of
          * this fragment using the provided parameters.

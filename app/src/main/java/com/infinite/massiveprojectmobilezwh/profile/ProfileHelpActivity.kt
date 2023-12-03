@@ -9,9 +9,10 @@ class ProfileHelpActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_profile_help)
-        val btnBack = findViewById<ImageView>(R.id.kembali)
+        // kembali ke activity sebelumnya
+        val btnBack = findViewById<ImageView>(R.id.iv_back)
         btnBack.setOnClickListener {
-            onBackPressed()
+            finish()
         }
     }
 }

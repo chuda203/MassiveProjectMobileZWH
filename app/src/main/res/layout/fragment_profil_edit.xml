@@ -6,15 +6,6 @@
     android:layout_height="match_parent"
     tools:context=".profil.ProfilEditFragment">
 
-
-<!--    <ScrollView-->
-<!--        android:layout_width="match_parent"-->
-<!--        android:layout_height="0dp"-->
-<!--        app:layout_constraintBottom_toTopOf="@+id/bt_confirmation"-->
-<!--        app:layout_constraintEnd_toEndOf="parent"-->
-<!--        app:layout_constraintStart_toStartOf="parent"-->
-<!--        app:layout_constraintTop_toTopOf="parent">-->
-
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -32,62 +23,72 @@
             android:focusable="true"
             android:focusableInTouchMode="true"
             android:fontFamily="@font/poppinsregular"
-            android:hint="Username"
-            android:textSize="14sp"/>
+            android:hint="@string/profile_edit_username"
+            android:inputType="text"
+            android:textSize="14sp"
+            android:importantForAutofill="no" />
 
         <EditText
             android:id="@+id/et_fullname"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:fontFamily="@font/poppinsregular"
-            android:hint="Nama Lengkap"
-            android:textSize="14sp"/>
+            android:hint="@string/profile_edit_fullname"
+            android:inputType="text"
+            android:textSize="14sp"
+            android:importantForAutofill="no"/>
 
         <EditText
             android:id="@+id/et_birth"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:fontFamily="@font/poppinsregular"
-            android:hint="Tempat, Tanggal Lahir"
-            android:textSize="14sp"/>
+            android:hint="@string/profile_edit_birth"
+            android:inputType="date"
+            android:textSize="14sp"
+            android:importantForAutofill="no"/>
 
         <EditText
             android:id="@+id/et_email"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:fontFamily="@font/poppinsregular"
-            android:hint="Email"
-            android:textSize="14sp"/>
+            android:hint="@string/profile_edit_email"
+            android:inputType="textEmailAddress"
+            android:textSize="14sp"
+            android:importantForAutofill="no"/>
 
         <EditText
             android:id="@+id/et_phone"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:fontFamily="@font/poppinsregular"
-            android:hint="Nomor Telepon"
-            android:textSize="14sp"/>
+            android:hint="@string/profile_edit_phone"
+            android:inputType="phone"
+            android:textSize="14sp"
+            android:importantForAutofill="no"/>
 
         <EditText
             android:id="@+id/et_gender"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:fontFamily="@font/poppinsregular"
-            android:hint="Jenis Kelamin"
-            android:textSize="14sp"/>
+            android:hint="@string/profile_edit_gender"
+            android:inputType="text"
+            android:textSize="14sp"
+            android:importantForAutofill="no"/>
 
         <EditText
             android:id="@+id/et_address"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:fontFamily="@font/poppinsregular"
-            android:hint="Alamat Lengkap"
-            android:textSize="14sp"/>
+            android:hint="@string/profile_edit_address"
+            android:inputType="text"
+            android:textSize="14sp"
+            android:importantForAutofill="no"/>
 
     </LinearLayout>
-
-
-<!--    </ScrollView>-->
-
 
     <Button
         android:id="@+id/bt_confirmation"
@@ -97,14 +98,11 @@
         android:layout_marginBottom="40dp"
         android:background="@drawable/bg_bt"
         android:fontFamily="@font/poppinsbold"
-        android:text="Simpan"
+        android:text="@string/profile_edit_confirmation"
         android:textAllCaps="false"
         android:textColor="@color/white"
         android:textSize="15sp"
         style="@style/ButtonNext"
-        app:layout_constraintBottom_toBottomOf="parent"
-        tools:layout_editor_absoluteX="30dp" />
-
-
+        app:layout_constraintBottom_toBottomOf="parent"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

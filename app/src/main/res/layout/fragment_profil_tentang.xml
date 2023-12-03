@@ -4,153 +4,113 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/two_color_background"
     tools:context=".profil.ProfilTentangFragment">
 
-    <ImageView
-        android:id="@+id/kembali"
-        android:layout_width="42dp"
-        android:layout_height="42dp"
-        android:layout_marginStart="28dp"
-        android:src="@drawable/back"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.06" />
-
     <TextView
-        android:id="@+id/tvTentangKami"
+        android:id="@+id/tv_title"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="22dp"
-        android:layout_marginTop="42dp"
-        android:fontFamily="@font/poppinsbold"
-        android:text="Tentang Kami"
-        android:textColor="@color/white"
-        android:textSize="25sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.299"
-        app:layout_constraintStart_toEndOf="@+id/kembali"
+        android:layout_marginTop="20dp"
+        android:layout_marginStart="30dp"
+        android:fontFamily="@font/poppinssemibold"
+        android:text="@string/profile_about_title"
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:id="@+id/tvJudulTentangKami"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="64dp"
-        android:fontFamily="@font/poppinssemibold"
-        android:text="Tentang Kami"
-        android:textColor="@color/black"
-        android:textSize="16sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.104"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tvTentangKami" />
-
-    <TextView
-        android:id="@+id/isiTK"
+        android:id="@+id/tv_about"
         android:layout_width="343dp"
         android:layout_height="79dp"
         android:layout_marginTop="12dp"
         android:fontFamily="@font/poppinsregular"
-        android:text="Selamat datang di Smart Recycling, tempat di mana kami menginspirasi perubahan positif
-melalui daur ulang sampah untuk menjaga kita
-bumi yang hijau dan berkelanjutan."
+        android:text="@string/profile_about_content"
         android:textSize="14sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.455"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tvJudulTentangKami" />
+        app:layout_constraintTop_toBottomOf="@+id/tv_title" />
 
     <TextView
-        android:id="@+id/tvinfoselengkapnya"
+        android:id="@+id/tv_title_more"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
         android:fontFamily="@font/poppinsmedium"
-        android:text="Informasi Selengkapnya"
+        android:text="@string/profile_about_title_more"
         android:textColor="@color/black"
         android:textSize="16sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.132"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/isiTK" />
+        app:layout_constraintStart_toStartOf="@+id/tv_title"
+        app:layout_constraintTop_toBottomOf="@+id/tv_about" />
 
     <ImageView
-        android:id="@+id/logoWeb"
+        android:id="@+id/iv_web"
         android:layout_width="37dp"
         android:layout_height="37dp"
         android:layout_marginStart="30dp"
         android:layout_marginTop="10dp"
-        android:src="@drawable/web"
+        android:src="@drawable/ic_web"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tvinfoselengkapnya" />
+        app:layout_constraintTop_toBottomOf="@+id/tv_title_more"
+        android:contentDescription="@string/todo" />
 
     <TextView
-        android:id="@+id/tvSitus"
+        android:id="@+id/tv_web"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
-        android:layout_marginTop="332dp"
         android:fontFamily="@font/poppinsregular"
-        android:text="https://smartrecycling.co.id"
+        android:text="@string/profile_about_website"
         android:textColor="@color/black"
         android:textSize="13sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.032"
-        app:layout_constraintStart_toEndOf="@+id/logoWeb"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintBottom_toBottomOf="@+id/iv_web"
+        app:layout_constraintStart_toEndOf="@+id/iv_web"
+        app:layout_constraintTop_toTopOf="@+id/iv_web" />
 
     <ImageView
-        android:id="@+id/logoIg"
+        android:id="@+id/iv_ig"
         android:layout_width="37dp"
         android:layout_height="37dp"
-        android:layout_marginStart="30dp"
         android:layout_marginTop="16dp"
-        android:src="@drawable/ig"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/logoWeb" />
+        android:src="@drawable/ic_instagram"
+        app:layout_constraintEnd_toEndOf="@+id/iv_web"
+        app:layout_constraintStart_toStartOf="@id/iv_web"
+        app:layout_constraintTop_toBottomOf="@+id/iv_web"
+        android:contentDescription="@string/todo" />
 
     <TextView
-        android:id="@+id/tvIg"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="32dp"
-        android:layout_marginEnd="152dp"
-        android:fontFamily="@font/poppinsregular"
-        android:text="smartrecycling.id"
-        android:textColor="@color/black"
-        android:textSize="13sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.162"
-        app:layout_constraintStart_toEndOf="@+id/logoIg"
-        app:layout_constraintTop_toBottomOf="@+id/tvSitus" />
-
-    <ImageView
-        android:id="@+id/logoWa"
-        android:layout_width="37dp"
-        android:layout_height="37dp"
-        android:layout_marginStart="30dp"
-        android:layout_marginTop="16dp"
-        android:src="@drawable/wa"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/logoIg"
-        app:layout_constraintVertical_bias="0.0" />
-
-    <TextView
-        android:id="@+id/tvWa"
+        android:id="@+id/tv_ig"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:fontFamily="@font/poppinsregular"
-        android:text="Informasi lanjut"
+        android:text="@string/profile_about_instagram"
         android:textColor="@color/black"
         android:textSize="13sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.053"
-        app:layout_constraintStart_toEndOf="@+id/logoWa"
-        app:layout_constraintTop_toBottomOf="@+id/tvIg"
-        app:layout_constraintVertical_bias="0.096" />
+        app:layout_constraintBottom_toBottomOf="@+id/iv_ig"
+        app:layout_constraintStart_toStartOf="@+id/tv_web"
+        app:layout_constraintTop_toTopOf="@+id/iv_ig" />
+
+    <ImageView
+        android:id="@+id/iv_wa"
+        android:layout_width="37dp"
+        android:layout_height="37dp"
+        android:layout_marginTop="16dp"
+        android:src="@drawable/ic_wa"
+        app:layout_constraintEnd_toEndOf="@+id/iv_ig"
+        app:layout_constraintStart_toStartOf="@+id/iv_ig"
+        app:layout_constraintTop_toBottomOf="@+id/iv_ig"
+        android:contentDescription="@string/todo" />
+
+    <TextView
+        android:id="@+id/tv_wa"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/poppinsregular"
+        android:text="@string/profile_about_whatsapp"
+        android:textColor="@color/black"
+        android:textSize="13sp"
+        app:layout_constraintBottom_toBottomOf="@+id/iv_wa"
+        app:layout_constraintStart_toStartOf="@+id/tv_ig"
+        app:layout_constraintTop_toTopOf="@+id/iv_wa" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
