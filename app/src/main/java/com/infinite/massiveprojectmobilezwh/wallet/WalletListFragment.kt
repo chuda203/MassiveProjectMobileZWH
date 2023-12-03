@@ -1,10 +1,13 @@
 package com.infinite.massiveprojectmobilezwh.wallet
 
+import android.content.Intent
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Button
+import androidx.cardview.widget.CardView
 import com.infinite.massiveprojectmobilezwh.R
 
 // TODO: Rename parameter arguments, choose names that match
@@ -37,8 +40,25 @@ class WalletListFragment : Fragment() {
         // Inflate the layout for this fragment
         return inflater.inflate(R.layout.fragment_wallet_list, container, false)
     }
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+        // Intent ke isi saldo
+        val btnTopup : View = view.findViewById(R.id.view_frame_topup)
+        btnTopup.setOnClickListener {
+            Intent(requireActivity(), WalletAddActivity::class.java).also{
+                startActivity(it)
+            }
+        }
+        // Intent ke riwayat pembayaran
+        val btnHistory : View = view.findViewById(R.id.view_frame_history)
+        btnHistory.setOnClickListener {
+            Intent(requireActivity(), WalletHistoryActivity::class.java).also{
+                startActivity(it)
+            }
+        }
+    }
 
-    companion object {
+        companion object {
         /**
          * Use this factory method to create a new instance of
          * this fragment using the provided parameters.

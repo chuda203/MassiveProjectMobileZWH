@@ -51,6 +51,9 @@
             android:name=".beranda.BerandaChatActivity"
             android:exported="false" />
         <activity
+            android:name=".beranda.BerandaObrolanActivity"
+            android:exported="false" />
+        <activity
             android:name=".ui.DaftarActivity"
             android:windowSoftInputMode="adjustNothing"
             android:exported="false" />

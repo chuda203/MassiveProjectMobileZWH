@@ -11,15 +11,18 @@ class BerandaUpfotoActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_beranda_upfoto)
-        val btn_confrim = findViewById<Button>(R.id.bt_confirmation)
-        btn_confrim.setOnClickListener {
+        // Intent ke Konfirmasi Order
+        val btnConfrim = findViewById<Button>(R.id.bt_confirmation)
+        btnConfrim.setOnClickListener {
             Intent(this, BerandaOrderActivity::class.java).also {
                 startActivity(it)
             }
         }
+        // kembali ke Activity sebelumnya
         val btnBack = findViewById<ImageView>(R.id.iv_back)
         btnBack.setOnClickListener {
-            onBackPressed()
+            // Akhiri Activity, alternatif onBackPressed
+            finish()
         }
     }
 }

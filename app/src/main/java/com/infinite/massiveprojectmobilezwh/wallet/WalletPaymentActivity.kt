@@ -9,9 +9,11 @@ class WalletPaymentActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_wallet_payment)
-        val btnBack = findViewById<ImageView>(R.id.back)
+        // kembali ke Activity sebelumnya
+        val btnBack = findViewById<ImageView>(R.id.iv_back)
+        // akhiri Activity, alternatif onBackPressed
         btnBack.setOnClickListener {
-            onBackPressed()
+            finish()
         }
     }
 }

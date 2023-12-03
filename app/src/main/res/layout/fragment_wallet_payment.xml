@@ -4,41 +4,17 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/two_color_background"
     tools:context=".wallet.WalletPaymentFragment">
-
-    <ImageView
-        android:id="@+id/back"
-        android:layout_width="28dp"
-        android:layout_height="28dp"
-        android:src="@drawable/back"
-        android:layout_marginTop="35dp"
-        android:layout_marginStart="20dp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"/>
-
-    <TextView
-        android:id="@+id/judul"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Pembayaran"
-        android:textColor="@color/white"
-        android:textSize="20sp"
-        android:fontFamily="@font/poppinsbold"
-        android:layout_marginTop="33dp"
-        android:layout_marginStart="70dp"
-        app:layout_constraintStart_toEndOf="@+id/back"
-        app:layout_constraintTop_toTopOf="parent"/>
 
     <TextView
         android:id="@+id/debit_kredit"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="160dp"
+        android:layout_marginTop="10dp"
         android:layout_marginStart="30dp"
         android:layout_marginEnd="30dp"
         android:fontFamily="@font/poppinsmedium"
-        android:text="Debit atau Kartu Kredit"
+        android:text="@string/wallet_payment_title_card"
         android:textColor="@color/black"
         android:textSize="18sp"
         app:layout_constraintEnd_toEndOf="parent"
@@ -54,10 +30,11 @@
         android:layout_marginEnd="30dp"
         android:padding="10dp"
         android:background="@drawable/custom_shape_full"
-        app:srcCompat="@drawable/bbca"
+        app:srcCompat="@drawable/ic_payment_bca"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/debit_kredit"/>
+        app:layout_constraintTop_toBottomOf="@+id/debit_kredit"
+        android:contentDescription="@string/todo" />
 
     <ImageView
         android:id="@+id/bri"
@@ -68,10 +45,11 @@
         android:layout_marginEnd="30dp"
         android:padding="9dp"
         android:background="@drawable/custom_shape_full"
-        app:srcCompat="@drawable/bbri"
+        app:srcCompat="@drawable/ic_payment_bri"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/bca"/>
+        app:layout_constraintTop_toBottomOf="@+id/bca"
+        android:contentDescription="@string/todo" />
 
     <ImageView
         android:id="@+id/bni"
@@ -82,10 +60,11 @@
         android:layout_marginEnd="30dp"
         android:padding="10dp"
         android:background="@drawable/custom_shape_full"
-        app:srcCompat="@drawable/bni"
+        app:srcCompat="@drawable/ic_payment_bni"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/bri"/>
+        app:layout_constraintTop_toBottomOf="@+id/bri"
+        android:contentDescription="@string/todo" />
 
     <TextView
         android:id="@+id/more_banks"
@@ -96,7 +75,7 @@
         android:layout_marginEnd="30dp"
         android:padding="10dp"
         android:background="@drawable/custom_shape_full"
-        android:text="Lihat bank lainnya"
+        android:text="@string/wallet_payment_more_card"
         android:textAlignment="center"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -147,7 +126,7 @@
         android:layout_marginStart="30dp"
         android:layout_marginEnd="30dp"
         android:fontFamily="@font/poppinsmedium"
-        android:text="Pembayaran Lainnya"
+        android:text="@string/wallet_payment_alternatif"
         android:textColor="@color/black"
         android:textSize="18sp"
         app:layout_constraintEnd_toEndOf="parent"
@@ -163,10 +142,11 @@
         android:layout_marginEnd="30dp"
         android:padding="11dp"
         android:background="@drawable/custom_shape_full"
-        app:srcCompat="@drawable/dana"
+        app:srcCompat="@drawable/ic_payment_dana"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/e_wallet"/>
+        app:layout_constraintTop_toBottomOf="@+id/e_wallet"
+        android:contentDescription="@string/todo" />
 
     <ImageView
         android:id="@+id/ovo"
@@ -177,10 +157,11 @@
         android:layout_marginEnd="30dp"
         android:padding="10dp"
         android:background="@drawable/custom_shape_full"
-        app:srcCompat="@drawable/ovo"
+        app:srcCompat="@drawable/ic_payment_ovo"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/dana"/>
+        app:layout_constraintTop_toBottomOf="@+id/dana"
+        android:contentDescription="@string/todo" />
 
     <ImageView
         android:id="@+id/paypal"
@@ -191,10 +172,11 @@
         android:layout_marginEnd="30dp"
         android:padding="14dp"
         android:background="@drawable/custom_shape_full"
-        app:srcCompat="@drawable/paypal"
+        app:srcCompat="@drawable/ic_payment_paypal"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/ovo"/>
+        app:layout_constraintTop_toBottomOf="@+id/ovo"
+        android:contentDescription="@string/todo" />
 
     <TextView
         android:id="@+id/more_wallet"
@@ -248,11 +230,12 @@
             android:onClick="radio_button_click"/>
     </RadioGroup>
 
-    <ImageView
+    <View
         android:layout_width="match_parent"
         android:layout_height="100dp"
-        android:background="@drawable/rectangle_for_bottom"
-        app:layout_constraintBottom_toBottomOf="parent"/>
+        android:background="@color/grey"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
 
     <TextView
         android:id="@+id/total"
@@ -281,7 +264,7 @@
         app:layout_constraintEnd_toEndOf="parent" />
 
     <Button
-        android:id="@+id/button"
+        android:id="@+id/bt_confirmation"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Bayar Sekarang"

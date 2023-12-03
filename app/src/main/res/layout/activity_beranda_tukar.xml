@@ -4,125 +4,52 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/two_color_background"
+    android:background="@drawable/bg_base"
     tools:context=".dompet.BerandaTukarActivity">
 
     <ImageView
-        android:id="@+id/back"
+        android:id="@+id/iv_back"
         android:layout_width="28dp"
         android:layout_height="28dp"
-        android:src="@drawable/back"
+        android:src="@drawable/ic_back"
         android:layout_marginTop="35dp"
         android:layout_marginStart="20dp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"/>
+        app:layout_constraintTop_toTopOf="parent"
+        android:contentDescription="@string/todo" />
 
     <TextView
-        android:id="@+id/judul"
-        android:layout_width="match_parent"
+        android:id="@+id/tv_title"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Tukar Koin"
+        android:layout_marginStart="10dp"
+        android:fontFamily="@font/poppinsbold"
+        android:text="@string/beranda_tukar"
         android:textColor="@color/white"
         android:textSize="20sp"
-        android:fontFamily="@font/poppinsbold"
-        android:layout_marginTop="33dp"
-        android:layout_marginStart="70dp"
-        app:layout_constraintStart_toEndOf="@+id/back"
-        app:layout_constraintTop_toTopOf="parent"/>
+        app:layout_constraintBottom_toBottomOf="@+id/iv_back"
+        app:layout_constraintStart_toEndOf="@+id/iv_back"
+        app:layout_constraintTop_toTopOf="@+id/iv_back" />
 
-    <TextView
-        android:id="@+id/no_hp"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Nomor Dana"
-        android:textColor="@color/black"
-        android:textSize="14sp"
-        android:fontFamily="@font/poppinsmedium"
-        android:layout_marginTop="160dp"
-        android:layout_marginStart="20dp"
-        android:layout_marginEnd="20dp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent"/>
-
-    <EditText
-        android:id="@+id/input_no_hp"
-        android:layout_width="match_parent"
-        android:layout_height="50dp"
-        android:layout_marginStart="20dp"
-        android:layout_marginEnd="20dp"
-        android:hint="@string/no_hp"
+    <View
+        android:id="@+id/separator"
+        android:layout_width="wrap_content"
+        android:layout_height="10dp"
+        android:layout_marginTop="120dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/no_hp" />
+        app:layout_constraintTop_toTopOf="parent" />
 
-    <TextView
-        android:id="@+id/nominal"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Nominal"
-        android:textColor="@color/black"
-        android:textSize="14sp"
-        android:fontFamily="@font/poppinsmedium"
-        android:layout_marginTop="15dp"
-        android:layout_marginStart="20dp"
-        android:layout_marginEnd="20dp"
-        app:layout_constraintStart_toStartOf="parent"
+    <androidx.fragment.app.FragmentContainerView
+        android:id="@+id/fragment_container"
+        android:name="com.infinite.massiveprojectmobilezwh.dompet.BerandaTukarFragment"
+        tools:layout="@layout/fragment_beranda_tukar"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/input_no_hp"/>
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/separator"/>
 
-    <EditText
-        android:id="@+id/input_nominasi"
-        android:layout_width="match_parent"
-        android:layout_height="50dp"
-        android:layout_marginStart="20dp"
-        android:layout_marginEnd="20dp"
-        android:hint="@string/nominal"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/nominal"/>
-
-    <TextView
-        android:id="@+id/catatan"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Catatan Transaksi"
-        android:textColor="@color/black"
-        android:textSize="14sp"
-        android:fontFamily="@font/poppinsmedium"
-        android:layout_marginTop="15dp"
-        android:layout_marginStart="20dp"
-        android:layout_marginEnd="20dp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/input_nominasi"/>
-
-    <EditText
-        android:id="@+id/input_catatan"
-        android:layout_width="match_parent"
-        android:layout_height="50dp"
-        android:layout_marginStart="20dp"
-        android:layout_marginEnd="20dp"
-        android:hint="@string/catatan"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/catatan"/>
-
-    <Button
-        android:id="@+id/bt_confirmation"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Lanjutkan"
-        android:textColor="@color/white"
-        android:textSize="14sp"
-        android:fontFamily="@font/poppinsbold"
-        android:textAlignment="center"
-        style="@style/ButtonNext"
-        android:layout_marginStart="20dp"
-        android:layout_marginEnd="20dp"
-        android:layout_marginBottom="50dp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintBottom_toBottomOf="parent"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

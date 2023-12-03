@@ -45,15 +45,16 @@ class MapsListFragment : Fragment() {
     }
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-//        val btn_gps : ImageView = view.findViewById(R.id.iv_gps)
 
+        // delay 1,5 detik untuk langsung menampilkan order yang sedang berjalan
         Handler(Looper.getMainLooper()).postDelayed( {
-            val fragmentTransaction = requireActivity().supportFragmentManager.beginTransaction()
-            fragmentTransaction.replace(R.id.fragment_container, MapsProcessFragment())
-            fragmentTransaction.addToBackStack(null)
-            fragmentTransaction.commit()
+            if (isAdded) {
+                val fragmentTransaction = requireActivity().supportFragmentManager.beginTransaction()
+                fragmentTransaction.replace(R.id.fragment_container_order, MapsProcessFragment())
+//                fragmentTransaction.addToBackStack(null)   // simpan ke back function
+                fragmentTransaction.commit()
+            }
         }, 1500)
-
     }
 
 

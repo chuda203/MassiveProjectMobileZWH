@@ -17,38 +17,28 @@ class BerandaOrderActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_beranda_order)
 
+        // kembali ke Activity sebelumnya
         val btnBack = findViewById<ImageView>(R.id.iv_back)
         btnBack.setOnClickListener {
-            onBackPressed()
+            // akhiri Activity, alternatif onBackPressed
+            finish()
         }
 
-        replaceFragment(BerandaOrderFragment())
-
-        val btn_confrim = findViewById<Button>(R.id.bt_confirmation)
-        btn_confrim.setOnClickListener {
+        // Intent ke proses pencarian pengepul
+        val btnConfrim = findViewById<Button>(R.id.bt_confirmation)
+        btnConfrim.setOnClickListener {
             Intent(this, BerandaCariActivity::class.java).also {
                 startActivity(it)
             }
         }
 
+        // Buat dropdown kategori
         val items = listOf("Kaleng", "Plastik", "Besi", "Elektronik")
         val autoComplete : AutoCompleteTextView = findViewById(R.id.auto_complete)
         val adapter = ArrayAdapter(this, R.layout.list_item, items)
-
         autoComplete.setAdapter(adapter)
-
         autoComplete.onItemClickListener = AdapterView.OnItemClickListener{
             adapterView, view, i, l ->
-
         }
-
-
-    }
-
-    private fun replaceFragment(fragment : Fragment) {
-        val fragmentManager = supportFragmentManager
-        val transaction = fragmentManager.beginTransaction()
-        transaction.replace(R.id.iv_capture_preview, fragment)
-        transaction.commit()
     }
 }

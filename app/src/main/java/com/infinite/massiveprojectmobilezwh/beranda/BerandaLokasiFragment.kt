@@ -46,11 +46,12 @@ class BerandaLokasiFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        val btn_confrim : Button = view.findViewById(R.id.bt_confirmation)
-
-        btn_confrim.setOnClickListener {
-            val intent = Intent(requireActivity(), BerandaCameraActivity::class.java)
-            startActivity(intent)
+        val btnConfrim : Button = view.findViewById(R.id.bt_confirmation)
+        // Intent ke Capture Sampah
+        btnConfrim.setOnClickListener {
+            Intent(requireActivity(), BerandaCameraActivity::class.java).also {
+                startActivity(it)
+            }
         }
 
     }

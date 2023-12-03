@@ -40,16 +40,6 @@ class BerandaCariFragment : Fragment() {
         // Inflate the layout for this fragment
         return inflater.inflate(R.layout.fragment_beranda_cari, container, false)
     }
-    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
-        super.onViewCreated(view, savedInstanceState)
-        val btn_confrim : TextView = view.findViewById(R.id.tv_confirmation)
-
-        btn_confrim.setOnClickListener {
-            val intent = Intent(requireActivity(), BerandaProsesActivity::class.java)
-            startActivity(intent)
-        }
-
-    }
 
     companion object {
         /**

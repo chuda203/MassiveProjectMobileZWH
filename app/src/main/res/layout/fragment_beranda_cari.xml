@@ -60,7 +60,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="10dp"
-                android:text="@string/maps_detail_beranda_jemput_pilih"
+                android:text="@string/beranda_lokasi_address"
                 android:fontFamily="@font/poppinsregular"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintStart_toEndOf="@+id/iv_maps"
@@ -75,12 +75,13 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="40dp"
-        android:paddingHorizontal="90dp"
-        android:gravity="center"
         android:fontFamily="@font/poppinsbold"
-        android:textColor="@color/colorutama"
+        android:gravity="center"
+        android:paddingHorizontal="90dp"
         android:text="Mohon tunggu sebentar, pesananmu sedang diproses"
-        app:layout_constraintBottom_toBottomOf="parent" />
+        android:textColor="@color/green"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
 
 
 

@@ -43,16 +43,20 @@ class OrderListFragment : Fragment() {
     }
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        val btn_region : CardView = view.findViewById(R.id.cardView_region1)
-        val btn_history : CardView = view.findViewById(R.id.cardView_history)
 
-        btn_region.setOnClickListener {
-            val intent = Intent(requireActivity(), OrderRegionActivity::class.java)
-            startActivity(intent)
+        // Intent ke detail kategori wilayah
+        val btnRegion : CardView = view.findViewById(R.id.cardView_region1)
+        btnRegion.setOnClickListener {
+            Intent(requireActivity(), OrderRegionActivity::class.java).also {
+                startActivity(it)
+            }
         }
-        btn_history.setOnClickListener {
-            val intent = Intent(requireActivity(), OrderHistoryActivity::class.java)
-            startActivity(intent)
+        //Intent ke riwayat pesanan
+        val btnHistory : CardView = view.findViewById(R.id.cardView_history)
+        btnHistory.setOnClickListener {
+            Intent(requireActivity(), OrderHistoryActivity::class.java).also {
+                startActivity(it)
+            }
         }
 
     }

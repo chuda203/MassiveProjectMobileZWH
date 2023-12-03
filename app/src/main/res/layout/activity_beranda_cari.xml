@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/two_color_background"
+    android:background="@drawable/bg_base"
     tools:context=".beranda.BerandaCariActivity">
 
     <TextView
@@ -13,14 +13,13 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="30dp"
         android:fontFamily="@font/poppinsbold"
-        android:text="@string/title_beranda_jemput"
+        android:text="@string/beranda_lokasi"
         android:textColor="@color/white"
         android:textSize="22sp"
         app:layout_constraintBottom_toTopOf="@+id/separator"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
-
 
     <View
         android:id="@+id/separator"
@@ -31,16 +30,15 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <fragment
+    <androidx.fragment.app.FragmentContainerView
         android:id="@+id/fragment_container"
         android:name="com.infinite.massiveprojectmobilezwh.beranda.BerandaCariFragment"
+        tools:layout="@layout/fragment_beranda_cari"
         android:layout_width="0dp"
         android:layout_height="0dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/separator" />
-
-
 
 </androidx.constraintlayout.widget.ConstraintLayout>

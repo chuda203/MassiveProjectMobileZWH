@@ -4,41 +4,17 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/two_color_background"
     tools:context=".dompet.BerandaTukarFragment">
 
-    <ImageView
-        android:id="@+id/back"
-        android:layout_width="28dp"
-        android:layout_height="28dp"
-        android:src="@drawable/back"
-        android:layout_marginTop="35dp"
-        android:layout_marginStart="20dp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"/>
-
     <TextView
-        android:id="@+id/judul"
+        android:id="@+id/tv_id_account"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Tukar Koin"
-        android:textColor="@color/white"
-        android:textSize="20sp"
-        android:fontFamily="@font/poppinsbold"
-        android:layout_marginTop="33dp"
-        android:layout_marginStart="70dp"
-        app:layout_constraintStart_toEndOf="@+id/back"
-        app:layout_constraintTop_toTopOf="parent"/>
-
-    <TextView
-        android:id="@+id/no_hp"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Nomor Dana"
+        android:text="@string/beranda_tukar_id"
         android:textColor="@color/black"
         android:textSize="14sp"
         android:fontFamily="@font/poppinsmedium"
-        android:layout_marginTop="160dp"
+        android:layout_marginTop="20dp"
         android:layout_marginStart="20dp"
         android:layout_marginEnd="20dp"
         app:layout_constraintStart_toStartOf="parent"
@@ -46,20 +22,25 @@
         app:layout_constraintTop_toTopOf="parent"/>
 
     <EditText
-        android:id="@+id/input_no_hp"
+        android:id="@+id/et_id_account"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="20dp"
         android:layout_marginEnd="20dp"
+        android:inputType="number"
+        android:hint="@string/beranda_tukar_id_hint"
+        android:fontFamily="@font/poppinsregular"
+        android:textSize="11sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/no_hp"/>
+        app:layout_constraintTop_toBottomOf="@id/tv_id_account"
+        android:importantForAutofill="no" />
 
     <TextView
-        android:id="@+id/nominal"
+        android:id="@+id/tv_value"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Nominal"
+        android:text="@string/beranda_tukar_value"
         android:textColor="@color/black"
         android:textSize="14sp"
         android:fontFamily="@font/poppinsmedium"
@@ -68,23 +49,28 @@
         android:layout_marginEnd="20dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/input_no_hp"/>
+        app:layout_constraintTop_toBottomOf="@id/et_id_account"/>
 
     <EditText
-        android:id="@+id/input_nominasi"
+        android:id="@+id/et_value"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="20dp"
         android:layout_marginEnd="20dp"
+        android:fontFamily="@font/poppinsregular"
+        android:textSize="11sp"
+        android:hint="@string/beranda_tukar_value_hint"
+        android:inputType="number"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/nominal"/>
+        app:layout_constraintTop_toBottomOf="@id/tv_value"
+        android:autofillHints="" />
 
     <TextView
-        android:id="@+id/catatan"
+        android:id="@+id/tv_note"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Catatan Transaksi"
+        android:text="@string/beranda_tukar_note"
         android:textColor="@color/black"
         android:textSize="14sp"
         android:fontFamily="@font/poppinsmedium"
@@ -93,22 +79,29 @@
         android:layout_marginEnd="20dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/input_nominasi"/>
+        app:layout_constraintTop_toBottomOf="@id/et_value"/>
 
     <EditText
-        android:id="@+id/input_catatan"
+        android:id="@+id/et_note"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="20dp"
         android:layout_marginEnd="20dp"
+        android:fontFamily="@font/poppinsregular"
+        android:textSize="11sp"
+        android:hint="@string/beranda_tukar_note_hint"
+        android:inputType="text"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/catatan"/>
+        app:layout_constraintTop_toBottomOf="@id/tv_note"
+        android:autofillHints="" />
 
     <Button
+        android:id="@+id/bt_confirmation"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Lanjutkan"
+        android:text="@string/beranda_tukar_confirmation"
+        android:textAllCaps="false"
         android:textColor="@color/white"
         android:textSize="14sp"
         android:fontFamily="@font/poppinsbold"

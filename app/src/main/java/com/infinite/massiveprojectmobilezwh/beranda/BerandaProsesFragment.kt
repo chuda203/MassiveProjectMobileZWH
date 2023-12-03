@@ -42,24 +42,27 @@ class BerandaProsesFragment : Fragment() {
     }
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        val btn_confrim : Button = view.findViewById(R.id.bt_confirmation)
-        val btnPhone : Button = view.findViewById(R.id.bt_phone)
-        val btnChat : Button = view.findViewById(R.id.bt_chat)
-
-        btn_confrim.setOnClickListener {
-            val intent = Intent(requireActivity(), BerandaOrderSelesaiActivity::class.java)
-            startActivity(intent)
+        // Konfirmasi order selesai
+        val btnConfrim : Button = view.findViewById(R.id.bt_confirmation)
+        btnConfrim.setOnClickListener {
+            Intent(requireActivity(), BerandaOrderSelesaiActivity::class.java).also {
+                startActivity(it)
+            }
         }
-
+        // Lanjut ke dial
+        val btnPhone : Button = view.findViewById(R.id.bt_phone)
         btnPhone.setOnClickListener {
             val phoneNumber = "tel:081234567890"
-            val dialIntent = Intent(Intent.ACTION_DIAL, Uri.parse(phoneNumber))
-            startActivity(dialIntent)
+            Intent(Intent.ACTION_DIAL, Uri.parse(phoneNumber)).also {
+                startActivity(it)
+            }
         }
-
+        // Intent ke Chat
+        val btnChat : Button = view.findViewById(R.id.bt_chat)
         btnChat.setOnClickListener {
-            val intent = Intent(requireActivity(), BerandaChatActivity::class.java)
-            startActivity(intent)
+            Intent(requireActivity(), BerandaChatActivity::class.java).also {
+                startActivity(it)
+            }
         }
 
     }

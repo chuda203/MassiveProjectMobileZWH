@@ -9,9 +9,11 @@ class OrderRegionActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_order_region)
+        // kembali ke Activity sebelumnya
         val btnBack = findViewById<ImageView>(R.id.iv_back)
         btnBack.setOnClickListener {
-            onBackPressed()
+            // akhiri Activity, alternatif onBackPressed
+            finish()
         }
     }
 }

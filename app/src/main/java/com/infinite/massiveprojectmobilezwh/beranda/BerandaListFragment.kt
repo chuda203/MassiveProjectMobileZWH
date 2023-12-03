@@ -13,6 +13,7 @@ import androidx.cardview.widget.CardView
 import com.infinite.massiveprojectmobilezwh.R
 import com.infinite.massiveprojectmobilezwh.dompet.BerandaDompetActivity
 import com.infinite.massiveprojectmobilezwh.dompet.BerandaTukarActivity
+import com.infinite.massiveprojectmobilezwh.profil.ProfilListFragment
 import com.infinite.massiveprojectmobilezwh.profil.ProfilNotifActivity
 
 // TODO: Rename parameter arguments, choose names that match
@@ -48,38 +49,54 @@ class BerandaListFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        val btn_jemput : CardView = view.findViewById(R.id.cardView_jemput)
-        val btn_tukar : CardView = view.findViewById(R.id.cardView_tukar)
-        val btn_history : ImageView = view.findViewById(R.id.iv_history)
+
+        // Intent ke fitur pickup
+        val btnJemput : CardView = view.findViewById(R.id.cardView_jemput)
+        btnJemput.setOnClickListener {
+            Intent(requireActivity(), BerandaLokasiActivity::class.java).also {
+                startActivity(it)
+            }
+        }
+
+        // Intent ke fitur reedem
+        val btnTukar : CardView = view.findViewById(R.id.cardView_tukar)
+        btnTukar.setOnClickListener {
+            Intent(requireActivity(), BerandaTukarActivity::class.java).also {
+                startActivity(it)
+            }
+        }
+
+        // Intent ke riwayat transaksi
+        val btnHistory : ImageView = view.findViewById(R.id.iv_history)
+        btnHistory.setOnClickListener {
+            Intent(requireActivity(), BerandaDompetActivity::class.java).also {
+                startActivity(it)
+            }
+        }
+
+        // Intent ke Frame Artikel
         val btnArtikel : TextView = view.findViewById(R.id.tv_subtitle_artikel)
-        val btnNotif : ImageView =  view.findViewById(R.id.iv_notif)
-
-        btn_jemput.setOnClickListener {
-            val intent = Intent(requireActivity(), BerandaLokasiActivity::class.java)
-            startActivity(intent)
-        }
-
-        btn_tukar.setOnClickListener {
-            val intent = Intent(requireActivity(), BerandaTukarActivity::class.java)
-            startActivity(intent)
-        }
-
-        btn_history.setOnClickListener {
-            val intent = Intent(requireActivity(), BerandaDompetActivity::class.java)
-            startActivity(intent)
-        }
-
         btnArtikel.setOnClickListener {
-            val intent = Intent(requireActivity(), BerandaArtikelActivity::class.java)
-            startActivity(intent)
+            Intent(requireActivity(), BerandaArtikelActivity::class.java).also {
+                startActivity(it)
+            }
         }
 
+        // Intent ke Frame Notifikasi
+        val btnNotif : ImageView =  view.findViewById(R.id.iv_notif)
         btnNotif.setOnClickListener {
-            val intent = Intent(requireActivity(), ProfilNotifActivity::class.java)
-            startActivity(intent)
+            Intent(requireActivity(), ProfilNotifActivity::class.java).also {
+                startActivity(it)
+            }
         }
 
-
+        // Intent ke Frame Profil
+        val btnProfil : ImageView =  view.findViewById(R.id.iv_profile)
+        btnProfil.setOnClickListener {
+            requireActivity().supportFragmentManager.beginTransaction()
+                .replace(R.id.fragment_container, ProfilListFragment())
+                .commit()
+        }
     }
 
     companion object {

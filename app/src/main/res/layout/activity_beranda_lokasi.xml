@@ -4,21 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/two_color_background"
+    android:background="@drawable/bg_base"
     tools:context=".beranda.BerandaLokasiActivity">
-
-    <TextView
-        android:id="@+id/tv_title"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="20dp"
-        android:layout_marginTop="3dp"
-        android:fontFamily="@font/poppinsbold"
-        android:text="@string/title_beranda_jemput"
-        android:textColor="@color/white"
-        android:textSize="22sp"
-        app:layout_constraintStart_toEndOf="@+id/iv_back"
-        app:layout_constraintTop_toTopOf="@id/iv_back" />
 
     <ImageView
         android:id="@+id/iv_back"
@@ -31,6 +18,19 @@
         app:layout_constraintTop_toTopOf="parent"
         android:contentDescription="@string/todo" />
 
+    <TextView
+        android:id="@+id/tv_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="3dp"
+        android:fontFamily="@font/poppinsbold"
+        android:text="@string/beranda_lokasi"
+        android:textColor="@color/white"
+        android:textSize="22sp"
+        app:layout_constraintStart_toEndOf="@+id/iv_back"
+        app:layout_constraintTop_toTopOf="@id/iv_back" />
+
     <View
         android:id="@+id/separator"
         android:layout_width="wrap_content"
@@ -40,9 +40,10 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <fragment
+    <androidx.fragment.app.FragmentContainerView
         android:id="@+id/fragment_container"
         android:name="com.infinite.massiveprojectmobilezwh.beranda.BerandaLokasiFragment"
+        tools:layout="@layout/fragment_beranda_lokasi"
         android:layout_width="0dp"
         android:layout_height="0dp"
         app:layout_constraintBottom_toBottomOf="parent"

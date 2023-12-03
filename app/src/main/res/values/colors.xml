@@ -2,15 +2,12 @@
 <resources>
     <color name="black">#FF000000</color>
     <color name="white">#FCFCFC</color>
-    <color name="colorutama">#00AF5C</color>
-    <color name="secondarycolor">#9098B1</color>
     <color name="green">#00AF5C</color>
-    <color name="green_secondary_button">#E5FCA1</color>
-
+    <color name="green_secondary">#E5FCA1</color>
     <color name="black_trasnparent">#C0000000</color>
-    <color name="black2">#222222</color>
-    <color name="green2">#E5FCA1</color>
+    <color name="semi_black">#222222</color>
     <color name="red">#C91C1C</color>
-    <color name="grey">#F1F1F1</color>
-    <color name="darkgrey">#121212</color>
+    <color name="grey">#F2F2F2</color>
+    <color name="semi_grey">#E6E6E6</color>
+    <color name="dark_grey">#121212</color>
 </resources>

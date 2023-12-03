@@ -11,15 +11,11 @@ class BerandaTukarActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_beranda_tukar)
-        val btn_confrim = findViewById<Button>(R.id.bt_confirmation)
-        btn_confrim.setOnClickListener {
-            Intent(this, BerandaTukarKonfrimActivity::class.java).also {
-                startActivity(it)
-            }
-        }
-        val btnBack = findViewById<ImageView>(R.id.back)
+        // kembali ke Activity sebelumnya
+        val btnBack = findViewById<ImageView>(R.id.iv_back)
         btnBack.setOnClickListener {
-            onBackPressed()
+            // akhiri Activity, alternatif onBackPressed
+            finish()
         }
 
     }

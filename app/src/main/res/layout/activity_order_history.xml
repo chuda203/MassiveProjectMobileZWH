@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/two_color_background"
+    android:background="@drawable/bg_base"
     tools:context=".order.OrderHistoryActivity">
 
     <TextView
@@ -14,7 +14,7 @@
         android:layout_marginStart="20dp"
         android:layout_marginTop="3dp"
         android:fontFamily="@font/poppinsbold"
-        android:text="Pesanan"
+        android:text="@string/order_history"
         android:textColor="@color/white"
         android:textSize="22sp"
         app:layout_constraintStart_toEndOf="@+id/iv_back"
@@ -40,8 +40,9 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <fragment
+    <androidx.fragment.app.FragmentContainerView
         android:id="@+id/fragment_container"
+        tools:layout="@layout/fragment_order_history"
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:name="com.infinite.massiveprojectmobilezwh.order.OrderHistoryFragment"

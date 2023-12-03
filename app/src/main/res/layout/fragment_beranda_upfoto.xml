@@ -4,15 +4,16 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/two_color_background"
+    android:background="@drawable/bg_base"
     tools:context=".beranda.BerandaUpfotoFragment">
 
     <ImageView
+        android:id="@+id/iv_content"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:contentDescription="@string/todo"
         android:scaleType="centerCrop"
-        android:src="@drawable/img_capture_sample"
+        android:src="@drawable/img_capture_order"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"

@@ -10,16 +10,5 @@ class BerandaProsesActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_beranda_proses)
-        replaceFragment(BerandaProsesFragment())
-        val btnBack = findViewById<ImageView>(R.id.iv_back)
-        btnBack.setOnClickListener {
-            onBackPressed()
-        }
-    }
-    private fun replaceFragment(fragment : Fragment) {
-        val fragmentManager = supportFragmentManager
-        val transaction = fragmentManager.beginTransaction()
-        transaction.replace(R.id.fragment_container, fragment)
-        transaction.commit()
     }
 }

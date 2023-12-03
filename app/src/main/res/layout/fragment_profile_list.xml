@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/two_color_profil_list"
+    android:background="@drawable/bg_base_profile"
     tools:context=".profile.ProfileListFragment">
 
     <!-- TODO: Update blank fragment layout -->
@@ -50,7 +50,7 @@
         android:layout_width="75dp"
         android:layout_height="82dp"
         android:layout_marginStart="30dp"
-        android:src="@drawable/foto_profile"
+        android:src="@drawable/img_avatar"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/header_profile" />
 
@@ -69,7 +69,7 @@
         android:layout_height="25dp"
         android:layout_marginTop="20dp"
         android:layout_marginStart="30dp"
-        android:background="@drawable/profileicon"
+        android:background="@drawable/ic_profile_edit"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/separator" />
 
@@ -78,7 +78,7 @@
         android:layout_width="25dp"
         android:layout_height="25dp"
         android:layout_marginTop="20dp"
-        android:background="@drawable/payment_check"
+        android:background="@drawable/ic_wallet_profile"
         app:layout_constraintStart_toStartOf="@+id/pengaturan_akun"
         app:layout_constraintTop_toBottomOf="@+id/pengaturan_akun" />
 
@@ -88,7 +88,7 @@
         android:layout_height="25dp"
         android:layout_marginTop="20dp"
 
-        android:background="@drawable/notifications"
+        android:background="@drawable/ic_notif_profile"
         app:layout_constraintStart_toStartOf="@+id/dompet"
         app:layout_constraintTop_toBottomOf="@+id/dompet" />
 
@@ -98,7 +98,7 @@
         android:layout_height="25dp"
         android:layout_marginTop="20dp"
 
-        android:background="@drawable/info"
+        android:background="@drawable/ic_information"
         app:layout_constraintStart_toStartOf="@+id/bantuan"
         app:layout_constraintTop_toBottomOf="@+id/bantuan" />
 
@@ -107,7 +107,7 @@
         android:layout_width="25dp"
         android:layout_height="25dp"
         android:layout_marginTop="20dp"
-        android:background="@drawable/help"
+        android:background="@drawable/ic_help"
         app:layout_constraintStart_toStartOf="@+id/notifikasi1"
         app:layout_constraintTop_toBottomOf="@+id/notifikasi1" />
 
@@ -116,7 +116,7 @@
         android:layout_width="25dp"
         android:layout_height="25dp"
         android:layout_marginEnd="30dp"
-        android:background="@drawable/baseline_navigate_next_24"
+        android:background="@drawable/ic_arrow_next"
         app:layout_constraintBottom_toBottomOf="@+id/set_akun"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="@+id/set_akun" />
@@ -126,7 +126,7 @@
         android:layout_width="25dp"
         android:layout_height="25dp"
         android:layout_marginEnd="30dp"
-        android:background="@drawable/baseline_navigate_next_24"
+        android:background="@drawable/ic_arrow_next"
         app:layout_constraintBottom_toBottomOf="@+id/dompet1"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="@+id/dompet1" />
@@ -136,7 +136,7 @@
         android:layout_width="25dp"
         android:layout_height="25dp"
         android:layout_marginEnd="30dp"
-        android:background="@drawable/baseline_navigate_next_24"
+        android:background="@drawable/ic_arrow_next"
         app:layout_constraintBottom_toBottomOf="@+id/notifikasi2"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="@+id/notifikasi2" />
@@ -146,7 +146,7 @@
         android:layout_width="25dp"
         android:layout_height="25dp"
         android:layout_marginEnd="30dp"
-        android:background="@drawable/baseline_navigate_next_24"
+        android:background="@drawable/ic_arrow_next"
         app:layout_constraintBottom_toBottomOf="@+id/bantuan1"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="@+id/bantuan1" />
@@ -156,7 +156,7 @@
         android:layout_width="25dp"
         android:layout_height="25dp"
         android:layout_marginEnd="30dp"
-        android:background="@drawable/baseline_navigate_next_24"
+        android:background="@drawable/ic_arrow_next"
         app:layout_constraintBottom_toBottomOf="@+id/tentang_kami1"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="@+id/tentang_kami1" />

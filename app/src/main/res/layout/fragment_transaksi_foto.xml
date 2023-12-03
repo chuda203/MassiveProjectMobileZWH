@@ -11,7 +11,7 @@
         android:layout_height="wrap_content"
         android:contentDescription="@string/todo"
         android:scaleType="centerCrop"
-        android:src="@drawable/img_capture_sample"
+        android:src="@drawable/img_capture_order"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"

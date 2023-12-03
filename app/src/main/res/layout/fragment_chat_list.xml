@@ -4,22 +4,21 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/two_color_background"
+    android:background="@drawable/bg_base"
     tools:context=".chat.ChatListFragment">
-
 
     <TextView
         android:id="@+id/tv_title"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="50dp"
-        android:layout_marginStart="60dp"
         android:fontFamily="@font/poppinsbold"
-        android:text="Chat"
+        android:text="@string/chat_list"
         android:textColor="@color/white"
         android:textSize="22sp"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"/>
+        app:layout_constraintTop_toTopOf="parent" />
 
     <View
         android:id="@+id/separator"
@@ -68,7 +67,7 @@
                         android:layout_marginStart="20dp"
                         android:layout_marginTop="5dp"
                         android:fontFamily="@font/poppinsbold"
-                        android:text="Aldio Yohanes"
+                        android:text="@string/beranda_chat_title"
                         app:layout_constraintStart_toEndOf="@+id/iv_maps1"
                         app:layout_constraintTop_toTopOf="parent" />
 
@@ -77,7 +76,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:fontFamily="@font/poppinsregular"
-                        android:text="Oke bang ditunggu"
+                        android:text="@string/beranda_chat_preview"
                         android:textSize="11sp"
                         app:layout_constraintStart_toStartOf="@+id/tv_profile1"
                         app:layout_constraintTop_toBottomOf="@+id/tv_profile1" />
@@ -97,8 +96,8 @@
                         android:layout_height="wrap_content"
                         android:layout_marginTop="10dp"
                         android:fontFamily="@font/poppinsregular"
-                        android:text="11/5/23"
-                        android:textSize="10dp"
+                        android:text="@string/beranda_chat_date"
+                        android:textSize="11sp"
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintTop_toTopOf="@+id/tv_profile1" />
 
@@ -132,7 +131,7 @@
                         android:layout_marginStart="20dp"
                         android:layout_marginTop="5dp"
                         android:fontFamily="@font/poppinsbold"
-                        android:text="Rizky Pramudia"
+                        android:text="@string/beranda_chat_title2"
                         app:layout_constraintStart_toEndOf="@+id/iv_maps2"
                         app:layout_constraintTop_toTopOf="parent" />
 
@@ -141,7 +140,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:fontFamily="@font/poppinsregular"
-                        android:text="Dah sampe kak ?"
+                        android:text="@string/beranda_chat_preview2"
                         android:textSize="11sp"
                         app:layout_constraintStart_toStartOf="@+id/tv_profile2"
                         app:layout_constraintTop_toBottomOf="@+id/tv_profile2" />
@@ -161,8 +160,8 @@
                         android:layout_height="wrap_content"
                         android:layout_marginTop="10dp"
                         android:fontFamily="@font/poppinsregular"
-                        android:text="11/5/23"
-                        android:textSize="10dp"
+                        android:text="@string/beranda_chat_date"
+                        android:textSize="11sp"
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintTop_toTopOf="@+id/tv_profile2" />
 
@@ -196,7 +195,7 @@
                         android:layout_marginStart="20dp"
                         android:layout_marginTop="5dp"
                         android:fontFamily="@font/poppinsbold"
-                        android:text="Aldio Yohanes"
+                        android:text="@string/beranda_chat_title"
                         app:layout_constraintStart_toEndOf="@+id/iv_maps3a"
                         app:layout_constraintTop_toTopOf="parent" />
 
@@ -205,7 +204,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:fontFamily="@font/poppinsregular"
-                        android:text="Oke bang ditunggu"
+                        android:text="@string/beranda_chat_preview"
                         android:textSize="11sp"
                         app:layout_constraintStart_toStartOf="@+id/tv_profile3a"
                         app:layout_constraintTop_toBottomOf="@+id/tv_profile3a" />
@@ -225,8 +224,8 @@
                         android:layout_height="wrap_content"
                         android:layout_marginTop="10dp"
                         android:fontFamily="@font/poppinsregular"
-                        android:text="11/5/23"
-                        android:textSize="10dp"
+                        android:text="@string/beranda_chat_date"
+                        android:textSize="11sp"
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintTop_toTopOf="@+id/tv_profile3a" />
 
@@ -260,7 +259,7 @@
                         android:layout_marginStart="20dp"
                         android:layout_marginTop="5dp"
                         android:fontFamily="@font/poppinsbold"
-                        android:text="Rizky Pramudia"
+                        android:text="@string/beranda_chat_title2"
                         app:layout_constraintStart_toEndOf="@+id/iv_maps3"
                         app:layout_constraintTop_toTopOf="parent" />
 
@@ -269,7 +268,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:fontFamily="@font/poppinsregular"
-                        android:text="Dah sampe kak ?"
+                        android:text="@string/beranda_chat_preview2"
                         android:textSize="11sp"
                         app:layout_constraintStart_toStartOf="@+id/tv_profile3"
                         app:layout_constraintTop_toBottomOf="@+id/tv_profile3" />
@@ -289,8 +288,8 @@
                         android:layout_height="wrap_content"
                         android:layout_marginTop="10dp"
                         android:fontFamily="@font/poppinsregular"
-                        android:text="11/5/23"
-                        android:textSize="10dp"
+                        android:text="@string/beranda_chat_date"
+                        android:textSize="11sp"
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintTop_toTopOf="@+id/tv_profile3" />
 
@@ -324,7 +323,7 @@
                         android:layout_marginStart="20dp"
                         android:layout_marginTop="5dp"
                         android:fontFamily="@font/poppinsbold"
-                        android:text="Aldio Yohanes"
+                        android:text="@string/beranda_chat_title"
                         app:layout_constraintStart_toEndOf="@+id/iv_maps4"
                         app:layout_constraintTop_toTopOf="parent" />
 
@@ -333,7 +332,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:fontFamily="@font/poppinsregular"
-                        android:text="Oke bang ditunggu"
+                        android:text="@string/beranda_chat_preview"
                         android:textSize="11sp"
                         app:layout_constraintStart_toStartOf="@+id/tv_profile4"
                         app:layout_constraintTop_toBottomOf="@+id/tv_profile4" />
@@ -353,8 +352,8 @@
                         android:layout_height="wrap_content"
                         android:layout_marginTop="10dp"
                         android:fontFamily="@font/poppinsregular"
-                        android:text="11/5/23"
-                        android:textSize="10dp"
+                        android:text="@string/beranda_chat_date"
+                        android:textSize="11sp"
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintTop_toTopOf="@+id/tv_profile4" />
 
@@ -388,7 +387,7 @@
                         android:layout_marginStart="20dp"
                         android:layout_marginTop="5dp"
                         android:fontFamily="@font/poppinsbold"
-                        android:text="Rizky Pramudia"
+                        android:text="@string/beranda_chat_title2"
                         app:layout_constraintStart_toEndOf="@+id/iv_maps5"
                         app:layout_constraintTop_toTopOf="parent" />
 
@@ -397,7 +396,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:fontFamily="@font/poppinsregular"
-                        android:text="Dah sampe kak ?"
+                        android:text="@string/beranda_chat_preview2"
                         android:textSize="11sp"
                         app:layout_constraintStart_toStartOf="@+id/tv_profile5"
                         app:layout_constraintTop_toBottomOf="@+id/tv_profile5" />
@@ -417,8 +416,8 @@
                         android:layout_height="wrap_content"
                         android:layout_marginTop="10dp"
                         android:fontFamily="@font/poppinsregular"
-                        android:text="11/5/23"
-                        android:textSize="10dp"
+                        android:text="@string/beranda_chat_date"
+                        android:textSize="11sp"
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintTop_toTopOf="@+id/tv_profile5" />
 
@@ -452,7 +451,7 @@
                         android:layout_marginStart="20dp"
                         android:layout_marginTop="5dp"
                         android:fontFamily="@font/poppinsbold"
-                        android:text="Aldio Yohanes"
+                        android:text="@string/beranda_chat_title"
                         app:layout_constraintStart_toEndOf="@+id/iv_maps6"
                         app:layout_constraintTop_toTopOf="parent" />
 
@@ -461,7 +460,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:fontFamily="@font/poppinsregular"
-                        android:text="Oke bang ditunggu"
+                        android:text="@string/beranda_chat_preview"
                         android:textSize="11sp"
                         app:layout_constraintStart_toStartOf="@+id/tv_profile6"
                         app:layout_constraintTop_toBottomOf="@+id/tv_profile6" />
@@ -481,8 +480,8 @@
                         android:layout_height="wrap_content"
                         android:layout_marginTop="10dp"
                         android:fontFamily="@font/poppinsregular"
-                        android:text="11/5/23"
-                        android:textSize="10dp"
+                        android:text="@string/beranda_chat_date"
+                        android:textSize="11sp"
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintTop_toTopOf="@+id/tv_profile6" />
 
@@ -516,7 +515,7 @@
                         android:layout_marginStart="20dp"
                         android:layout_marginTop="5dp"
                         android:fontFamily="@font/poppinsbold"
-                        android:text="Rizky Pramudia"
+                        android:text="@string/beranda_chat_title2"
                         app:layout_constraintStart_toEndOf="@+id/iv_maps7"
                         app:layout_constraintTop_toTopOf="parent" />
 
@@ -525,7 +524,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:fontFamily="@font/poppinsregular"
-                        android:text="Dah sampe kak ?"
+                        android:text="@string/beranda_chat_preview2"
                         android:textSize="11sp"
                         app:layout_constraintStart_toStartOf="@+id/tv_profile7"
                         app:layout_constraintTop_toBottomOf="@+id/tv_profile7" />
@@ -545,8 +544,8 @@
                         android:layout_height="wrap_content"
                         android:layout_marginTop="10dp"
                         android:fontFamily="@font/poppinsregular"
-                        android:text="11/5/23"
-                        android:textSize="10dp"
+                        android:text="@string/beranda_chat_date"
+                        android:textSize="11sp"
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintTop_toTopOf="@+id/tv_profile7" />
 
@@ -580,7 +579,7 @@
                         android:layout_marginStart="20dp"
                         android:layout_marginTop="5dp"
                         android:fontFamily="@font/poppinsbold"
-                        android:text="Aldio Yohanes"
+                        android:text="@string/beranda_chat_title"
                         app:layout_constraintStart_toEndOf="@+id/iv_maps8"
                         app:layout_constraintTop_toTopOf="parent" />
 
@@ -589,7 +588,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:fontFamily="@font/poppinsregular"
-                        android:text="Oke bang ditunggu"
+                        android:text="@string/beranda_chat_preview"
                         android:textSize="11sp"
                         app:layout_constraintStart_toStartOf="@+id/tv_profile8"
                         app:layout_constraintTop_toBottomOf="@+id/tv_profile8" />
@@ -609,8 +608,8 @@
                         android:layout_height="wrap_content"
                         android:layout_marginTop="10dp"
                         android:fontFamily="@font/poppinsregular"
-                        android:text="11/5/23"
-                        android:textSize="10dp"
+                        android:text="@string/beranda_chat_date"
+                        android:textSize="11sp"
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintTop_toTopOf="@+id/tv_profile8" />
 
@@ -644,7 +643,7 @@
                         android:layout_marginStart="20dp"
                         android:layout_marginTop="5dp"
                         android:fontFamily="@font/poppinsbold"
-                        android:text="Rizky Pramudia"
+                        android:text="@string/beranda_chat_title2"
                         app:layout_constraintStart_toEndOf="@+id/iv_maps9"
                         app:layout_constraintTop_toTopOf="parent" />
 
@@ -653,7 +652,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:fontFamily="@font/poppinsregular"
-                        android:text="Dah sampe kak ?"
+                        android:text="@string/beranda_chat_preview2"
                         android:textSize="11sp"
                         app:layout_constraintStart_toStartOf="@+id/tv_profile9"
                         app:layout_constraintTop_toBottomOf="@+id/tv_profile9" />
@@ -673,8 +672,8 @@
                         android:layout_height="wrap_content"
                         android:layout_marginTop="10dp"
                         android:fontFamily="@font/poppinsregular"
-                        android:text="11/5/23"
-                        android:textSize="10dp"
+                        android:text="@string/beranda_chat_date"
+                        android:textSize="11sp"
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintTop_toTopOf="@+id/tv_profile9" />
 

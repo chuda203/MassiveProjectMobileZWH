@@ -33,6 +33,7 @@ class DaftarActivity : AppCompatActivity() {
             }
         }
 
+        // Aktifkan klik agreement, sementara pake about us dr web
         val tvAgreement = findViewById<TextView>(R.id.tv_agreement)
         tvAgreement.setOnClickListener {
             val url = "https://greensaver.vercel.app/about"
@@ -40,22 +41,28 @@ class DaftarActivity : AppCompatActivity() {
                 startActivity(it)
             }
         }
-        val editTextPassword = findViewById<EditText>(R.id.et_password)
-        val imageViewToggle = findViewById<ImageView>(R.id.ic_password)
-        val editTextPasswordTwice = findViewById<EditText>(R.id.et_password_twice)
-        val imageViewToggleTwice = findViewById<ImageView>(R.id.ic_password_twice)
 
+        // Mengaktifkan fungsi hide dan unhide password
+        val imageViewToggle = findViewById<ImageView>(R.id.ic_password)
+        val editTextPassword = findViewById<EditText>(R.id.et_password)
         imageViewToggle.setOnClickListener {
-            // Saat ImageView diklik, ubah tipe input teks
+            // Saat ImageView diklik, ubah tipe input password
             isPasswordVisible = !isPasswordVisible
             togglePasswordVisibility(editTextPassword, isPasswordVisible)
-            imageViewToggleTwice.setOnClickListener {
-                // Saat ImageView diklik, ubah tipe input teks
+        }
+
+        // Mengaktifkan fungsi hide dan unhide konfirmasi password
+        val editTextPasswordTwice = findViewById<EditText>(R.id.et_password_twice)
+        val imageViewToggleTwice = findViewById<ImageView>(R.id.ic_password_twice)
+        imageViewToggleTwice.setOnClickListener {
+            // Saat ImageView diklik, ubah tipe input password
             isPasswordVisible = !isPasswordVisible
             togglePasswordVisibility(editTextPasswordTwice, isPasswordVisible)
             }
-        }
+
     }
+
+    // Function untuk fitur hide/unhide password
     private fun togglePasswordVisibility(editText: EditText, isVisible: Boolean) {
         if (isVisible) {
             // Jika terlihat, ubah ke tipe teks biasa

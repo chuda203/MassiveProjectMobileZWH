@@ -1,10 +1,12 @@
 package com.infinite.massiveprojectmobilezwh.beranda
 
+import android.content.Intent
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.cardview.widget.CardView
 import com.infinite.massiveprojectmobilezwh.R
 
 // TODO: Rename parameter arguments, choose names that match
@@ -37,6 +39,18 @@ class BerandaChatFragment : Fragment() {
         // Inflate the layout for this fragment
         return inflater.inflate(R.layout.fragment_beranda_chat, container, false)
     }
+
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+        // Intent ke isi chat
+        val chatDetail : CardView = view.findViewById(R.id.cardView_region1)
+        chatDetail.setOnClickListener {
+            Intent(requireActivity(), BerandaObrolanActivity::class.java).also{
+                startActivity(it)
+            }
+        }
+    }
+
 
     companion object {
         /**

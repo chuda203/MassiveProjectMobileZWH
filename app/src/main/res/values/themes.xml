@@ -12,7 +12,7 @@
     </style>
 
     <style name="ButtonSubNext" parent="Widget.MaterialComponents.Button">
-        <item name="backgroundTint">@color/green_secondary_button</item>
+        <item name="backgroundTint">@color/green_secondary</item>
         <item name="cornerRadius">8dp</item>
     </style>
 

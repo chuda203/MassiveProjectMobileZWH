@@ -4,56 +4,20 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/two_color_background"
-    tools:context=".profile.ProfileNotifFragment">
-
-    <ImageView
-        android:id="@+id/back1"
-        android:layout_width="28dp"
-        android:layout_height="28dp"
-        android:layout_marginStart="28dp"
-        android:layout_marginTop="52dp"
-        android:src="@drawable/back"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <TextView
-        android:id="@+id/tvNotif"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="28dp"
-        android:layout_marginTop="47dp"
-        android:fontFamily="@font/poppinsbold"
-        android:text="Notifikasi"
-        android:textColor="@color/white"
-        android:textSize="25sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.146"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <View
-        android:id="@+id/separator"
-        android:layout_width="wrap_content"
-        android:layout_height="10dp"
-        android:layout_marginTop="120dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+    tools:context=".profile.ProfileNotifActivity">
 
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_marginTop="20dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/separator">
+        app:layout_constraintTop_toTopOf="parent">
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical"
             android:gravity="center"
+            android:orientation="vertical"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/separator">
@@ -62,7 +26,7 @@
                 android:id="@+id/notif1"
                 android:layout_width="350dp"
                 android:layout_height="40dp"
-                app:cardBackgroundColor="@color/green2"
+                app:cardBackgroundColor="@color/green_secondary"
                 app:cardCornerRadius="15dp"
                 app:contentPadding="5dp"
                 app:layout_constraintBottom_toBottomOf="parent"
@@ -84,7 +48,8 @@
                         android:src="@drawable/ic_circle"
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toTopOf="parent" />
+                        app:layout_constraintTop_toTopOf="parent"
+                        android:contentDescription="@string/todo" />
 
                     <TextView
                         android:id="@+id/tvNotif1"
@@ -92,7 +57,7 @@
                         android:layout_height="wrap_content"
                         android:layout_marginStart="10dp"
                         android:fontFamily="@font/poppinsblack"
-                        android:text="Hore! Transaksi pertamamu berhasil"
+                        android:text="@string/profile_notif_01"
                         app:layout_constraintBottom_toBottomOf="@+id/ic_indicator1"
                         app:layout_constraintStart_toEndOf="@+id/ic_indicator1"
                         app:layout_constraintTop_toTopOf="@+id/ic_indicator1" />
@@ -106,7 +71,7 @@
                 android:layout_width="350dp"
                 android:layout_height="40dp"
                 android:layout_marginTop="15dp"
-                app:cardBackgroundColor="@color/green2"
+                app:cardBackgroundColor="@color/green_secondary"
                 app:cardCornerRadius="15dp"
                 app:contentPadding="5dp"
                 app:layout_constraintBottom_toBottomOf="parent"
@@ -128,7 +93,8 @@
                         android:src="@drawable/ic_circle"
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toTopOf="parent" />
+                        app:layout_constraintTop_toTopOf="parent"
+                        android:contentDescription="@string/todo" />
 
                     <TextView
                         android:id="@+id/tvNotif2"
@@ -136,7 +102,7 @@
                         android:layout_height="wrap_content"
                         android:layout_marginStart="10dp"
                         android:fontFamily="@font/poppinsblack"
-                        android:text="Hore! Transaksi pertamamu berhasil"
+                        android:text="@string/profile_notif_01"
                         app:layout_constraintBottom_toBottomOf="@+id/ic_indicator2"
                         app:layout_constraintStart_toEndOf="@+id/ic_indicator2"
                         app:layout_constraintTop_toTopOf="@+id/ic_indicator2" />
@@ -150,7 +116,7 @@
                 android:layout_width="350dp"
                 android:layout_height="40dp"
                 android:layout_marginTop="15dp"
-                app:cardBackgroundColor="@color/green2"
+                app:cardBackgroundColor="@color/green_secondary"
                 app:cardCornerRadius="15dp"
                 app:contentPadding="5dp"
                 app:layout_constraintBottom_toBottomOf="parent"
@@ -172,6 +138,7 @@
                         android:src="@drawable/ic_circle"
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintStart_toStartOf="parent"
+                        android:contentDescription="@string/todo"
                         app:layout_constraintTop_toTopOf="parent" />
 
                     <TextView
@@ -180,7 +147,7 @@
                         android:layout_height="wrap_content"
                         android:layout_marginStart="10dp"
                         android:fontFamily="@font/poppinsblack"
-                        android:text="Hore! Transaksi pertamamu berhasil"
+                        android:text="@string/profile_notif_01"
                         app:layout_constraintBottom_toBottomOf="@+id/ic_indicator3"
                         app:layout_constraintStart_toEndOf="@+id/ic_indicator3"
                         app:layout_constraintTop_toTopOf="@+id/ic_indicator3" />
@@ -194,7 +161,7 @@
                 android:layout_width="350dp"
                 android:layout_height="40dp"
                 android:layout_marginTop="15dp"
-                app:cardBackgroundColor="@color/green2"
+                app:cardBackgroundColor="@color/green_secondary"
                 app:cardCornerRadius="15dp"
                 app:contentPadding="5dp"
                 app:layout_constraintBottom_toBottomOf="parent"
@@ -216,6 +183,7 @@
                         android:src="@drawable/ic_circle"
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintStart_toStartOf="parent"
+                        android:contentDescription="@string/todo"
                         app:layout_constraintTop_toTopOf="parent" />
 
                     <TextView
@@ -224,7 +192,7 @@
                         android:layout_height="wrap_content"
                         android:layout_marginStart="10dp"
                         android:fontFamily="@font/poppinsblack"
-                        android:text="Hore! Transaksi pertamamu berhasil"
+                        android:text="@string/profile_notif_01"
                         app:layout_constraintBottom_toBottomOf="@+id/ic_indicator4"
                         app:layout_constraintStart_toEndOf="@+id/ic_indicator4"
                         app:layout_constraintTop_toTopOf="@+id/ic_indicator4" />
@@ -238,7 +206,7 @@
                 android:layout_width="350dp"
                 android:layout_height="40dp"
                 android:layout_marginTop="15dp"
-                app:cardBackgroundColor="@color/green2"
+                app:cardBackgroundColor="@color/green_secondary"
                 app:cardCornerRadius="15dp"
                 app:contentPadding="5dp"
                 app:layout_constraintBottom_toBottomOf="parent"
@@ -260,7 +228,8 @@
                         android:src="@drawable/ic_circle"
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toTopOf="parent" />
+                        app:layout_constraintTop_toTopOf="parent"
+                        android:contentDescription="@string/todo" />
 
                     <TextView
                         android:id="@+id/tvNotif5"
@@ -268,7 +237,7 @@
                         android:layout_height="wrap_content"
                         android:layout_marginStart="10dp"
                         android:fontFamily="@font/poppinsblack"
-                        android:text="Hore! Transaksi pertamamu berhasil"
+                        android:text="@string/profile_notif_01"
                         app:layout_constraintBottom_toBottomOf="@+id/ic_indicator5"
                         app:layout_constraintStart_toEndOf="@+id/ic_indicator5"
                         app:layout_constraintTop_toTopOf="@+id/ic_indicator5" />
@@ -282,7 +251,7 @@
                 android:layout_width="350dp"
                 android:layout_height="40dp"
                 android:layout_marginTop="15dp"
-                app:cardBackgroundColor="@color/green2"
+                app:cardBackgroundColor="@color/green_secondary"
                 app:cardCornerRadius="15dp"
                 app:contentPadding="5dp"
                 app:layout_constraintBottom_toBottomOf="parent"
@@ -304,7 +273,8 @@
                         android:src="@drawable/ic_circle"
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toTopOf="parent" />
+                        app:layout_constraintTop_toTopOf="parent"
+                        android:contentDescription="@string/todo" />
 
                     <TextView
                         android:id="@+id/tvNotif6"
@@ -312,7 +282,7 @@
                         android:layout_height="wrap_content"
                         android:layout_marginStart="10dp"
                         android:fontFamily="@font/poppinsblack"
-                        android:text="Hore! Transaksi pertamamu berhasil"
+                        android:text="@string/profile_notif_01"
                         app:layout_constraintBottom_toBottomOf="@+id/ic_indicator6"
                         app:layout_constraintStart_toEndOf="@+id/ic_indicator6"
                         app:layout_constraintTop_toTopOf="@+id/ic_indicator6" />
@@ -326,7 +296,7 @@
                 android:layout_width="350dp"
                 android:layout_height="40dp"
                 android:layout_marginTop="15dp"
-                app:cardBackgroundColor="@color/green2"
+                app:cardBackgroundColor="@color/green_secondary"
                 app:cardCornerRadius="15dp"
                 app:contentPadding="5dp"
                 app:layout_constraintBottom_toBottomOf="parent"
@@ -348,7 +318,8 @@
                         android:src="@drawable/ic_circle"
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toTopOf="parent" />
+                        app:layout_constraintTop_toTopOf="parent"
+                        android:contentDescription="@string/todo" />
 
                     <TextView
                         android:id="@+id/tvNotif7"
@@ -356,7 +327,7 @@
                         android:layout_height="wrap_content"
                         android:layout_marginStart="10dp"
                         android:fontFamily="@font/poppinsblack"
-                        android:text="Hore! Transaksi pertamamu berhasil"
+                        android:text="@string/profile_notif_01"
                         app:layout_constraintBottom_toBottomOf="@+id/ic_indicator7"
                         app:layout_constraintStart_toEndOf="@+id/ic_indicator7"
                         app:layout_constraintTop_toTopOf="@+id/ic_indicator7" />
@@ -370,7 +341,7 @@
                 android:layout_width="350dp"
                 android:layout_height="40dp"
                 android:layout_marginTop="15dp"
-                app:cardBackgroundColor="@color/green2"
+                app:cardBackgroundColor="@color/green_secondary"
                 app:cardCornerRadius="15dp"
                 app:contentPadding="5dp"
                 app:layout_constraintBottom_toBottomOf="parent"
@@ -392,7 +363,8 @@
                         android:src="@drawable/ic_circle"
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toTopOf="parent" />
+                        app:layout_constraintTop_toTopOf="parent"
+                        android:contentDescription="@string/todo" />
 
                     <TextView
                         android:id="@+id/tvNotif8"
@@ -400,7 +372,7 @@
                         android:layout_height="wrap_content"
                         android:layout_marginStart="10dp"
                         android:fontFamily="@font/poppinsblack"
-                        android:text="Hore! Transaksi pertamamu berhasil"
+                        android:text="@string/profile_notif_01"
                         app:layout_constraintBottom_toBottomOf="@+id/ic_indicator8"
                         app:layout_constraintStart_toEndOf="@+id/ic_indicator8"
                         app:layout_constraintTop_toTopOf="@+id/ic_indicator8" />
@@ -414,7 +386,7 @@
                 android:layout_width="350dp"
                 android:layout_height="40dp"
                 android:layout_marginTop="15dp"
-                app:cardBackgroundColor="@color/green2"
+                app:cardBackgroundColor="@color/green_secondary"
                 app:cardCornerRadius="15dp"
                 app:contentPadding="5dp"
                 app:layout_constraintBottom_toBottomOf="parent"
@@ -436,7 +408,8 @@
                         android:src="@drawable/ic_circle"
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toTopOf="parent" />
+                        app:layout_constraintTop_toTopOf="parent"
+                        android:contentDescription="@string/todo" />
 
                     <TextView
                         android:id="@+id/tvNotif16"
@@ -444,7 +417,7 @@
                         android:layout_height="wrap_content"
                         android:layout_marginStart="10dp"
                         android:fontFamily="@font/poppinsblack"
-                        android:text="Hore! Transaksi pertamamu berhasil"
+                        android:text="@string/profile_notif_01"
                         app:layout_constraintBottom_toBottomOf="@+id/ic_indicator16"
                         app:layout_constraintStart_toEndOf="@+id/ic_indicator16"
                         app:layout_constraintTop_toTopOf="@+id/ic_indicator16" />
@@ -458,7 +431,7 @@
                 android:layout_width="350dp"
                 android:layout_height="40dp"
                 android:layout_marginTop="15dp"
-                app:cardBackgroundColor="@color/green2"
+                app:cardBackgroundColor="@color/green_secondary"
                 app:cardCornerRadius="15dp"
                 app:contentPadding="5dp"
                 app:layout_constraintBottom_toBottomOf="parent"
@@ -480,7 +453,8 @@
                         android:src="@drawable/ic_circle"
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toTopOf="parent" />
+                        app:layout_constraintTop_toTopOf="parent"
+                        android:contentDescription="@string/todo" />
 
                     <TextView
                         android:id="@+id/tvNotif9"
@@ -488,7 +462,7 @@
                         android:layout_height="wrap_content"
                         android:layout_marginStart="10dp"
                         android:fontFamily="@font/poppinsblack"
-                        android:text="Hore! Transaksi pertamamu berhasil"
+                        android:text="@string/profile_notif_01"
                         app:layout_constraintBottom_toBottomOf="@+id/ic_indicator9"
                         app:layout_constraintStart_toEndOf="@+id/ic_indicator9"
                         app:layout_constraintTop_toTopOf="@+id/ic_indicator9" />
@@ -502,7 +476,7 @@
                 android:layout_width="350dp"
                 android:layout_height="40dp"
                 android:layout_marginTop="15dp"
-                app:cardBackgroundColor="@color/green2"
+                app:cardBackgroundColor="@color/green_secondary"
                 app:cardCornerRadius="15dp"
                 app:contentPadding="5dp"
                 app:layout_constraintBottom_toBottomOf="parent"
@@ -524,7 +498,8 @@
                         android:src="@drawable/ic_circle"
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toTopOf="parent" />
+                        app:layout_constraintTop_toTopOf="parent"
+                        android:contentDescription="@string/todo"  />
 
                     <TextView
                         android:id="@+id/tvNotif10"
@@ -532,7 +507,7 @@
                         android:layout_height="wrap_content"
                         android:layout_marginStart="10dp"
                         android:fontFamily="@font/poppinsblack"
-                        android:text="Hore! Transaksi pertamamu berhasil"
+                        android:text="@string/profile_notif_01"
                         app:layout_constraintBottom_toBottomOf="@+id/ic_indicator10"
                         app:layout_constraintStart_toEndOf="@+id/ic_indicator10"
                         app:layout_constraintTop_toTopOf="@+id/ic_indicator10" />
@@ -546,7 +521,7 @@
                 android:layout_width="350dp"
                 android:layout_height="40dp"
                 android:layout_marginTop="15dp"
-                app:cardBackgroundColor="@color/green2"
+                app:cardBackgroundColor="@color/green_secondary"
                 app:cardCornerRadius="15dp"
                 app:contentPadding="5dp"
                 app:layout_constraintBottom_toBottomOf="parent"
@@ -568,7 +543,8 @@
                         android:src="@drawable/ic_circle"
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toTopOf="parent" />
+                        app:layout_constraintTop_toTopOf="parent"
+                        android:contentDescription="@string/todo" />
 
                     <TextView
                         android:id="@+id/tvNotif11"
@@ -576,7 +552,7 @@
                         android:layout_height="wrap_content"
                         android:layout_marginStart="10dp"
                         android:fontFamily="@font/poppinsblack"
-                        android:text="Hore! Transaksi pertamamu berhasil"
+                        android:text="@string/profile_notif_01"
                         app:layout_constraintBottom_toBottomOf="@+id/ic_indicator11"
                         app:layout_constraintStart_toEndOf="@+id/ic_indicator11"
                         app:layout_constraintTop_toTopOf="@+id/ic_indicator11" />
@@ -590,7 +566,7 @@
                 android:layout_width="350dp"
                 android:layout_height="40dp"
                 android:layout_marginTop="15dp"
-                app:cardBackgroundColor="@color/green2"
+                app:cardBackgroundColor="@color/green_secondary"
                 app:cardCornerRadius="15dp"
                 app:contentPadding="5dp"
                 app:layout_constraintBottom_toBottomOf="parent"
@@ -612,7 +588,8 @@
                         android:src="@drawable/ic_circle"
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toTopOf="parent" />
+                        app:layout_constraintTop_toTopOf="parent"
+                        android:contentDescription="@string/todo" />
 
                     <TextView
                         android:id="@+id/tvNotif12"
@@ -620,7 +597,7 @@
                         android:layout_height="wrap_content"
                         android:layout_marginStart="10dp"
                         android:fontFamily="@font/poppinsblack"
-                        android:text="Hore! Transaksi pertamamu berhasil"
+                        android:text="@string/profile_notif_01"
                         app:layout_constraintBottom_toBottomOf="@+id/ic_indicator12"
                         app:layout_constraintStart_toEndOf="@+id/ic_indicator12"
                         app:layout_constraintTop_toTopOf="@+id/ic_indicator12" />
@@ -634,7 +611,7 @@
                 android:layout_width="350dp"
                 android:layout_height="40dp"
                 android:layout_marginTop="15dp"
-                app:cardBackgroundColor="@color/green2"
+                app:cardBackgroundColor="@color/green_secondary"
                 app:cardCornerRadius="15dp"
                 app:contentPadding="5dp"
                 app:layout_constraintBottom_toBottomOf="parent"
@@ -656,6 +633,7 @@
                         android:src="@drawable/ic_circle"
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintStart_toStartOf="parent"
+                        android:contentDescription="@string/todo"
                         app:layout_constraintTop_toTopOf="parent" />
 
                     <TextView
@@ -664,7 +642,7 @@
                         android:layout_height="wrap_content"
                         android:layout_marginStart="10dp"
                         android:fontFamily="@font/poppinsblack"
-                        android:text="Hore! Transaksi pertamamu berhasil"
+                        android:text="@string/profile_notif_01"
                         app:layout_constraintBottom_toBottomOf="@+id/ic_indicator13"
                         app:layout_constraintStart_toEndOf="@+id/ic_indicator13"
                         app:layout_constraintTop_toTopOf="@+id/ic_indicator13" />
@@ -678,7 +656,7 @@
                 android:layout_width="350dp"
                 android:layout_height="40dp"
                 android:layout_marginTop="15dp"
-                app:cardBackgroundColor="@color/green2"
+                app:cardBackgroundColor="@color/green_secondary"
                 app:cardCornerRadius="15dp"
                 app:contentPadding="5dp"
                 app:layout_constraintBottom_toBottomOf="parent"
@@ -700,7 +678,8 @@
                         android:src="@drawable/ic_circle"
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toTopOf="parent" />
+                        app:layout_constraintTop_toTopOf="parent"
+                        android:contentDescription="@string/todo" />
 
                     <TextView
                         android:id="@+id/tvNotif14"
@@ -708,7 +687,7 @@
                         android:layout_height="wrap_content"
                         android:layout_marginStart="10dp"
                         android:fontFamily="@font/poppinsblack"
-                        android:text="Hore! Transaksi pertamamu berhasil"
+                        android:text="@string/profile_notif_01"
                         app:layout_constraintBottom_toBottomOf="@+id/ic_indicator14"
                         app:layout_constraintStart_toEndOf="@+id/ic_indicator14"
                         app:layout_constraintTop_toTopOf="@+id/ic_indicator14" />
@@ -722,7 +701,7 @@
                 android:layout_width="350dp"
                 android:layout_height="40dp"
                 android:layout_marginTop="15dp"
-                app:cardBackgroundColor="@color/green2"
+                app:cardBackgroundColor="@color/green_secondary"
                 app:cardCornerRadius="15dp"
                 app:contentPadding="5dp"
                 app:layout_constraintBottom_toBottomOf="parent"
@@ -744,7 +723,8 @@
                         android:src="@drawable/ic_circle"
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toTopOf="parent" />
+                        app:layout_constraintTop_toTopOf="parent"
+                        android:contentDescription="@string/todo" />
 
                     <TextView
                         android:id="@+id/tvNotif15"
@@ -752,7 +732,7 @@
                         android:layout_height="wrap_content"
                         android:layout_marginStart="10dp"
                         android:fontFamily="@font/poppinsblack"
-                        android:text="Hore! Transaksi pertamamu berhasil"
+                        android:text="@string/profile_notif_01"
                         app:layout_constraintBottom_toBottomOf="@+id/ic_indicator15"
                         app:layout_constraintStart_toEndOf="@+id/ic_indicator15"
                         app:layout_constraintTop_toTopOf="@+id/ic_indicator15" />

@@ -9,9 +9,11 @@ class TransaksiBelumStatusActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_transaksi_belum_status)
-        val btnBack = findViewById<ImageView>(R.id.back)
+        // kembali ke activity sebelumnya
+        val btnBack = findViewById<ImageView>(R.id.iv_back)
         btnBack.setOnClickListener {
-            onBackPressed()
+            // akhiri Activity, alternatif onBackPressed
+            finish()
         }
     }
 }

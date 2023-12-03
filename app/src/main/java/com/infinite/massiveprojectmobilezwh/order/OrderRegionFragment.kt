@@ -33,11 +33,12 @@ class OrderRegionFragment : Fragment() {
     }
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        val btn_region : CardView = view.findViewById(R.id.cardView_region1)
-
-        btn_region.setOnClickListener {
-            val intent = Intent(requireActivity(), OrderHistoryActivity::class.java)
-            startActivity(intent)
+        // Intent ke order_detail
+        val btnDetail: CardView = view.findViewById(R.id.cardView_region1)
+        btnDetail.setOnClickListener {
+            Intent(requireActivity(), OrderDetailActivity::class.java).also {
+                startActivity(it)
+            }
         }
     }
 

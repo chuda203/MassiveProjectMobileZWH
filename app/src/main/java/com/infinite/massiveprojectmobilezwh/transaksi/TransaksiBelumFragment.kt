@@ -35,11 +35,20 @@ class TransaksiBelumFragment : Fragment() {
     }
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        val btn_confrim : TextView = view.findViewById(R.id.tv_photo1)
+        // Intent ke detail foto
+        val btnImage : TextView = view.findViewById(R.id.tv_photo1)
+        btnImage.setOnClickListener {
+            Intent(requireActivity(), TransaksiFotoActivity::class.java).also {
+                startActivity(it)
+            }
+        }
 
-        btn_confrim.setOnClickListener {
-            val intent = Intent(requireActivity(), TransaksiFotoActivity::class.java)
-            startActivity(intent)
+        // Intent ke detail pesanan
+        val btnDetail : TextView = view.findViewById(R.id.tv_status1)
+        btnDetail.setOnClickListener {
+            Intent(requireActivity(), TransaksiBelumStatusActivity::class.java).also {
+                startActivity(it)
+            }
         }
 
     }

@@ -4,86 +4,67 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/two_color_background"
     tools:context=".wallet.WalletAddFragment">
 
-    <ImageView
-        android:id="@+id/back"
-        android:layout_width="28dp"
-        android:layout_height="28dp"
-        android:src="@drawable/back"
-        android:layout_marginTop="35dp"
-        android:layout_marginStart="20dp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"/>
-
     <TextView
-        android:id="@+id/judul"
-        android:layout_width="match_parent"
+        android:id="@+id/tv_value"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Tambah Koin"
-        android:textColor="@color/white"
-        android:textSize="20sp"
-        android:fontFamily="@font/poppinsbold"
-        android:layout_marginTop="33dp"
-        android:layout_marginStart="70dp"
-        app:layout_constraintStart_toEndOf="@+id/back"
-        app:layout_constraintTop_toTopOf="parent"/>
-
-    <TextView
-        android:id="@+id/nominal"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Nominal"
+        android:layout_marginTop="20dp"
+        android:layout_marginStart="30dp"
+        android:text="@string/wallet_add_value"
         android:textColor="@color/black"
         android:textSize="14sp"
         android:fontFamily="@font/poppinsmedium"
-        android:layout_marginTop="160dp"
-        android:layout_marginStart="20dp"
-        android:layout_marginEnd="20dp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent"/>
 
     <EditText
-        android:id="@+id/input_nominasi"
+        android:id="@+id/et_value"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginStart="20dp"
-        android:layout_marginEnd="20dp"
+        android:layout_marginHorizontal="30dp"
+        android:hint="@string/wallet_add_hint_value"
+        android:inputType="number"
+        android:fontFamily="@font/poppinsregular"
+        android:textSize="11sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/nominal"/>
+        app:layout_constraintTop_toBottomOf="@id/tv_value"
+        android:importantForAutofill="no" />
 
     <TextView
-        android:id="@+id/catatan"
-        android:layout_width="match_parent"
+        android:id="@+id/tv_note"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Catatan Transaksi"
+        android:layout_marginTop="15dp"
+        android:layout_marginEnd="20dp"
+        android:fontFamily="@font/poppinsmedium"
+        android:text="@string/wallet_add_note"
         android:textColor="@color/black"
         android:textSize="14sp"
-        android:fontFamily="@font/poppinsmedium"
-        android:layout_marginTop="15dp"
-        android:layout_marginStart="20dp"
-        android:layout_marginEnd="20dp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/input_nominasi"/>
+        app:layout_constraintStart_toStartOf="@+id/tv_value"
+        app:layout_constraintTop_toBottomOf="@id/et_value" />
 
     <EditText
         android:id="@+id/input_catatan"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginStart="20dp"
-        android:layout_marginEnd="20dp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/catatan"/>
+        android:layout_marginHorizontal="30dp"
+        android:hint="@string/wallet_add_hint_note"
+        android:inputType="text"
+        android:fontFamily="@font/poppinsregular"
+        android:textSize="11sp"
+        app:layout_constraintEnd_toEndOf="@+id/et_value"
+        app:layout_constraintStart_toStartOf="@+id/et_value"
+        app:layout_constraintTop_toBottomOf="@id/tv_note"
+        android:importantForAutofill="no" />
 
     <Button
+        android:id="@+id/bt_confirmation"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Lanjutkan"
+        android:text="@string/wallet_add_confirmation"
         android:textColor="@color/white"
         android:textSize="14sp"
         android:fontFamily="@font/poppinsbold"

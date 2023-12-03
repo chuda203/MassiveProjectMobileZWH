@@ -1,5 +1,5 @@
 <!-- res/drawable/rounded_green_background.xml -->
 <shape xmlns:android="http://schemas.android.com/apk/res/android">
-    <solid android:color="@color/colorutama" /> <!-- Warna hijau -->
+    <solid android:color="@color/green" /> <!-- Warna hijau -->
     <corners android:radius="13dp" /> <!-- Radius sudut -->
 </shape>
