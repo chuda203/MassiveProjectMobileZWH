@@ -35,9 +35,15 @@ class ProfilListFragment : Fragment() {
             param2 = it.getString(ARG_PARAM2)
         }
     }
+    fun updateUsername() {
+        val tvProfil = view?.findViewById<TextView>(R.id.nama)
+        val username = arguments?.getString(com.infinite.massiveprojectmobilezwh.profil.ARG_PARAM1)
+        tvProfil?.text = "$username"
+    }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+        updateUsername()
         val btn_edit : TextView = view.findViewById(R.id.set_akun)
         val btn_wallet : TextView = view.findViewById(R.id.dompet1)
         val btn_notif : TextView = view.findViewById(R.id.notifikasi2)

@@ -74,7 +74,7 @@
             android:layout_marginHorizontal="30dp"
             android:paddingHorizontal="10dp"
             android:hint="@string/register_hint_phone"
-            android:inputType="phone"
+            android:inputType="textEmailAddress"
             android:fontFamily="@font/poppinsregular"
             android:textSize="11sp"
             android:background="@drawable/bg_et_login"

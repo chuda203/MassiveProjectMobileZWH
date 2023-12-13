@@ -5,11 +5,22 @@ import android.net.Uri
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.text.method.PasswordTransformationMethod
+import android.util.Log
 import android.widget.Button
 import android.widget.EditText
 import android.widget.ImageView
 import android.widget.TextView
+import androidx.core.content.ContextCompat.startActivity
 import com.infinite.massiveprojectmobilezwh.R
+import com.infinite.massiveprojectmobilezwh.Retro
+import com.infinite.massiveprojectmobilezwh.UserApi
+import com.infinite.massiveprojectmobilezwh.UserRequest
+import com.infinite.massiveprojectmobilezwh.UserResponse
+import com.infinite.massiveprojectmobilezwh.beranda.BerandaListActivity
+import com.infinite.massiveprojectmobilezwh.maps.MapsListActivity
+import retrofit2.Call
+import retrofit2.Callback
+import retrofit2.Response
 
 class DaftarActivity : AppCompatActivity() {
     private var isPasswordVisible = false
@@ -17,13 +28,13 @@ class DaftarActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_daftar)
 
-        // Pengaturan OnClickListener untuk tombol "Daftar"
-        val btnDaftar = findViewById<Button>(R.id.bt_confirmation)
-        btnDaftar.setOnClickListener {
-            Intent(this, MasukActivity::class.java).also {
-                startActivity(it)
-            }
-        }
+//        // Pengaturan OnClickListener untuk tombol "Daftar"
+//        val btnDaftar = findViewById<Button>(R.id.bt_confirmation)
+//        btnDaftar.setOnClickListener {
+//            Intent(this, MasukActivity::class.java).also {
+//                startActivity(it)
+//            }
+//        }
 
         // Pengaturan OnClickListener untuk teks "Masuk"
         val tvLogin = findViewById<TextView>(R.id.tv_login)
@@ -72,6 +83,51 @@ class DaftarActivity : AppCompatActivity() {
             // Jika tidak terlihat, ubah ke tipe password
             editText.transformationMethod = PasswordTransformationMethod()
             editText.setSelection(editText.text.length) // Agar kursor tetap di akhir teks
+        }
+        initAction()
+    }
+
+    fun initAction() {
+        val btnMasuk : Button = findViewById(R.id.bt_confirmation)
+        btnMasuk.setOnClickListener {
+            register()
+        }
+    }
+
+    fun register () {
+        val etUsername : EditText = findViewById(R.id.et_username)
+        val etEmail : EditText = findViewById(R.id.et_phone)
+        val etPassword : EditText = findViewById(R.id.et_password)
+        val request = UserRequest()
+        request.name = etUsername.text.toString().trim()
+        request.email = etEmail.text.toString().trim()
+        request.password = etPassword.text.toString().trim()
+
+        val retro = Retro().getRetroCLientInstance().create(UserApi::class.java)
+        retro.signup(request).enqueue(object : Callback<UserResponse> {
+            override fun onResponse(call: Call<UserResponse>, response: Response<UserResponse>) {
+                if (response.isSuccessful) {
+                    val user = response.body()
+                    if (user != null) {
+                        toHome()
+                    } else {
+                        Log.e("Error", "User or data is null")
+                    }
+                } else {
+                    Log.e("Error", "Unsuccessful response: ${response.code()}")
+                }
+            }
+
+            override fun onFailure(call: Call<UserResponse>, t: Throwable) {
+                Log.e("Error", t.message ?: "Unknown error")
+            }
+
+        })
+    }
+
+    private fun toHome() {
+        Intent(this, MasukActivity::class.java).also {
+            startActivity(it)
         }
     }
 }
