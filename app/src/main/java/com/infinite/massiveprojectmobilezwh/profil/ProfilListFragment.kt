@@ -1,5 +1,6 @@
 package com.infinite.massiveprojectmobilezwh.profil
 
+import android.content.Context
 import android.content.Intent
 import android.os.Bundle
 import androidx.fragment.app.Fragment
@@ -9,9 +10,8 @@ import android.view.ViewGroup
 import android.widget.Button
 import android.widget.TextView
 import com.infinite.massiveprojectmobilezwh.R
-import com.infinite.massiveprojectmobilezwh.beranda.BerandaCameraActivity
 import com.infinite.massiveprojectmobilezwh.dompet.BerandaDompetActivity
-import com.infinite.massiveprojectmobilezwh.profile.ProfileHelpActivity
+import com.infinite.massiveprojectmobilezwh.login.SplashOptionActivity
 
 // TODO: Rename parameter arguments, choose names that match
 // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -35,14 +35,22 @@ class ProfilListFragment : Fragment() {
             param2 = it.getString(ARG_PARAM2)
         }
     }
+    fun updateUsername() {
+        val sharedPreferences = requireActivity().applicationContext.getSharedPreferences("MySharedPreferences", Context.MODE_PRIVATE)
+        val tvProfil = view?.findViewById<TextView>(R.id.nama)
+        val username = sharedPreferences.getString("username", "").toString()
+        tvProfil?.text = "$username"
+    }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+        updateUsername()
         val btn_edit : TextView = view.findViewById(R.id.set_akun)
         val btn_wallet : TextView = view.findViewById(R.id.dompet1)
         val btn_notif : TextView = view.findViewById(R.id.notifikasi2)
         val btn_help : TextView = view.findViewById(R.id.bantuan1)
         val btn_about : TextView = view.findViewById(R.id.tentang_kami1)
+        val btnLogout : Button = view.findViewById(R.id.bt_logout)
 
         btn_edit.setOnClickListener {
             val intent = Intent(requireActivity(), ProfilEditActivity::class.java)
@@ -66,6 +74,11 @@ class ProfilListFragment : Fragment() {
 
         btn_about.setOnClickListener {
             val intent = Intent(requireActivity(), ProfilTentangActivity::class.java)
+            startActivity(intent)
+        }
+
+        btnLogout.setOnClickListener {
+            val intent = Intent(requireActivity(), SplashOptionActivity::class.java)
             startActivity(intent)
         }
 

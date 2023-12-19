@@ -30,9 +30,9 @@
         android:name="com.infinite.massiveprojectmobilezwh.transaksi.TransaksiSudahFragment"
         android:label="TransaksiSudahFragment"
         tools:layout="@layout/activity_transaksi_sudah"/>
-    <fragment
-        android:id="@+id/daftarFragment"
-        android:name="com.infinite.massiveprojectmobilezwh.DaftarFragment"
-        android:label="fragment_daftar"
-        tools:layout="@layout/fragment_daftar" />
+<!--    <fragment-->
+<!--        android:id="@+id/daftarFragment"-->
+<!--        android:name="com.infinite.massiveprojectmobilezwh.DaftarFragment"-->
+<!--        android:label="fragment_daftar"-->
+<!--        tools:layout="@layout/fragment_daftar" />-->
 </navigation>

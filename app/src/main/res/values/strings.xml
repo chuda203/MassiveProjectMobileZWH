@@ -85,7 +85,7 @@
     <string name="beranda_tukar_selesai_confirmation">Lanjutkan</string>
     <string name="chat_list">Chat</string>
     <string name="register_title_fullname">Nama Lengkap</string>
-    <string name="register_title_phone">Nomor Hp</string>
+    <string name="register_title_phone">Email</string>
     <string name="register_title_password">Kata Sandi</string>
     <string name="register_title_password_twice">Konfirmasi Kata Sandi</string>
     <string name="register_hint_fullname">Masukkan Nama Lengkap</string>
@@ -98,7 +98,7 @@
     <string name="register_option">Atau</string>
     <string name="register_title_to_login">Apakah Anda sudah memiliki akun?</string>
     <string name="register_to_login">Masuk</string>
-    <string name="login_title_phone">Nomor Hp</string>
+    <string name="login_title_phone">Email</string>
     <string name="login_title_password">Kata Sandi</string>
     <string name="login_hint_phone">Masukkan Nomor Telepon</string>
     <string name="login_hint_password">Masukkan Kata Sandi</string>
@@ -168,6 +168,7 @@
     <string name="profile_edit_gender">Jenis Kelamin</string>
     <string name="profile_edit_address">Alamat Lengkap</string>
     <string name="profile_edit_confirmation">Simpan</string>
+    <string name="profile_list_confirmation"> Keluar</string>
     <string name="profile_notif">Notifikasi</string>
     <string name="profile_notif_01">Hore! Transaksi pertamamu berhasil</string>
     <string name="profile_about">Tentang Kami</string>

@@ -5,7 +5,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ui.DaftarActivity"
+    tools:context=".login.DaftarActivity"
     android:background="@drawable/bg_base">
 
     <ImageView
@@ -74,7 +74,7 @@
             android:layout_marginHorizontal="30dp"
             android:paddingHorizontal="10dp"
             android:hint="@string/register_hint_phone"
-            android:inputType="phone"
+            android:inputType="textEmailAddress"
             android:fontFamily="@font/poppinsregular"
             android:textSize="11sp"
             android:background="@drawable/bg_et_login"
@@ -209,49 +209,16 @@
         android:layout_alignBottom="@+id/splash_logo"
         android:layout_marginHorizontal="35dp"
         android:layout_marginTop="12dp"
+        android:layout_marginBottom="20dp"
         android:paddingBottom="8dp"
         android:text="@string/register_confirmation"
         android:textAllCaps="false"
         android:textColor="@color/white"
         android:fontFamily="@font/poppinsbold"
         android:textSize="18sp"
-        app:layout_constraintBottom_toTopOf="@+id/tv_option"
+        app:layout_constraintBottom_toTopOf="@+id/tv_to_login"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"/>
-
-    <TextView
-        android:id="@+id/tv_option"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
-        android:text="@string/register_option"
-        android:textColor="@color/black"
-        android:fontFamily="@font/poppinsregular"
-        android:textSize="14sp"
-        app:layout_constraintBottom_toTopOf="@+id/iv_google"
-        app:layout_constraintEnd_toEndOf="@+id/bt_confirmation"
-        app:layout_constraintStart_toStartOf="@+id/bt_confirmation" />
-
-    <ImageButton
-        android:id="@+id/iv_google"
-        android:layout_width="121dp"
-        android:layout_height="44dp"
-        android:layout_marginStart="50dp"
-        android:layout_marginTop="8dp"
-        android:src="@drawable/img_with_google"
-        app:layout_constraintBottom_toTopOf="@+id/tv_to_login"
-        app:layout_constraintStart_toStartOf="parent"
-        android:contentDescription="@string/todo" />
-
-    <ImageButton
-        android:id="@+id/iv_fb"
-        android:layout_width="131dp"
-        android:layout_height="44dp"
-        android:layout_marginEnd="50dp"
-        android:src="@drawable/img_with_fb"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/iv_google"
-        android:contentDescription="@string/todo" />
 
     <TextView
         android:id="@+id/tv_to_login"
@@ -265,7 +232,7 @@
         android:fontFamily="@font/poppinsregular"
         android:textSize="14sp"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="@+id/iv_google" />
+        app:layout_constraintStart_toStartOf="@+id/bt_confirmation" />
 
     <TextView
         android:id="@+id/tv_login"

@@ -216,5 +216,21 @@
         app:layout_constraintStart_toEndOf="@+id/tentang_kami"
         app:layout_constraintTop_toTopOf="@+id/tentang_kami" />
 
+    <Button
+        android:id="@+id/bt_logout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="30dp"
+        android:layout_marginBottom="70dp"
+        android:background="@drawable/bg_bt"
+        android:fontFamily="@font/poppinsbold"
+        android:text="@string/profile_list_confirmation"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        android:textSize="15sp"
+        style="@style/ButtonNext"
+        app:layout_constraintBottom_toBottomOf="parent"/>
+
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>
