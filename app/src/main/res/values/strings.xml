@@ -168,6 +168,7 @@
     <string name="profile_edit_gender">Jenis Kelamin</string>
     <string name="profile_edit_address">Alamat Lengkap</string>
     <string name="profile_edit_confirmation">Simpan</string>
+    <string name="profile_list_confirmation"> Keluar</string>
     <string name="profile_notif">Notifikasi</string>
     <string name="profile_notif_01">Hore! Transaksi pertamamu berhasil</string>
     <string name="profile_about">Tentang Kami</string>

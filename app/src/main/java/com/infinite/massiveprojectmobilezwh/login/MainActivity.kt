@@ -1,4 +1,4 @@
-package com.infinite.massiveprojectmobilezwh.ui
+package com.infinite.massiveprojectmobilezwh.login
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle

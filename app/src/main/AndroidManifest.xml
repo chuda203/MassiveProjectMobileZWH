@@ -36,11 +36,11 @@
             android:name=".transaksi.TransaksiListActivity"
             android:exported="false" />
         <activity
-            android:name=".ui.RegisterActivity"
+            android:name=".login.RegisterActivity"
             android:windowSoftInputMode="adjustNothing"
             android:exported="false" />
         <activity
-            android:name=".ui.LoginActivity"
+            android:name=".login.LoginActivity"
             android:windowSoftInputMode="adjustNothing"
             android:exported="false" />
         <activity
@@ -56,18 +56,18 @@
             android:name=".beranda.BerandaObrolanActivity"
             android:exported="false" />
         <activity
-            android:name=".ui.DaftarActivity"
+            android:name=".login.DaftarActivity"
             android:windowSoftInputMode="adjustNothing"
             android:exported="false" />
         <activity
-            android:name=".ui.MasukActivity"
+            android:name=".login.MasukActivity"
             android:windowSoftInputMode="adjustNothing"
             android:exported="false" />
         <activity
-            android:name=".ui.SplashOptionActivity"
+            android:name=".login.SplashOptionActivity"
             android:exported="false" />
         <activity
-            android:name=".ui.MainActivity"
+            android:name=".login.MainActivity"
             android:exported="false" />
         <activity
             android:name=".profil.ProfilNotifActivity"
@@ -172,7 +172,7 @@
             android:name=".profil.ProfilTentangActivity"
             android:exported="false" />
         <activity
-            android:name=".ui.SplashActivity"
+            android:name=".login.SplashActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

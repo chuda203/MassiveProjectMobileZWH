@@ -1,17 +1,16 @@
 package com.infinite.massiveprojectmobilezwh.profile
 
+import android.content.Context
 import android.content.Intent
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Button
 import android.widget.TextView
 import com.infinite.massiveprojectmobilezwh.R
-import com.infinite.massiveprojectmobilezwh.dompet.BerandaDompetActivity
-import com.infinite.massiveprojectmobilezwh.profil.ProfilBantuanActivity
-import com.infinite.massiveprojectmobilezwh.profil.ProfilEditActivity
-import com.infinite.massiveprojectmobilezwh.profil.ProfilNotifActivity
+import com.infinite.massiveprojectmobilezwh.login.SplashOptionActivity
 import com.infinite.massiveprojectmobilezwh.wallet.WalletListActivity
 
 // TODO: Rename parameter arguments, choose names that match
@@ -44,13 +43,22 @@ class ProfileListFragment : Fragment() {
         // Inflate the layout for this fragment
         return inflater.inflate(R.layout.fragment_profile_list, container, false)
     }
+
+    fun updateUsername() {
+        val sharedPreferences = requireActivity().applicationContext.getSharedPreferences("MySharedPreferences", Context.MODE_PRIVATE)
+        val tvProfil = view?.findViewById<TextView>(R.id.nama)
+        val username = sharedPreferences.getString("username", "").toString()
+        tvProfil?.text = "$username"
+    }
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+        updateUsername()
         val btn_edit : TextView = view.findViewById(R.id.set_akun)
         val btn_wallet : TextView = view.findViewById(R.id.dompet1)
         val btn_notif : TextView = view.findViewById(R.id.notifikasi2)
         val btn_help : TextView = view.findViewById(R.id.bantuan1)
         val btn_about : TextView = view.findViewById(R.id.tentang_kami1)
+        val btnLogout : Button = view.findViewById(R.id.bt_logout)
 
         btn_edit.setOnClickListener {
             val intent = Intent(requireActivity(), ProfileEditActivity::class.java)
@@ -74,6 +82,11 @@ class ProfileListFragment : Fragment() {
 
         btn_about.setOnClickListener {
             val intent = Intent(requireActivity(), ProfileAboutActivity::class.java)
+            startActivity(intent)
+        }
+
+        btnLogout.setOnClickListener {
+            val intent = Intent(requireActivity(), SplashOptionActivity::class.java)
             startActivity(intent)
         }
 

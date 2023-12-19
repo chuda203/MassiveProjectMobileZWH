@@ -1,4 +1,4 @@
-package com.infinite.massiveprojectmobilezwh.ui
+package com.infinite.massiveprojectmobilezwh.login
 
 import android.content.Intent
 import android.net.Uri
@@ -10,14 +10,11 @@ import android.widget.Button
 import android.widget.EditText
 import android.widget.ImageView
 import android.widget.TextView
-import androidx.core.content.ContextCompat.startActivity
 import com.infinite.massiveprojectmobilezwh.R
 import com.infinite.massiveprojectmobilezwh.Retro
 import com.infinite.massiveprojectmobilezwh.UserApi
 import com.infinite.massiveprojectmobilezwh.UserRequest
 import com.infinite.massiveprojectmobilezwh.UserResponse
-import com.infinite.massiveprojectmobilezwh.beranda.BerandaListActivity
-import com.infinite.massiveprojectmobilezwh.maps.MapsListActivity
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
@@ -27,14 +24,6 @@ class DaftarActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_daftar)
-
-//        // Pengaturan OnClickListener untuk tombol "Daftar"
-//        val btnDaftar = findViewById<Button>(R.id.bt_confirmation)
-//        btnDaftar.setOnClickListener {
-//            Intent(this, MasukActivity::class.java).also {
-//                startActivity(it)
-//            }
-//        }
 
         // Pengaturan OnClickListener untuk teks "Masuk"
         val tvLogin = findViewById<TextView>(R.id.tv_login)
@@ -70,7 +59,10 @@ class DaftarActivity : AppCompatActivity() {
             isPasswordVisible = !isPasswordVisible
             togglePasswordVisibility(editTextPasswordTwice, isPasswordVisible)
             }
-
+        val btnRegis : Button = findViewById(R.id.bt_confirmation)
+        btnRegis.setOnClickListener {
+            register()
+        }
     }
 
     // Function untuk fitur hide/unhide password
@@ -83,14 +75,6 @@ class DaftarActivity : AppCompatActivity() {
             // Jika tidak terlihat, ubah ke tipe password
             editText.transformationMethod = PasswordTransformationMethod()
             editText.setSelection(editText.text.length) // Agar kursor tetap di akhir teks
-        }
-        initAction()
-    }
-
-    fun initAction() {
-        val btnMasuk : Button = findViewById(R.id.bt_confirmation)
-        btnMasuk.setOnClickListener {
-            register()
         }
     }
 

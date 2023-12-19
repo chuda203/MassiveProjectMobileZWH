@@ -1,5 +1,6 @@
 package com.infinite.massiveprojectmobilezwh.beranda
 
+import android.content.Context
 import android.content.Intent
 import android.os.Bundle
 import android.util.Log
@@ -41,8 +42,9 @@ class BerandaListFragment : Fragment() {
     }
 
     fun updateUsername() {
+        val sharedPreferences = requireActivity().applicationContext.getSharedPreferences("MySharedPreferences", Context.MODE_PRIVATE)
         val tvProfil = view?.findViewById<TextView>(R.id.tv_profil)
-        val username = arguments?.getString(ARG_PARAM1)
+        val username = sharedPreferences.getString("username", "").toString()
         tvProfil?.text = "Halo $username"
     }
     override fun onCreateView(

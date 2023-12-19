@@ -1,4 +1,4 @@
-package com.infinite.massiveprojectmobilezwh.ui
+package com.infinite.massiveprojectmobilezwh.login
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
@@ -8,7 +8,6 @@ import android.widget.Button
 import android.widget.EditText
 import android.widget.ImageView
 import android.widget.TextView
-import android.widget.Toast
 import com.infinite.massiveprojectmobilezwh.R
 import com.infinite.massiveprojectmobilezwh.Retro
 import com.infinite.massiveprojectmobilezwh.UserApi
@@ -45,7 +44,10 @@ class MasukActivity : AppCompatActivity() {
             togglePasswordVisibility(editTextPassword, isPasswordVisible)
         }
 
-        initAction()
+        val btnLogin : Button = findViewById(R.id.bt_confirmation)
+        btnLogin.setOnClickListener {
+            login()
+        }
     }
 
     // Function untuk fitur hide/unhide password
@@ -58,13 +60,6 @@ class MasukActivity : AppCompatActivity() {
             // Jika tidak terlihat, ubah ke tipe password
             editText.transformationMethod = PasswordTransformationMethod()
             editText.setSelection(editText.text.length) // Agar kursor tetap di akhir teks
-        }
-    }
-
-    fun initAction() {
-        val btnMasuk: Button = findViewById(R.id.bt_confirmation)
-        btnMasuk.setOnClickListener {
-            login()
         }
     }
 
@@ -81,7 +76,7 @@ class MasukActivity : AppCompatActivity() {
                 if (response.isSuccessful) {
                     user = response.body()
                     val accessToken = user?.access_token
-                    accessToken?.let { saveBearerTokenToSharedPreferences(it) }
+                    accessToken?.let { saveBearerTokenToSharedPreferences(it, null) }
                     accessToken?.let { requestUserData(it) }
                 } else {
                     Log.e("Error", "Unsuccessful response: ${response.code()}")
@@ -108,6 +103,7 @@ class MasukActivity : AppCompatActivity() {
                     if (userProfile != null) {
                         val username = userProfile.user?.name
                         toHome(username)
+                        saveBearerTokenToSharedPreferences(bearerToken, username)
                     } else {
                         Log.e("Error", "No Username")
                     }
@@ -125,15 +121,13 @@ class MasukActivity : AppCompatActivity() {
     private fun toHome(username: String?) {
         Log.d("UserToHome", "User: $username")
         val intent = Intent(this, BerandaListActivity::class.java)
-        username.let {
-            intent.putExtra("USERNAME", username)
-            startActivity(intent)
-        }
+        startActivity(intent)
     }
-    private fun saveBearerTokenToSharedPreferences(token: String) {
+    private fun saveBearerTokenToSharedPreferences(token: String, username: String?) {
         val sharedPreferences = getSharedPreferences("MySharedPreferences", MODE_PRIVATE)
         val editor = sharedPreferences.edit()
         editor.putString("bearerToken", token)
+        editor.putString("username", username)
         editor.apply()
     }
 }
