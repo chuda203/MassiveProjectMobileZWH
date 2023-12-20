@@ -8,6 +8,8 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
+import android.widget.TextView
+import androidx.appcompat.app.AppCompatActivity
 import com.infinite.massiveprojectmobilezwh.R
 
 // TODO: Rename parameter arguments, choose names that match
@@ -65,6 +67,18 @@ class BerandaProsesFragment : Fragment() {
             }
         }
 
+        // Membaca alamat dari SharedPreferences dan menggantikan teks pada tv_maps_detail
+        val savedAddress = getAddressFromSharedPreferences()
+        if (savedAddress != null) {
+            val tvMapsDetail: TextView = view.findViewById(R.id.tv_maps_detail)
+            tvMapsDetail.text = savedAddress
+        }
+
+    }
+
+    private fun getAddressFromSharedPreferences(): String? {
+        val sharedPreferences = requireContext().getSharedPreferences("Order", AppCompatActivity.MODE_PRIVATE)
+        return sharedPreferences.getString("ADDRESS", null)
     }
 
     companion object {

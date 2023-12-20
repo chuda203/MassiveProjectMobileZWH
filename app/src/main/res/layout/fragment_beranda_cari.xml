@@ -7,28 +7,27 @@
     tools:context=".beranda.BerandaCariFragment">
 
 
-    <LinearLayout
-        android:id="@+id/linearlayout_maps"
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_marginBottom="30dp"
-        android:orientation="vertical"
+
+<!--        <ImageView-->
+<!--            android:id="@+id/iv_map_sample"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_marginTop="25dp"-->
+<!--            android:scaleType="centerCrop"-->
+<!--            android:src="@drawable/img_map_sample"-->
+<!--            android:contentDescription="@string/todo"/>-->
+
+    <pl.droidsonroids.gif.GifImageView
+        android:layout_width="250dp"
+        android:layout_height="250dp"
+        android:layout_gravity="center"
+        android:background="@color/white"
+        android:src="@drawable/ic_maps_loading"
+        app:layout_constraintBottom_toTopOf="@+id/cardView_maps_detail"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintBottom_toBottomOf="@id/cardView_maps_detail"
-        android:elevation="-1dp"
-        app:layout_constraintTop_toTopOf="parent">
+        app:layout_constraintTop_toTopOf="parent" />
 
-        <ImageView
-            android:id="@+id/iv_map_sample"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="25dp"
-            android:scaleType="centerCrop"
-            android:src="@drawable/img_map_sample"
-            android:contentDescription="@string/todo"/>
-
-    </LinearLayout>
 
     <androidx.cardview.widget.CardView
         android:id="@+id/cardView_maps_detail"
@@ -60,9 +59,10 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="10dp"
-                android:text="@string/beranda_lokasi_address"
                 android:fontFamily="@font/poppinsregular"
+                android:text="@string/beranda_lokasi_address"
                 app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toEndOf="@+id/iv_maps"
                 app:layout_constraintTop_toTopOf="parent" />
 

@@ -33,6 +33,7 @@ import java.util.Locale
 import android.content.IntentSender
 import android.util.Log
 import android.widget.Toast
+import androidx.appcompat.app.AppCompatActivity
 
 
 // TODO: Rename parameter arguments, choose names that match
@@ -199,6 +200,7 @@ class BerandaLokasiFragment : Fragment() {
                     if (address != null && address.isNotEmpty()){
                         // buat nampilin alamat
                         val address_line = address[0].getAddressLine(0)
+                        saveAddressToSharedPreferences(address_line)
                         binding.tvMapsDetail.setText(address_line)
 
                         val address_location = address[0].getAddressLine(0)
@@ -216,6 +218,14 @@ class BerandaLokasiFragment : Fragment() {
 
         }
 
+
+    }
+
+    private fun saveAddressToSharedPreferences(address_line: String?) {
+        val sharedPreferences = requireContext().getSharedPreferences("Order", AppCompatActivity.MODE_PRIVATE)
+        val editor = sharedPreferences.edit()
+        editor.putString("ADDRESS", address_line)
+        editor.apply()
 
     }
 

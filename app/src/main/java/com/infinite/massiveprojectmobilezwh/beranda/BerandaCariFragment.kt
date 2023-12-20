@@ -8,6 +8,7 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
 import android.widget.TextView
+import androidx.appcompat.app.AppCompatActivity
 import com.infinite.massiveprojectmobilezwh.R
 
 // TODO: Rename parameter arguments, choose names that match
@@ -39,6 +40,22 @@ class BerandaCariFragment : Fragment() {
     ): View? {
         // Inflate the layout for this fragment
         return inflater.inflate(R.layout.fragment_beranda_cari, container, false)
+    }
+
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+
+        // Membaca alamat dari SharedPreferences dan menggantikan teks pada tv_maps_detail
+        val savedAddress = getAddressFromSharedPreferences()
+        if (savedAddress != null) {
+            val tvMapsDetail: TextView = view.findViewById(R.id.tv_maps_detail)
+            tvMapsDetail.text = savedAddress
+        }
+    }
+
+    private fun getAddressFromSharedPreferences(): String? {
+        val sharedPreferences = requireContext().getSharedPreferences("Order", AppCompatActivity.MODE_PRIVATE)
+        return sharedPreferences.getString("ADDRESS", null)
     }
 
     companion object {

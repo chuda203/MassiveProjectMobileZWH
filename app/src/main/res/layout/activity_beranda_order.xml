@@ -12,11 +12,11 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="20dp"
-        android:layout_marginTop="3dp"
         android:fontFamily="@font/poppinsbold"
         android:text="@string/beranda_lokasi"
         android:textColor="@color/white"
         android:textSize="22sp"
+        app:layout_constraintBottom_toBottomOf="@+id/iv_back"
         app:layout_constraintStart_toEndOf="@+id/iv_back"
         app:layout_constraintTop_toTopOf="@id/iv_back" />
 
@@ -69,10 +69,8 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent">
 
-            <androidx.fragment.app.FragmentContainerView
-                android:id="@+id/iv_capture_preview"
-                android:name="com.infinite.massiveprojectmobilezwh.beranda.BerandaOrderFragment"
-                tools:layout="@layout/fragment_beranda_order"
+            <ImageView
+                android:id="@+id/imageView"
                 android:layout_width="100dp"
                 android:layout_height="140dp"
                 android:scaleType="centerCrop"
@@ -90,7 +88,7 @@
                 android:fontFamily="@font/poppinsregular"
                 android:textSize="11sp"
                 android:textStyle="bold"
-                app:layout_constraintStart_toEndOf="@+id/iv_capture_preview"
+                app:layout_constraintStart_toEndOf="@+id/imageView"
                 app:layout_constraintTop_toTopOf="parent" />
 
             <ImageView
@@ -105,13 +103,13 @@
 
             <TextView
                 android:id="@+id/tv_maps_detail"
-                android:layout_width="wrap_content"
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:paddingEnd="170dp"
                 android:fontFamily="@font/poppinsregular"
                 android:textSize="11sp"
                 android:text="@string/beranda_order_address"
                 app:layout_constraintStart_toEndOf="@+id/iv_maps"
+                app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintTop_toTopOf="@id/iv_maps"
                 android:ellipsize="end"
                 android:maxLines="3"
