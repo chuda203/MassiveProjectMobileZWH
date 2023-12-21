@@ -15,7 +15,7 @@ class BerandaCariActivity : AppCompatActivity() {
         // ganti fragment setelah 1,5 detik
         Handler(Looper.getMainLooper()).postDelayed({
             replaceFragment(BerandaProsesFragment())
-        },1500)
+        },10000)
 
     }
 

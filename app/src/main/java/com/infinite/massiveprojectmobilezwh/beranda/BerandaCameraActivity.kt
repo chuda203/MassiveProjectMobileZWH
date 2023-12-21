@@ -34,13 +34,10 @@ class BerandaCameraActivity : AppCompatActivity() {
         // Langsung buka kamera saat activity dijalankan
         dispatchTakePictureIntent()
 
-        val btnUpload : Button = findViewById(R.id.bt_confirmation)
-        btnUpload.setOnClickListener {
-            Intent(this, BerandaOrderActivity::class.java).also {
-                startActivity(it)
-            }
+        val btnShutter : ImageView = findViewById(R.id.iv_shutter)
+        btnShutter.setOnClickListener {
+            dispatchTakePictureIntent()
         }
-
     }
 
     @RequiresApi(Build.VERSION_CODES.M)
@@ -100,8 +97,8 @@ class BerandaCameraActivity : AppCompatActivity() {
 
         if (requestCode == REQUEST_IMAGE_CAPTURE && resultCode == RESULT_OK) {
             // Gambar diambil, tampilkan di ImageView atau lakukan yang lain
-            val imageView: ImageView = findViewById(R.id.imageView)
-            imageView.setImageURI(Uri.parse(currentPhotoPath))
+//            val imageView: ImageView = findViewById(R.id.imageView)
+//            imageView.setImageURI(Uri.parse(currentPhotoPath))
             val intent = Intent(this, BerandaOrderActivity::class.java)
             intent.putExtra("PHOTO_PATH", currentPhotoPath)
             startActivity(intent)

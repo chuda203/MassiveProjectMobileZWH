@@ -24,7 +24,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="25dp"
             android:scaleType="centerCrop"
-            android:src="@drawable/img_map_sample"
+            android:src="@drawable/ic_maps_loading_2"
             android:contentDescription="@string/todo"/>
 
     </LinearLayout>
@@ -44,26 +44,26 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent">
 
-            <ImageView
-                android:id="@+id/iv_maps"
-                android:layout_width="20dp"
-                android:layout_height="20dp"
-                android:src="@drawable/ic_maps"
-                app:layout_constraintStart_toEndOf="@id/img_profile"
-                app:layout_constraintTop_toTopOf="parent"
-                android:contentDescription="@string/todo"/>
+<!--            <ImageView-->
+<!--                android:id="@+id/iv_maps"-->
+<!--                android:layout_width="20dp"-->
+<!--                android:layout_height="20dp"-->
+<!--                android:src="@drawable/ic_maps"-->
+<!--                app:layout_constraintStart_toEndOf="@id/img_profile"-->
+<!--                app:layout_constraintTop_toTopOf="parent"-->
+<!--                android:contentDescription="@string/todo"/>-->
 
             <TextView
                 android:id="@+id/tv_maps_detail"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="3dp"
-                android:text="@string/beranda_lokasi_address"
                 android:fontFamily="@font/poppinsregular"
+                android:text="@string/beranda_lokasi_address"
                 android:textStyle="bold"
-                app:layout_constraintStart_toEndOf="@+id/iv_maps"
-                app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"/>
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
 
             <TextView
                 android:id="@+id/tv_profile"
@@ -71,9 +71,9 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="3dp"
                 android:layout_marginStart="3dp"
-                android:text="@string/beranda_proses_username"
+                android:text="Anton"
                 android:fontFamily="@font/poppinsbold"
-                app:layout_constraintStart_toStartOf="@+id/iv_maps"
+                app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/tv_maps_detail" />
 
             <TextView
@@ -95,14 +95,14 @@
                 android:background="@color/green"
                 app:layout_constraintTop_toBottomOf="@+id/tv_process" />
 
-            <ImageView
-                android:id="@+id/img_profile"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:src="@drawable/ic_profile_process"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                android:contentDescription="@string/todo" />
+<!--            <ImageView-->
+<!--                android:id="@+id/img_profile"-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:src="@drawable/ic_profile_order"-->
+<!--                app:layout_constraintStart_toStartOf="parent"-->
+<!--                app:layout_constraintTop_toTopOf="parent"-->
+<!--                android:contentDescription="@string/todo" />-->
 
             <Button
                 android:id="@+id/bt_phone"

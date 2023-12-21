@@ -44,7 +44,7 @@
                         android:layout_marginStart="3dp"
                         android:layout_marginTop="3dp"
                         android:fontFamily="@font/poppinsbold"
-                        android:text="@string/order_history_name"
+                        android:text="Anton"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toTopOf="parent" />
 
@@ -73,7 +73,7 @@
                         android:layout_height="wrap_content"
                         android:layout_marginStart="3dp"
                         android:fontFamily="@font/poppinsregular"
-                        android:text="@string/order_history_address"
+                        android:text="Nayan, Maguwoharjo, Sleman"
                         android:textSize="12sp"
                         android:textStyle="bold"
                         app:layout_constraintStart_toEndOf="@+id/iv_maps1"

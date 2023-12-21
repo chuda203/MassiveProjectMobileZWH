@@ -72,7 +72,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="10dp"
                 android:fontFamily="@font/poppinsbold"
-                android:text="@string/maps_process_name"
+                android:text="Anton"
                 app:layout_constraintBottom_toBottomOf="@id/img_profile"
                 app:layout_constraintStart_toEndOf="@+id/img_profile"
                 app:layout_constraintTop_toTopOf="@id/img_profile" />

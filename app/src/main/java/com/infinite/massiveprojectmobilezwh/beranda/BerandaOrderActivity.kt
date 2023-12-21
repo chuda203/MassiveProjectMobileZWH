@@ -35,7 +35,7 @@ class BerandaOrderActivity : AppCompatActivity() {
         }
 
         // Buat dropdown kategori
-        val items = listOf("Kaleng", "Plastik", "Besi", "Elektronik")
+        val items = listOf("Kaleng", "Plastik", "Galon", "Tambahkan di catatan")
         val autoComplete : AutoCompleteTextView = findViewById(R.id.auto_complete)
         val adapter = ArrayAdapter(this, R.layout.list_item, items)
         autoComplete.setAdapter(adapter)
