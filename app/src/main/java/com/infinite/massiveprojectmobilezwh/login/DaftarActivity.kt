@@ -7,9 +7,11 @@ import android.os.Bundle
 import android.text.method.PasswordTransformationMethod
 import android.util.Log
 import android.widget.Button
+import android.widget.CheckBox
 import android.widget.EditText
 import android.widget.ImageView
 import android.widget.TextView
+import android.widget.Toast
 import com.infinite.massiveprojectmobilezwh.R
 import com.infinite.massiveprojectmobilezwh.Retro
 import com.infinite.massiveprojectmobilezwh.UserApi
@@ -59,7 +61,15 @@ class DaftarActivity : AppCompatActivity() {
             isPasswordVisible = !isPasswordVisible
             togglePasswordVisibility(editTextPasswordTwice, isPasswordVisible)
             }
+
+        val checkBox : CheckBox = findViewById(R.id.ic_check)
         val btnRegis : Button = findViewById(R.id.bt_confirmation)
+        checkBox.setOnCheckedChangeListener { _, isChecked ->
+            // Aktifkan atau nonaktifkan tombol konfirmasi berdasarkan status checkbox
+            btnRegis.isEnabled = isChecked
+            Log.d("CheckboxStatus", "isChecked: $isChecked")
+        }
+
         btnRegis.setOnClickListener {
             register()
         }
@@ -82,10 +92,16 @@ class DaftarActivity : AppCompatActivity() {
         val etUsername : EditText = findViewById(R.id.et_username)
         val etEmail : EditText = findViewById(R.id.et_phone)
         val etPassword : EditText = findViewById(R.id.et_password)
+        val etPasswordConfrim : EditText = findViewById(R.id.et_password_twice)
         val request = UserRequest()
         request.name = etUsername.text.toString().trim()
         request.email = etEmail.text.toString().trim()
         request.password = etPassword.text.toString().trim()
+
+        if (etPassword.text.toString() != etPasswordConfrim.text.toString()){
+            Toast.makeText(this, "Sandi tidak cocok", Toast.LENGTH_SHORT).show()
+            return
+        }
 
         val retro = Retro().getRetroCLientInstance().create(UserApi::class.java)
         retro.signup(request).enqueue(object : Callback<UserResponse> {

@@ -5,9 +5,11 @@ import android.os.Bundle
 import android.text.method.PasswordTransformationMethod
 import android.util.Log
 import android.widget.Button
+import android.widget.CheckBox
 import android.widget.EditText
 import android.widget.ImageView
 import android.widget.TextView
+import android.widget.Toast
 import com.infinite.massiveprojectmobilezwh.R
 import com.infinite.massiveprojectmobilezwh.Retro
 import com.infinite.massiveprojectmobilezwh.UserApi
@@ -22,10 +24,28 @@ class MasukActivity : AppCompatActivity() {
 
     private var isPasswordVisible = false
     private var user: UserResponse? = null
+    private var isChecked: Boolean = false
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_masuk)
+
+        // Inisialisasi komponen CheckBox
+        val checkBoxRemember : CheckBox = findViewById(R.id.ic_check)
+
+        // Cek status CheckBox dari SharedPreferences
+        val sharedPreferences = getSharedPreferences("MySharedPreferences", MODE_PRIVATE)
+//        val isChecked = sharedPreferences.getBoolean("rememberCheckBox", false)
+        checkBoxRemember.isChecked = isChecked
+
+        // Pengaturan OnClickListener untuk checkbox
+        checkBoxRemember.setOnCheckedChangeListener { _, isChecked ->
+            // Simpan status CheckBox ke SharedPreferences
+            val editor = sharedPreferences.edit()
+            editor.putBoolean("rememberCheckBox", isChecked)
+            editor.apply()
+            showToast("Sudah dicheck $isChecked")
+        }
 
         // Pengaturan OnClickListener untuk teks "Daftar"
         val btnRegis = findViewById<TextView>(R.id.tv_to_register)
@@ -71,15 +91,28 @@ class MasukActivity : AppCompatActivity() {
         request.password = etPassword.text.toString().trim()
 
         val retro = Retro().getRetroCLientInstance().create(UserApi::class.java)
+//        checkBoxRemember.setOnCheckedChangeListener { _, checked ->
+//            isChecked = checked
+//        }
         retro.signin(request).enqueue(object : Callback<UserResponse> {
             override fun onResponse(call: Call<UserResponse>, response: Response<UserResponse>) {
                 if (response.isSuccessful) {
                     user = response.body()
                     val accessToken = user?.access_token
-                    accessToken?.let { saveBearerTokenToSharedPreferences(it, null) }
+                    accessToken?.let { saveBearerTokenToSharedPreferences(it, null, null, null, null, null, isChecked) }
                     accessToken?.let { requestUserData(it) }
                 } else {
-                    Log.e("Error", "Unsuccessful response: ${response.code()}")
+//                    val errorMessage = user?.message
+//                    if (errorMessage?.contains("User not found") == true){
+                    if (response.code() == 404){
+                        Log.e("Error", " Email belum terdaftar : ${response.code()}")
+                        showToast("Email Salah atau belum terdaftar")
+                    } else if (response.code() == 422){
+                        Log.e("Error", " Sandi salah : ${response.code()}")
+                        showToast("Sandi Salah")
+                    } else {
+                        Log.e("Error", " Unsuccesfull Response : ${response.code()}")
+                    }
                 }
             }
 
@@ -87,6 +120,10 @@ class MasukActivity : AppCompatActivity() {
                 Log.e("Error", t.message ?: "Unknown error")
             }
         })
+    }
+
+    private fun showToast(message: String) {
+        Toast.makeText(this, message, Toast.LENGTH_SHORT).show()
     }
 
     private fun requestUserData(bearerToken: String) {
@@ -102,8 +139,12 @@ class MasukActivity : AppCompatActivity() {
                     val userProfile = response.body()
                     if (userProfile != null) {
                         val username = userProfile.user?.name
+                        val uuid = userProfile.user?.uuid
+                        val email = userProfile.user?.email
+                        val role = userProfile.user?.role
+                        val points = userProfile.user?.points
                         toHome(username)
-                        saveBearerTokenToSharedPreferences(bearerToken, username)
+                        saveBearerTokenToSharedPreferences(bearerToken, username, uuid, email, role, points, isChecked)
                     } else {
                         Log.e("Error", "No Username")
                     }
@@ -121,13 +162,19 @@ class MasukActivity : AppCompatActivity() {
     private fun toHome(username: String?) {
         Log.d("UserToHome", "User: $username")
         val intent = Intent(this, BerandaListActivity::class.java)
+        intent.flags = Intent.FLAG_ACTIVITY_CLEAR_TASK or Intent.FLAG_ACTIVITY_NEW_TASK
+        showToast(isChecked.toString())
         startActivity(intent)
     }
-    private fun saveBearerTokenToSharedPreferences(token: String, username: String?) {
+    private fun saveBearerTokenToSharedPreferences(token: String, username: String?, uuid: String?, email: String?, role: String?, points: String?, rememberCheckBox: Boolean) {
         val sharedPreferences = getSharedPreferences("MySharedPreferences", MODE_PRIVATE)
         val editor = sharedPreferences.edit()
         editor.putString("bearerToken", token)
         editor.putString("username", username)
+        editor.putString("uuid", uuid)
+        editor.putString("email", email)
+        editor.putString("role", role)
+        editor.putString("points", points)
         editor.apply()
     }
 }
