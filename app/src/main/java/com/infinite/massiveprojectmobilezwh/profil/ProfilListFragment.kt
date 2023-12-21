@@ -40,6 +40,9 @@ class ProfilListFragment : Fragment() {
         val tvProfil = view?.findViewById<TextView>(R.id.nama)
         val username = sharedPreferences.getString("username", "").toString()
         tvProfil?.text = "$username"
+        val tvEmail = view?.findViewById<TextView>(R.id.email)
+        val email = sharedPreferences.getString("email", "").toString()
+        tvEmail?.text = "$email"
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
@@ -78,11 +81,20 @@ class ProfilListFragment : Fragment() {
         }
 
         btnLogout.setOnClickListener {
+            clearBearerTokenFromSharedPreferences()
             val intent = Intent(requireActivity(), SplashOptionActivity::class.java)
             startActivity(intent)
         }
 
 
+    }
+
+    private fun clearBearerTokenFromSharedPreferences() {
+        val sharedPreferences = requireActivity().getSharedPreferences("MySharedPreferences", Context.MODE_PRIVATE)
+        val editor = sharedPreferences.edit()
+        editor.remove("bearerToken")
+        editor.putBoolean("rememberCheckBox", false)
+        editor.apply()
     }
 
 

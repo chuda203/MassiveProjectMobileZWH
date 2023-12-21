@@ -4,90 +4,149 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/bg_base"
     tools:context=".beranda.BerandaCameraActivity">
 
+    <TextView
+        android:id="@+id/tv_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="3dp"
+        android:fontFamily="@font/poppinsbold"
+        android:text="@string/beranda_lokasi"
+        android:textColor="@color/white"
+        android:textSize="22sp"
+        app:layout_constraintStart_toEndOf="@+id/iv_back"
+        app:layout_constraintTop_toTopOf="@id/iv_back" />
+
+    <ImageView
+        android:id="@+id/iv_back"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="40dp"
+        android:layout_marginStart="30dp"
+        android:src="@drawable/ic_back"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:contentDescription="@string/todo" />
+
     <View
-        android:id="@+id/view_top"
-        android:layout_width="match_parent"
-        android:layout_height="70dp"
-        android:background="@color/black_trasnparent"
+        android:id="@+id/separator"
+        android:layout_width="wrap_content"
+        android:layout_height="10dp"
+        android:layout_marginTop="120dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <ImageView
-        android:id="@+id/iv_close"
-        android:layout_width="20dp"
-        android:layout_height="20dp"
-        android:layout_marginStart="30dp"
-        android:src="@drawable/ic_close"
-        app:layout_constraintBottom_toBottomOf="@+id/view_top"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        android:contentDescription="@string/todo" />
-
-    <ImageView
-        android:id="@+id/iv_flash"
-        android:layout_width="30dp"
-        android:layout_height="30dp"
-        android:layout_marginEnd="30dp"
-        android:src="@drawable/ic_flash"
-        app:layout_constraintBottom_toBottomOf="@+id/view_top"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        android:contentDescription="@string/todo" />
-
-    <View
-        android:id="@+id/view_bottom"
-        android:layout_width="match_parent"
-        android:layout_height="130dp"
-        android:background="@color/black_trasnparent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintBottom_toBottomOf="parent" />
-
-    <ImageView
-        android:id="@+id/iv_gallery"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="30dp"
-        android:src="@drawable/ic_gallery"
-        app:layout_constraintBottom_toBottomOf="@+id/view_bottom"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@id/view_bottom"
-        android:contentDescription="@string/todo"/>
-
-    <ImageView
-        android:id="@+id/iv_shutter"
-        android:layout_width="80dp"
-        android:layout_height="80dp"
-        android:src="@drawable/ic_shutter"
-        app:layout_constraintBottom_toBottomOf="@+id/view_bottom"
-        app:layout_constraintEnd_toStartOf="@+id/iv_switch_camera"
-        app:layout_constraintStart_toEndOf="@+id/iv_gallery"
-        app:layout_constraintTop_toTopOf="@id/view_bottom"
-        android:contentDescription="@string/todo"/>
-
-    <ImageView
-        android:id="@+id/iv_switch_camera"
-        android:layout_width="50dp"
-        android:layout_height="50dp"
-        android:layout_marginEnd="30dp"
-        android:src="@drawable/ic_switch_camera"
-        app:layout_constraintBottom_toBottomOf="@+id/view_bottom"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="@id/view_bottom"
-        android:contentDescription="@string/todo"/>
-
-    <androidx.fragment.app.FragmentContainerView
-        android:id="@+id/fragment_container"
-        android:name="com.infinite.massiveprojectmobilezwh.beranda.BerandaCameraFragment"
-        tools:layout="@layout/fragment_beranda_camera"
+        android:id="@+id/imageView"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        app:layout_constraintBottom_toTopOf="@+id/view_bottom"
+        android:layout_marginVertical="20dp"
+        app:layout_constraintBottom_toTopOf="@+id/bt_confirmation"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/view_top" />
+        app:layout_constraintTop_toTopOf="@+id/separator" />
+
+    <Button
+        android:id="@+id/bt_confirmation"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="30dp"
+        android:layout_marginBottom="30dp"
+        android:text="@string/beranda_upfoto_confirmation"
+        android:fontFamily="@font/poppinsbold"
+        android:textSize="15sp"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        style="@style/ButtonNext"
+        app:layout_constraintBottom_toBottomOf="parent" />
+
+
+    <!--    <View-->
+<!--        android:id="@+id/view_top"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="70dp"-->
+<!--        android:background="@color/black_trasnparent"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        app:layout_constraintTop_toTopOf="parent" />-->
+
+<!--    <ImageView-->
+<!--        android:id="@+id/iv_close"-->
+<!--        android:layout_width="20dp"-->
+<!--        android:layout_height="20dp"-->
+<!--        android:layout_marginStart="30dp"-->
+<!--        android:src="@drawable/ic_close"-->
+<!--        app:layout_constraintBottom_toBottomOf="@+id/view_top"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        app:layout_constraintTop_toTopOf="parent"-->
+<!--        android:contentDescription="@string/todo" />-->
+
+<!--    <ImageView-->
+<!--        android:id="@+id/iv_flash"-->
+<!--        android:layout_width="30dp"-->
+<!--        android:layout_height="30dp"-->
+<!--        android:layout_marginEnd="30dp"-->
+<!--        android:src="@drawable/ic_flash"-->
+<!--        app:layout_constraintBottom_toBottomOf="@+id/view_top"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        app:layout_constraintTop_toTopOf="parent"-->
+<!--        android:contentDescription="@string/todo" />-->
+
+<!--    <View-->
+<!--        android:id="@+id/view_bottom"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="130dp"-->
+<!--        android:background="@color/black_trasnparent"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        app:layout_constraintBottom_toBottomOf="parent" />-->
+
+<!--    <ImageView-->
+<!--        android:id="@+id/iv_gallery"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_marginStart="30dp"-->
+<!--        android:src="@drawable/ic_gallery"-->
+<!--        app:layout_constraintBottom_toBottomOf="@+id/view_bottom"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        app:layout_constraintTop_toTopOf="@id/view_bottom"-->
+<!--        android:contentDescription="@string/todo"/>-->
+
+<!--    <ImageView-->
+<!--        android:id="@+id/iv_shutter"-->
+<!--        android:layout_width="80dp"-->
+<!--        android:layout_height="80dp"-->
+<!--        android:src="@drawable/ic_shutter"-->
+<!--        app:layout_constraintBottom_toBottomOf="@+id/view_bottom"-->
+<!--        app:layout_constraintEnd_toStartOf="@+id/iv_switch_camera"-->
+<!--        app:layout_constraintStart_toEndOf="@+id/iv_gallery"-->
+<!--        app:layout_constraintTop_toTopOf="@id/view_bottom"-->
+<!--        android:contentDescription="@string/todo"/>-->
+
+<!--    <ImageView-->
+<!--        android:id="@+id/iv_switch_camera"-->
+<!--        android:layout_width="50dp"-->
+<!--        android:layout_height="50dp"-->
+<!--        android:layout_marginEnd="30dp"-->
+<!--        android:src="@drawable/ic_switch_camera"-->
+<!--        app:layout_constraintBottom_toBottomOf="@+id/view_bottom"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        app:layout_constraintTop_toTopOf="@id/view_bottom"-->
+<!--        android:contentDescription="@string/todo"/>-->
+
+<!--    <androidx.fragment.app.FragmentContainerView-->
+<!--        android:id="@+id/fragment_container"-->
+<!--        android:name="com.infinite.massiveprojectmobilezwh.beranda.BerandaCameraFragment"-->
+<!--        tools:layout="@layout/fragment_beranda_camera"-->
+<!--        android:layout_width="0dp"-->
+<!--        android:layout_height="0dp"-->
+<!--        app:layout_constraintBottom_toTopOf="@+id/view_bottom"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        app:layout_constraintTop_toBottomOf="@+id/view_top" />-->
 
 </androidx.constraintlayout.widget.ConstraintLayout>

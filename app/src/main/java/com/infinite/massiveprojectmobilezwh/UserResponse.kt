@@ -16,10 +16,31 @@ class UserResponse {
         @Expose
         var user: User? = null
 
+        @SerializedName("message")
+        @Expose
+        var message: String? = null
+
         class User {
 
                 @SerializedName("name")
                 @Expose
                 var name : String? = null
+
+                @SerializedName("uuid")
+                @Expose
+                var uuid : String? = null
+
+                @SerializedName("email")
+                @Expose
+                var email : String? = null
+
+                @SerializedName("role")
+                @Expose
+                var role : String? = null
+
+                @SerializedName("points")
+                @Expose
+                var points : String? = null
+
         }
     }
