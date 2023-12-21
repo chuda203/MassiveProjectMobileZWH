@@ -31,9 +31,12 @@ import com.google.android.gms.location.LocationSettingsStatusCodes
 import java.io.IOException
 import java.util.Locale
 import android.content.IntentSender
+import android.os.Build
 import android.util.Log
 import android.widget.Toast
+import androidx.annotation.RequiresApi
 import androidx.appcompat.app.AppCompatActivity
+import androidx.core.content.ContextCompat
 
 
 // TODO: Rename parameter arguments, choose names that match
@@ -53,6 +56,7 @@ class BerandaLokasiFragment : Fragment() {
     lateinit var binding : FragmentBerandaLokasiBinding
     lateinit var locationRequest: LocationRequest
     lateinit var fusedLocationProviderClient: FusedLocationProviderClient
+    private val REQUEST_IMAGE_CAPTURE = 1
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -87,9 +91,12 @@ class BerandaLokasiFragment : Fragment() {
 
         fusedLocationProviderClient = LocationServices.getFusedLocationProviderClient(requireActivity())
 
+        checkLocationPermission()
+
         binding.btGet.setOnClickListener {
             // cek self permission
-            checkLocationPermission()
+//            checkLocationPermission
+            checkGPS()
         }
 
     }
@@ -245,6 +252,8 @@ class BerandaLokasiFragment : Fragment() {
         }
 
     }
+
+
 
     companion object {
         /**
